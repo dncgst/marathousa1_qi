@@ -1,0 +1,8 @@
+area,unit,geo,edm_id,edm_suffix,x,y,z,edm_best,spit,surface,exc,dip_clock,orient_clock,dip_degree,orient_degree,dip_comp,orient_comp,length,width,thickness,comment,date,time,geo_takis,geo_description,plunge,bearing,elong_index
+B,932/595,UB5a,82,0,932.522,595.802,350.289,KN,1,,DG,NA,NA,NA,NA,10 NE,52,27,16,7,"bone fragment, refit with ID 81!",2016-04-07,10:21:39,UB5a,,10,52,1.6875
+B,932/595,UB5a,88,0,932.166,595.599,350.337,KN,1,,DG,NA,NA,NA,NA,20 E,80,230,100,20,large mammal bone fragment,2016-04-13,14:26:30,UB5a,,20,80,2.3
+B,933/597,UB5a,59,0,933.9,597.988,350.307,KN,2,,LS,NA,NA,NA,NA,38 W,286,100,15,4,bone fragment,2016-04-14,10:37:53,UB5a,,38,286,6.6666666667
+B,933/602,2,59,0,933.922,602.744,350.305,KN,2,,GM,2,11,22,316,20 N,340,70,6,6,bird long bone,2015-05-15,10:59:20,UB5a,Homogeneous clay,20,340,11.6666666667
+B,934/594,4,104,0,934.024,594.16,350.396,KN,5,,TKN,2,4,22,106,6 E,94,62,19,9,,2015-05-20,09:12:18,UB5a,Homogeneous clay,6,94,3.2631578947
+B,934/594,4,103,0,934.768,594.95,350.457,KN,3,,ES,2,4,22,106,16 SE,120,90,24,8,long bone fragment,2015-05-12,10:17:51,UB5a,Homogeneous clay,16,120,3.75
+B,934/596,UB5a,49,0,934.39,596.457,350.188,KN,3,,NT,NA,NA,NA,NA,18 E,68,60,22,13,bone fragment,2016-04-14,09:46:07,UB5a,,18,68,2.7272727273

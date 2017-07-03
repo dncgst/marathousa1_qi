@@ -1,0 +1,158 @@
+---
+title: "Beyond maps: Patterns of formation processes at the Middle Pleistocene open-air site of Marathousa~1, Megalopolis Basin, Greece"
+subtitle: "Point pattern analysis 3D"
+author: "Domenico Giusti"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+bibliography: "../doc/manuscript/marathousa_rr.bib"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# load packages: spatial analysis
+library(sp)
+library(rgdal)
+library(raster)
+library(maptools)
+library(gtools)
+library(mapproj)
+library(spatstat)
+```
+
+## Spatial data collection and sampling
+
+> The spatial 'window' containing the point pattern is currently required to be a 3D rectangual box [@Baddeley2016]
+
+We restricted the three-dimensional point pattern analysis to a 5x4x0.7 cube meters region in area A, for which we have an unbiased database.
+
+```{r}
+getwd()
+setwd("/home/dncgst/projects/marathousa1_qi")
+
+# Area A (2015)
+## bounding box, min/max vertical extent of lithics from UA3c, UA4
+summary(Xa.ppp[Xa.ppp$marks$geo_takis %in% c("UA3c","UA4") & Xa.ppp$marks$class == "Lithic"])
+b3 <- box3(c(938,943),c(673,677),c(349.1,349.9), unitname="meter")
+b2 <- owin(xrange=c(938,943), yrange=c(673,677), unitname="meter")
+## Elephas
+Eleph.pp3 <- Elephas.ppp
+summary(Eleph.pp3)
+Eleph.pp3 <- with(Eleph.pp3, pp3(x,y,z,b3))
+summary(Eleph.pp3)
+## Lithic
+summary(Xa.ppp)
+lithic.A.pp3 <- Xa.ppp[Xa.ppp$marks$geo_takis %in% c("UA3c","UA4") & Xa.ppp$marks$class == "Lithic"]
+summary(lithic.A.pp3)
+lithic.A.pp3 <- as.data.frame(lithic.A.pp3)
+lithic.A.pp3 <- with(lithic.A.pp3, pp3(x,y,z,b3))
+summary(lithic.A.pp3)
+plot(lithic.A.pp3)
+## Fauna
+summary(Xa.ppp)
+fauna.A.pp3 <- Xa.ppp[Xa.ppp$marks$geo_takis %in% c("UA3c","UA4") & Xa.ppp$marks$class == "Fauna"]
+fauna.A.pp3 <- as.data.frame(fauna.A.pp3)
+fauna.A.pp3 <- with(fauna.A.pp3, pp3(x,y,z,b3))
+plot(fauna.A.pp3)
+## plot
+plot(Eleph.pp3); plot(lithic.A.pp3, col="red", add=TRUE)
+```
+
+## Exploratory data analysis
+
+Lithic:
+Three-dimensional point pattern
+54 points
+Box: [938, 943] x [673, 677] x [349.1, 349.9] meter
+Volume 15.9999999999991 cubic meter
+Average intensity 3.37500000000019 points per cubic meter
+
+Fauna:
+Three-dimensional point pattern
+286 points
+Box: [938, 943] x [673, 677] x [349.1, 349.9] meter
+Volume 15.9999999999991 cubic meter
+Average intensity 17.875000000001 points per cubic meter
+
+### Intensity
+
+### Correlation
+
+```{r}
+# 3dimensional K-function
+plot(K3est(lithic.A.pp3))
+E <- envelope.pp3(lithic.A.pp3, fun=K3est, nsim=19, correction="iso", global=FALSE)
+plot(E)
+
+# 3dimensional pair corralation function
+plot(pcf3est(lithic.A.pp3))
+E <- envelope.pp3(lithic.A.pp3, fun=pcf3est, nsim=19, correction="iso", global=FALSE)
+plot(E)
+```
+
+### Spacing
+
+```{r}
+# 3dimensional nearest-neighbour G function
+plot(envelope.pp3(lithic.A.pp3, fun=G3est, nsim=19))
+```
+
+```{r}
+# 3dimensional emty-space F function
+plot(envelope.pp3(lithic.A.pp3, fun=F3est, nsim=19))
+```
+
+```{r, eval=FALSE, echo=FALSE}
+# Computes the distances between pairs of points taken from two different three-dimensional point patterns
+## d = \sqrt{(x_1-x_0)^2 + (y_1-y_0)^2 + (z_1 - z_0)^2}
+## crossdist.pp3
+## This function expects two point patterns X and Y, and returns the matrix whose [i,j] entry is the distance from X[i] to Y[j].
+## nncross.pp3
+## Given two point patterns X and Y in three dimensions, this function finds, for each point of X, the nearest point of Y. The distance between these points is also computed. If the argument k is specified, then the k-th nearest neighbours will be found. The return value is a data frame, with rows corresponding to the points of X. The first column gives the nearest neighbour distances (i.e. the ith entry is the distance from the ith point of X to the nearest element of Y). The second column gives the indices of the nearest neighbours (i.e.\ the ith entry is the index of the nearest element in Y.) If what="dist" then only the vector of distances is returned. If what="which" then only the vector of indices is returned. Note that this function is not symmetric in X and Y. To find the nearest neighbour in X of each point in Y, use nncross(Y,X).
+
+nn <- nncross(lithic.A.pp3, Eleph.pp3, what="dist")
+nn <- nncross(Eleph.pp3, lithic.A.pp3, what="dist")
+summary(nn)
+hist(nn, prob=TRUE, xlab="meter", main="b")
+lines(density(nn, bw="nrd"), col="#a51e37", lwd=2)
+```
+
+## Fig.9
+
+```{r}
+# fig.: area A
+setEPS()
+
+#postscript("./doc/artwork/Fig9.eps", width=30, height=10)
+
+pdf("./doc/artwork/Fig9.pdf", width=30, height=10)
+
+par(mfcol=c(1,3), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+
+set.seed(0979)
+
+w <- as.owin(unitsA_2015.shp)
+plot(density(unmark(UA3c.ppp), sigma=bw.diggle(unmark(UA3c.ppp)), diggle=TRUE), axes=TRUE, main="a"); plot(w, add=TRUE); plot(b2, lwd=4, border="green", add=TRUE)
+d <- density(UA3c.ppp[UA3c.ppp$marks$class == "Lithic"], sigma=bw.diggle(UA3c.ppp[UA3c.ppp$marks$class == "Lithic"]), diggle=TRUE)
+contour.im(d, add=TRUE) # nlevels=4
+e <- as.owin(Elephas.shp)
+plot(e, add=TRUE, pch=24, lwd=2, col="grey") #, border="red")
+GISTools::north.arrow(xb=937.5, yb=677.5, len=0.05, lab="N", cex.lab=1)  
+GISTools::map.scale(xc=938.5, yc=677.5, len=1, units="meter", ndivs=1)
+
+
+E <- envelope.pp3(lithic.A.pp3, fun=pcf3est, nsim=199, correction="iso", global=FALSE)
+plot(E, xlim=c(0,1), lwd=2, legend=TRUE, main="b")
+abline(v=0.35, lty=2, lwd=1, col="grey"); abline(v=0.65, lty=2, lwd=1, col="grey")
+text(0.37,0, label="0.35", col="grey"); text(0.67,0, label="0.65", col="grey")
+
+nn <- nncross(lithic.A.pp3, Eleph.pp3, what="dist")
+hist(nn, prob=TRUE, xlab="meter", main="c")
+lines(density(nn, bw="nrd"), col="#a51e37", lwd=2)
+
+dev.off()
+```
+
+## References

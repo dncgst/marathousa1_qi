@@ -1,0 +1,483 @@
+---
+title: "Beyond maps: Patterns of formation processes at the Middle Pleistocene open-air site of Marathousa~1, Megalopolis Basin, Greece"
+subtitle: "Vertical distribution analysis"
+author: "Domenico Giusti"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+bibliography: "../doc/manuscript/marathousa_rr.bib"
+output: 
+  html_document: 
+    fig_caption: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# load packages: spatial analysis
+library(sp)
+library(rgdal)
+library(raster)
+library(maptools)
+library(gtools)
+library(mapproj)
+library(spatstat)
+```
+
+## Reading and subsetting data
+
+```{r}
+# read data
+getwd()
+setwd("/home/dncgst/projects/marathousa1_qi")
+
+lithic_Kdb <- read.csv("data/lithic_Kdb.csv", header=TRUE, sep=",", skip=0)
+
+## Area A
+### subset archaeological and paleontological material from area A
+lithic.A <- lithic_Kdb[which(lithic_Kdb$area == "A"),]
+fossil_KdbA <- read.csv("data/fossil_KdbA.csv", header=TRUE, sep=",", skip=0)
+fossil.A <- fossil_KdbA[-which(fossil_KdbA$ORDER == "Proboscidea"),] # subset fossils not attribuited to order Proboscidea. This will exclude also tusk fragments which are probably, yet not certainly, attribuited to the same individual
+names(lithic.A)
+foo <- lithic.A[ , c("x","y","z","edm_best","Lithic.class","geo_takis","spit","length","width","thickness","unit","edm_id","date")]
+levels(foo$Lithic.class)
+names(foo)[5] <- "type"
+names(fossil.A)
+bar <- fossil.A[ , c("x","y","z","edm_best","TYPE","geo_takis","spit","length","width","thickness","unit","edm_id","date")]
+levels(bar$TYPE)
+names(bar)[5] <- "type"
+Xa <- rbind(foo, bar)
+summary(Xa)
+Xa$type <- factor(Xa$type)
+Xa$class <- Xa$type
+levels(Xa$class) <- c("Lithic","Lithic","Lithic","Lithic","Fauna","Fauna","Fauna","Fauna")
+summary(Xa)
+Xa <- Xa[-which(is.na(Xa$x)),]
+
+### jitter coordinates for sieve finds
+
+set.seed(0979)
+
+Xa$edm_best <- factor(Xa$edm_best)
+
+Xa$x[which(Xa$edm_best %in% c("Sample FLO","SF","SFA","SFB","SFPCN","SFPCW"))] <- jitter(Xa$x[which(Xa$edm_best %in% c("Sample FLO","SF","SFA","SFB","SFPCN","SFPCW"))], 1, 0.5)
+
+Xa$y[which(Xa$edm_best %in% c("Sample FLO","SF","SFA","SFB","SFPCN","SFPCW"))] <- jitter(Xa$y[which(Xa$edm_best %in% c("Sample FLO","SF","SFA","SFB","SFPCN","SFPCW"))], 1, 0.5)
+
+Xa$z[which(Xa$edm_best %in% c("Sample FLO","SF","SFA","SFB","SFPCN","SFPCW"))] <- Xa$z[which(Xa$edm_best %in% c("Sample FLO","SF","SFA","SFB","SFPCN","SFPCW"))] + 0.05
+Xa$z[which(Xa$edm_best %in% c("Sample FLO","SF","SFA","SFB","SFPCN","SFPCW"))] <- jitter(Xa$z[which(Xa$edm_best %in% c("Sample FLO","SF","SFA","SFB","SFPCN","SFPCW"))], 1, 0.05)
+summary(Xa)
+
+### save and export
+write.csv(Xa, file="data/Xa.csv", row.names=TRUE, na="NA")
+
+## Area B
+### subset archaeological and paleontological material from area B
+lithic.B <- lithic_Kdb[which(lithic_Kdb$area == "B"),]
+names(lithic.B)
+foo <- lithic.B[ , c("x","y","z","edm_best","Lithic.class","geo_takis","spit","length","width","thickness","unit","edm_id","date")]
+levels(foo$Lithic.class)
+names(foo)[5] <- "type"
+fossil_KdbB <- read.csv("data/fossil_KdbB.csv", header=TRUE, sep=",", skip=0)
+fossil.B <- fossil_KdbB
+names(fossil.B)
+bar <- fossil.B[ , c("x","y","z","edm_best","TYPE","geo_takis","spit","length","width","thickness","unit","edm_id","date")]
+names(bar)[5] <- "type"
+Xb <- rbind(foo, bar)
+summary(Xb)
+Xb$type <- factor(Xb$type)
+Xb$class <- Xb$type
+levels(Xb$class) <- c("Bone technology","Lithic","Lithic","Lithic","Lithic","Lithic", "Fauna","Bone technology","Fauna","Fauna")
+Xb <- Xb[-which(is.na(Xb$x)),]
+## remove double entries: bone technology & KN flake
+Xb[which(Xb$class == "Bone technology"),]
+Xb <- Xb[-which(Xb$type == "KN flake"),]
+
+### jitter collected finds coordinates
+Xb$edm_best <- factor(Xb$edm_best)
+
+Xb$x[which(Xb$edm_best %in% c("Sample FLO","SF","SFA","SFAC","SFB","SFC","SFD"))] <- jitter(Xb$x[which(Xb$edm_best %in% c("Sample FLO","SF","SFA","SFAC","SFB","SFC","SFD"))], 1, 0.25)
+
+Xb$y[which(Xb$edm_best %in% c("Sample FLO","SF","SFA","SFAC","SFB","SFC","SFD"))] <- jitter(Xb$y[which(Xb$edm_best %in% c("Sample FLO","SF","SFA","SFAC","SFB","SFC","SFD"))], 1, 0.25)
+
+Xb$z[which(Xb$edm_best %in% c("Sample FLO","SF","SFA","SFAC","SFB","SFC","SFD"))] <- Xb$z[which(Xb$edm_best %in% c("Sample FLO","SF","SFA","SFAC","SFB","SFC","SFD"))] + 0.025
+Xb$z[which(Xb$edm_best %in% c("Sample FLO","SF","SFA","SFAC","SFB","SFC","SFD"))] <- jitter(Xb$z[which(Xb$edm_best %in% c("Sample FLO","SF","SFA","SFAC","SFB","SFC","SFD"))], 1, 0.025)
+summary(Xb)
+
+#### save and export
+write.csv(Xb, file="data/Xb.csv", row.names=TRUE, na="NA")
+
+## Elephas
+### subset elephant coordinates, until 2015
+Elephas.ppp <- edm_Kdb[which(edm_Kdb$edm_best %in% c("Elephant bone","Elephant skull","Elephant tooth","Elephant tusk")),c("unit","edm_id","edm_suffix","edm_best","x","y","z","date")]
+class(Elephas.ppp$date)
+Elephas.ppp$date <- as.Date(Elephas.ppp$date, format="%Y-%m-%d")
+library(dplyr)
+Elephas.ppp <- dplyr::filter(Elephas.ppp, date < as.Date("2016-01-01"))
+write.csv(Elephas.ppp, file="../marathousa1_qi/data/Elephas.ppp.csv", row.names=TRUE, na="NA")
+```
+
+```{r}
+# reproducible research from here...
+getwd()
+setwd("/home/dncgst/projects/marathousa1_qi")
+Xa <- read.csv("data/Xa.csv", header=TRUE, sep=",", skip=0)
+Xb <- read.csv("data/Xb.csv", header=TRUE, sep=",", skip=0)
+Elephas.ppp <- read.csv("data/Elephas.ppp.csv", header=TRUE, sep=",", skip=0)
+```
+
+## IDW interpolation
+
+```{r}
+# read selection of surface points, Area A
+UA4_surf <- read.csv("data/UA4_surf.csv", header=TRUE, sep=",", skip=0)
+
+# window area A
+ogrInfo("data/shp/AreaA_2015.shp")
+unitsA_2015.shp <- readOGR("data/shp/AreaA_2015.shp", layer="AreaA_2015")
+proj4string(unitsA_2015.shp) <- CRS(as.character(NA))
+bbox(unitsA_2015.shp)
+
+# convert to ppp
+w <- as.owin(unitsA_2015.shp)
+plot(w)
+m <- as.numeric(UA4_surf$z)
+UA4_surf <- ppp(UA4_surf$x, UA4_surf$y, window=w, marks=m)
+UA4_surf <- as.ppp(UA4_surf)
+any(duplicated(UA4_surf))
+summary(UA4_surf)
+plot(UA4_surf)
+
+# IDW interpolation
+UA4_surf.idw <- spatstat::idw(UA4_surf, power=10, at="pixels", eps=0.01)
+plot(UA4_surf.idw, axes=TRUE, main="UA3c/4 erosional contact"); plot(w, add=TRUE)
+
+# read selection of surface points, Area B
+UB5a_surf <- read.csv("data/UB5a_surf_improved.csv", header=TRUE, sep=",", skip=0)
+
+# windows area B
+ogrInfo("data/shp/AreaB_2015.shp")
+unitsB_2015.shp <- readOGR("data/shp/AreaB_2015.shp", layer="AreaB_2015")
+proj4string(unitsB_2015.shp) <- CRS(as.character(NA))
+bbox(unitsB_2015.shp)
+
+# convert to ppp
+w <- as.owin(unitsB_2015.shp)
+m <- as.numeric(UB5a_surf$z)
+UB5a_surf <- ppp(UB5a_surf$x, UB5a_surf$y, window=w, marks=m)
+UB5a_surf <- as.ppp(UB5a_surf)
+any(duplicated(UB5a_surf))
+summary(UB5a_surf)
+plot(UB5a_surf)
+
+# IDW interpolation
+UB5a_surf.idw <- spatstat::idw(UB5a_surf, power=10, at="pixels", eps=0.01)
+plot(UB5a_surf.idw, axes=TRUE, main="UB4c/5a erosional contact"); plot(w, add=TRUE)
+```
+
+### Fig.3
+
+```{r}
+# fig.3: IDW interpolated UA3c/UA4 and UB4c/UB5a surfaces
+
+setEPS()
+
+# postscript("./doc/artwork/Fig3.eps", width=30, height=10)
+
+pdf("./doc/artwork/Fig3.pdf", width=30, height=10)
+
+par(mfcol=c(1,3), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+
+w <- as.owin(unitsA_2015.shp)
+plot(UA4_surf.idw, axes=TRUE, main="a"); plot(w, add=TRUE)
+library(GISTools)
+GISTools::north.arrow(xb=937.5, yb=677.5, len=0.05, lab="N", cex.lab=1)  
+GISTools::map.scale(xc=938.5, yc=677.5, len=1, units="meter", ndivs=1)
+
+w <- as.owin(unitsB_2015.shp)
+plot(UB5a_surf.idw, axes=TRUE, main="b"); plot(w, add=TRUE)
+GISTools::north.arrow(xb=933, yb=610, len=0.1, lab="N", cex.lab=1)
+GISTools::map.scale(xc=933.5, yc=608.5, len=1, units="meter", ndivs=1)
+
+z <- 2 * volcano        # Exaggerate the relief
+x <- 10 * (1:nrow(z))   # 10 meter spacing (S to N)
+y <- 10 * (1:ncol(z))   # 10 meter spacing (E to W)
+persp(x, y, z, theta=135, phi=10, col="gray", scale=FALSE,
+      ltheta=-120, shade=0.75, border=NA, box=FALSE, main="c")
+
+dev.off()
+```
+
+## Calculate minimum distance
+
+### Area A
+
+```{r}
+# subset points until 2015
+summary(Xa)
+Xa$date <- as.Date(Xa$date, format="%Y-%m-%d")
+library(dplyr)
+Xa <- dplyr::filter(Xa, date < as.Date("2016-01-01"))
+
+# convert dataframe to ppp, Area A
+w <- as.owin(unitsA_2015.shp)
+names(Xa)
+m <- Xa[,3:14]
+Xa.ppp <- ppp(Xa$x, Xa$y, window=w, marks=m)
+unitname(Xa.ppp) <- c("meter","meters")
+summary(Xa.ppp)
+## remove rejected points
+Xa.ppp <- as.ppp(Xa.ppp)
+any(duplicated(Xa.ppp))
+
+## plot
+plot(Xa.ppp$x, Xa.ppp$y, axes=TRUE, asp=1); plot(w, add=TRUE)
+plot(Xa.ppp$marks$class, main="Distribution of remains from area A")
+plot(droplevels(Xa.ppp$marks$geo_takis), main="Distribution of remains from area A")
+```
+
+Xa.ppp
+Marked planar point pattern:  405 points
+Average intensity 16.2 points per square meter
+Window area = 25 square meters
+UA3c     :279
+UA4      : 61
+
+```{r}
+# calculate minimum distance?  Difficult to quantify due to its not sharp nature --> "Likewise, in Area A the relative vertical distribution of remains from UA3c was estimated relative to the absolute elevation of the elephant remains and the range of elevations of the UA3c/4 surface.""
+summary(Xa.ppp)
+S <- UA4_surf.idw[Xa.ppp]
+summary(S)
+d <- Xa.ppp$marks$z-S
+Da <- cbind(as.data.frame(Xa.ppp), d)
+summary(Da)
+```
+
+Da: 405 obs.
+
+```{r}
+Da <- as.data.frame(Xa.ppp)
+```
+
+
+#### Fig.7
+
+```{r}
+# fig.7: Vertical distribution area A
+
+setEPS()
+
+#postscript("./doc/artwork/Fig7.eps", width=10, height=10)
+
+pdf("./doc/artwork/Fig7.pdf", width=10, height=10)
+
+par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+
+## UA3c
+hist(0, prob=TRUE, xlim=c(348.5,350), ylim=c(0,4), xlab=" meters a.s.l.", main="")
+rug(UA4_surf$marks, col="grey")
+rect(xleft=quantile(UA4_surf$marks, .25), xright=quantile(UA4_surf$marks, .75), ybottom=0, ytop=7, col="grey", border=NA, lwd=2)
+### Elephas
+hist(Elephas.ppp$z, nclass=30, prob=TRUE, col=NA, add=TRUE)
+### debris UA3c
+rug(Da[which(Da$geo_takis == "UA3c" & Da$type == "debris"),]$z, col="#e41a1c", lwd=2)
+lines(density(Da[which(Da$geo_takis == "UA3c" & Da$type == "debris"),]$z, bw="nrd"), col="#e41a1c", lwd=2)
+abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$type == "debris"),]$z), col="#e41a1c", lwd=1, lty=2)
+### debitage UA3c
+rug(Da[which(Da$geo_takis == "UA3c" & Da$type == "debitage"),]$z, col="#377eb8", lwd=2)
+abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$type == "debitage"),]$z), col="#377eb8", lwd=1, lty=2)
+### tool UA3c
+rug(Da[which(Da$geo_takis == "UA3c" & Da$type == "tool"),]$z, col="#4daf4a", lwd=2)
+abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$type == "tool"),]$z), col="#4daf4a", lwd=1, lty=2)
+### fauna UA3c
+lines(density(Da[which(Da$geo_takis == "UA3c" & Da$class == "Fauna"),]$z, bw="nrd"), col="#ff7f00", lwd=2)
+abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$class == "Fauna"),]$z), col="#ff7f00", lwd=1, lty=2)
+### fauna UA4
+lines(density(Da[which(Da$geo_takis == "UA4" & Da$class == "Fauna"),]$z, bw="nrd"), col="#ff7f00", lwd=2)
+abline(v=mean(Da[which(Da$geo_takis == "UA4" & Da$class == "Fauna"),]$z), col="#ff7f00", lwd=1, lty=2)
+
+legend(x="topright", c("UA3c/UA4 surface","debris/chip","flake","tool","fauna"), lty=1, lwd=2, col=c("grey","#e41a1c", "#377eb8", "#4daf4a", "#ff7f00"))
+
+dev.off()
+```
+
+### Area B
+
+```{r}
+# subset points until 2015
+summary(Xb)
+Xb$date <- as.Date(Xb$date, format="%Y-%m-%d")
+library(dplyr)
+Xb <- dplyr::filter(Xb, date < as.Date("2016-01-01"))
+
+# convert dataframe to ppp, Area B
+w <- as.owin(unitsB_2015.shp)
+names(Xb)
+m <- Xb[,3:14]
+Xb.ppp <- ppp(Xb$x, Xb$y, window=w, marks=m)
+unitname(Xb.ppp) <- c("meter","meters")
+summary(Xb.ppp)
+## remove rejected points
+Xb.ppp <- as.ppp(Xb.ppp)
+## deal with duplicated points
+any(duplicated(Xb.ppp))
+which(duplicated(Xb.ppp) == "TRUE")
+Xb.ppp <- Xb.ppp[!duplicated(Xb.ppp)]
+
+## plot
+plot(Xb.ppp$x, Xb.ppp$y, axes=TRUE, asp=1); plot(w, add=TRUE)
+plot(Xb.ppp$marks$class, main="Distribution of remains from area B")
+plot(droplevels(Xb.ppp$marks$geo_takis), main="Distribution of remains from area A")
+```
+
+Xb.ppp
+Marked planar point pattern:  1433 points
+Average intensity 49.44828 points per square meter
+Window area = 29 square meters
+UB4c   :1243
+UB5a   : 101
+
+```{r}
+# extract surface elevation at X positions and calculate minimum distance
+summary(Xb.ppp)
+S <- UB5a_surf.idw[Xb.ppp]
+summary(S)
+d <- Xb.ppp$marks$z-S
+Db <- cbind(as.data.frame(Xb.ppp), d)
+summary(Db)
+```
+
+Db: 1433 obs.
+
+#### Fig.8
+
+```{r}
+# colorbrewer2.org, 5 classes, qualitative
+# col <- c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00")
+```
+
+```{r}
+# fig.8: Vertical distribution area B
+
+setEPS()
+
+#postscript("./doc/artwork/Fig8.eps", width=20, height=10)
+
+pdf("./doc/artwork/Fig8.pdf", width=20, height=10)
+
+par(mfcol=c(1,2), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+
+## UB5a
+hist(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0),]$d, nclass=5, prob=TRUE, xlim=c(-0.6,0.1), ylim=c(0,14), xlab="d (meters)", main="a")
+rug(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debris"),]$d, col="#e41a1c", lwd=2)
+lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debris"),]$d, bw="nrd"), col="#e41a1c", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debris"),]$d), col="#e41a1c", lwd=1, lty=2)
+rug(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debitage"),]$d, col="#377eb8", lwd=2)
+lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debitage"),]$d, bw="nrd"), col="#377eb8", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debitage"),]$d), col="#377eb8", lwd=1, lty=2)
+rug(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "tool"),]$d, col="#4daf4a", lwd=2)
+lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "tool"),]$d, bw="nrd"), col="#4daf4a", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "tool"),]$d), col="#4daf4a", lwd=1, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$class == "Fauna"),]$d, bw="nrd"), col="#ff7f00", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$class == "Fauna"),]$d), col="#ff7f00", lwd=1, lty=2)
+legend(x="topright", c("debris","flake","tool","fossil"), lty=1, lwd=2, col=c("#e41a1c", "#377eb8", "#4daf4a", "#ff7f00"))
+
+## UB4c
+hist(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0),]$d, nclass=10, prob=TRUE, xlim=c(-0.1,0.6), ylim=c(0,7), xlab="d (meters)", main="b")
+rug(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debris"),]$d, col="#e41a1c", lwd=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debris"),]$d, bw="nrd"), col="#e41a1c", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debris"),]$d), col="#e41a1c", lwd=1, lty=2)
+rug(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debitage"),]$d, col="#377eb8", lwd=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debitage"),]$d, bw="nrd"), col="#377eb8", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debitage"),]$d), col="#377eb8", lwd=1, lty=2)
+rug(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "tool"),]$d, col="#4daf4a", lwd=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "tool"),]$d, bw="nrd"), col="#4daf4a", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "tool"),]$d), col="#4daf4a", lwd=1, lty=2)
+rug(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "core"),]$d, col="#984ea3", lwd=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "core"),]$d, bw="nrd"), col="#984ea3", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "core"),]$d), col="#984ea3", lwd=1, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$class == "Fauna"),]$d, bw="nrd"), col="#ff7f00", lwd=2)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$class == "Fauna"),]$d), col="#ff7f00", lwd=1, lty=2)
+legend(x="topright", c("debris","flake","tool","core","fossil"), lty=1, lwd=2, col=c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00"))
+
+dev.off()
+```
+
+## Tests
+
+```{r}
+# test normality assumption for the elephas
+foo <- Elephas.ppp$z
+boxplot(foo)
+m <- mean(foo)
+s <- sd(foo)
+hist(foo, prob=TRUE)
+curve(dnorm(x, mean=m, sd=s), col="red", lwd=2, add=TRUE)
+qqnorm(foo); qqline(foo, col="red", lwd=2)
+shapiro.test(foo)
+ks.test(foo, "pnorm")
+
+# mean & sd elevation of erosional contact UA3c/UA4
+summary(UA4_surf)
+sd(UA4_surf$marks)
+
+# student's t-test: compare debris/fauna distributions
+foo <- Da[which(Da$geo_takis == "UA3c" & Da$type == "debris"),]$z
+bar <- Da[which(Da$geo_takis == "UA3c" & Da$class == "Fauna"),]$z
+boxplot(foo)
+m <- mean(foo)
+s <- sd(foo)
+hist(foo, prob=TRUE)
+curve(dnorm(x, mean=m, sd=s), col="red", lwd=2, add=TRUE)
+qqnorm(foo); qqline(foo, col="red", lwd=2)
+t.test(foo, bar)
+
+foo <- Elephas.ppp$z
+bar <- Da[which(Da$geo_takis == "UA4" & Da$class == "Fauna"),]$z
+t.test(bar, foo)
+
+foo <- Db[which(Db$geo_takis == "UB5a" & Db$class == "Lithic"),]$z
+bar <- Db[which(Db$geo_takis == "UB5a" & Db$class == "Fauna"),]$z
+t.test(bar, foo)
+
+foo <- Db[which(Db$geo_takis == "UB4c" & Db$class == "Lithic"),]$z
+bar <- Db[which(Db$geo_takis == "UB4c" & Db$class == "Fauna"),]$z
+t.test(bar, foo)
+
+# one-way between groups ANOVA
+## data
+names(Db)
+foo <- Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$class == "Lithic"),c(5,15)]
+bar <- Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$class == "Fauna"),c(5,15)]
+baz <- rbind(foo, bar)
+baz$type <- factor(baz$type)
+levels(baz$type)
+levels(baz$type) <- c("core","debitage","debris","indet","fauna","fauna","tool","fauna")
+baz <- baz[-which(baz$type == "indet"),]
+baz <- baz[-which(baz$type == "core"),]
+baz$type <- factor(baz$type)
+summary(baz)
+str(baz)
+## eda
+boxplot(d ~ type, data=baz)
+## one-way between-groups anova
+out <- aov(d ~ type, data=baz)
+summary(out)
+## assessing test assumptions
+plot(out)
+plot(out, 1) # graphical test of homogeneity
+plot(out, 2) # graphical test of normality
+## Tukey Honestly Significant Difference test
+TukeyHSD(out)
+plot(TukeyHSD(out))
+## 
+library(gplots)
+gplots::plotmeans(d ~ type, data=baz)
+##
+library(multcomp)
+tuk <- multcomp::glht(out, linfct=mcp(type="Tukey"))
+plot(multcomp::cld(tuk, level=.05), col="lightgrey")
+```
+
+## References

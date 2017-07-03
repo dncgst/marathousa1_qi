@@ -1,0 +1,392 @@
+---
+title: "Beyond maps: Patterns of formation processes at the Middle Pleistocene open-air site of Marathousa~1, Megalopolis Basin, Greece"
+subtitle: "Point pattern analysis 2D"
+author: "Domenico Giusti"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+bibliography: "../doc/manuscript/marathousa_rr.bib"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# load packages: spatial analysis
+library(sp)
+library(rgdal)
+library(raster)
+library(maptools)
+library(gtools)
+library(mapproj)
+library(spatstat)
+```
+
+## Spatial data collection and sampling
+
+```{r}
+getwd()
+setwd("/home/dncgst/projects/marathousa1_qi")
+
+# Area A
+summary(Xa.ppp)
+plot(Xa.ppp, which.marks="class")
+summary(UA4_surf.idw)
+w <- as.owin(unitsA_2015.shp)
+plot(UA4_surf.idw, axes=TRUE, main="a"); plot(w, add=TRUE); plot(Xa.ppp, which.marks="class", add=TRUE)
+## subset UA3c & UA4
+UA3c.ppp <- Xa.ppp[Xa.ppp$marks$geo_takis == "UA3c"]
+summary(UA3c.ppp)
+UA4.ppp <- Xa.ppp[Xa.ppp$marks$geo_takis == "UA4"]
+summary(UA4.ppp)
+
+# Elephas
+Eleph.ppp <- Elephas.ppp
+summary(Eleph.ppp)
+w <- as.owin(unitsA_2015.shp)
+m <- Eleph.ppp["z"]
+Eleph.ppp <- ppp(Eleph.ppp$x, Eleph.ppp$y, window=w, marks=m)
+unitname(Eleph.ppp) <- c("meter","meters")
+summary(Eleph.ppp)
+Eleph.ppp <- as.ppp(Eleph.ppp)
+any(duplicated(Eleph.ppp))
+which(duplicated(Eleph.ppp) == "TRUE")
+Eleph.ppp <- Eleph.ppp[!duplicated(Eleph.ppp)]
+plot(unmark(Eleph.ppp))
+
+# Elephas .shp
+ogrInfo("data/shp/Elephas.shp")
+Elephas.shp <- readOGR("data/shp/Elephas.shp", layer="Elephas")
+proj4string(Elephas.shp) <- CRS(as.character(NA))
+bbox(Elephas.shp)
+plot(Elephas.shp)
+
+# area B
+summary(Xb.ppp)
+plot(Xb.ppp$marks$class)
+plot(Xb.ppp, which.marks="class")
+plot(Xb.ppp[Xb.ppp$marks$class=="Lithic"], which.marks = "type")
+summary(UB5a_surf.idw)
+w <- as.owin(unitsB_2015.shp)
+plot(UB5a_surf.idw, axes=TRUE, main="b"); plot(w, add=TRUE)
+## subset UB4c & UB5a
+UB4c.ppp <- Xb.ppp[Xb.ppp$marks$geo_takis == "UB4c"]
+UB5a.ppp <- Xb.ppp[Xb.ppp$marks$geo_takis == "UB5a"]
+summary(UB4c.ppp)
+summary(UB5a.ppp)
+```
+
+UA3c -- 279 points (Window area = 25 square meters; Average intensity 11.16 points per square meter): Fauna: 170 KN + 44 MF + 14 ZN + 1 ?(KN) = 229; Lithic: 46 debris + 2 debitage + 1 indet + 1 tool = 50
+
+UA4 -- 61 points (Window area = 25 square meters; Average intensity 2.44 points per square meter): Fauna: 45 KN + 8 MF + 4 ZN = 57; Lithic: 3 debris + 1 debitage = 4
+
+UB4c -- 1243 points (Window area = 29 square meters; Average intensity 42.86207 points per square meter) Bone technology: 1; Fauna: 246 KN + 28 ZN + 19 MF = 293; Lithic: 753 debris + 154 debitage + 34 tool + 6 core + 2 indet = 949
+
+UB5a -- 101 points (Window area = 29 square meters; Average intensity 3.482759 points per square meter) Fauna: 30 KN + 3 MF + 3 ZN = 36; Lithic: 12 debitage + 50 debris + 3 tool = 65
+
+## Exploratory Data Analysis
+
+### Intensity
+
+#### Unmarked point pattern
+
+> Intensity is the (localised) expected density of points per unit area. Is is typically interpreted as the rate of occurrence, abundance or incidence of the events recorded in the point pattern. [...] The main task for the analysis may be to quantify, to decide whether intensity is constant or spatially varying, or to map the spatial variation in intensity. If covariates are present, then the main task may be to investigate whether the intensity depends on the covariate [@Baddeley2016].
+
+```{r}
+# smoothing (non-parametric) estimation of intensity function
+
+## bandwidth selection
+bw.diggle(unmark(UB4c.ppp)) #assumes a Cox process
+bw.ppl(unmark(UB4c.ppp)) #assumes an inhomogeneous Poisson process
+
+## density plot
+### UA3c
+summary(UA3c.ppp)
+w <- as.owin(unitsA_2015.shp)
+plot(density(unmark(UA3c.ppp), sigma=bw.diggle(unmark(UA3c.ppp)), diggle=TRUE), axes=TRUE, main="UA3c"); plot(w, add=TRUE)
+e <- as.owin(Elephas.shp)
+plot(e, add=TRUE, pch=24, lwd=1, col="grey") #, border="red")
+### UB4c
+summary(UB4c.ppp)
+w <- as.owin(unitsB_2015.shp)
+plot(density(unmark(UB4c.ppp), sigma=bw.diggle(unmark(UB4c.ppp)), diggle=TRUE), axes=TRUE, main="UB4c"); plot(w, add=TRUE)
+### UB5a
+summary(UB5a.ppp)
+plot(density(unmark(UB5a.ppp), sigma=bw.diggle(unmark(UB5a.ppp)), diggle=TRUE), axes=TRUE, main="UB5a")
+
+## estimate of the standard error for the kernel estimate of intensity
+dse <- density(unmark(UB4c.ppp), diggle=TRUE, se=TRUE)$SE
+plot(density(unmark(UB4c.ppp), diggle=TRUE)); contour(dse, add=TRUE)
+```
+
+```{r}
+# intensity of a point process, as a function of a (continuous) spatial covariate.
+## UB4c as function of the erosional elevation model
+plot(UB5a_surf.idw, axes=TRUE, main="UB4c/UB5a surface")
+rho <- rhohat(unmark(UB4c.ppp), UB5a_surf.idw, smoother="local", method="transform", horvitz=FALSE)
+print(rho)
+plot(rho, main="Estimate of Intensity as Function of a Covariate")
+pred <- predict(rhohat(unmark(UB4c.ppp), UB5a_surf.idw))
+plot(pred)
+kden <- density(unmark(UB4c.ppp), sigma=bw.diggle(UB4c.ppp))
+plot(kden)
+pairs(pred,kden)
+plot(eval.im(kden - pred), axes=TRUE)
+```
+
+```{r}
+# tests based on exact values of a covariate
+## cumulative distribution function test of CSR
+cdf <- cdf.test(unmark(UB4c.ppp), UB5a_surf.idw, test="ks") #test="cvm"/"ad"
+cdf
+plot(cdf)
+## berman's tests (Z1, Z2)
+B <- berman.test(unmark(UB4c.ppp), UB5a_surf.idw)
+B <- berman.test(unmark(UB4c.ppp), UB5a_surf.idw, "Z2")
+B
+```
+
+Spatial Kolmogorov-Smirnov test of CSR in two dimensions: D = 0.11952, p-value = 7.772e-16 --> reject H0 of CSR in favor of the alternative H1 (dependence on the covariate)
+
+Berman Z1 test of CSR in two dimensions: Z1 = -0.0014606, p-value = 0.9988 --> fail to reject H0 of CSR
+
+Berman Z2 test of CSR in two dimensions: Z2 = -7.8447, p-value = 4.34e-15 --> reject H0 of CSR
+
+```{r}
+# strength of dependence on a covariate
+## > Even if we find significant evidence that the point process intensity  depends on the covariate Z, the effect of the covariate could still be quite weak [@Baddeley2016].
+### > For a covariate with strong disciminatory power, the ROC curve would lie substantially above the diagonal line [@Baddeley2016].
+plot(roc(unmark(UB4c.ppp), UB5a_surf.idw, high=TRUE))
+### > The AUC is a number between 0 and 1, with values close to 1 or 0 indicating strong discrimination, and value 0.5 indicating no discriminatin power. [...] The AUC is closely related to Berman's Z2 test but is a measure of the magnitude of the covariate effect rather than the strength of evidence for an affect [@Baddeley2016].
+auc(unmark(UB4c.ppp), UB5a_surf.idw, high=FALSE)
+```
+
+AUC: 0.5642324 suggest that the covariate effect has no disciminatory power on the pattern.
+
+#### Multitype point pattern
+
+> [...] we may want to know whether the intensity functions of the points of each type are proportional to each other, implying that the relative proportions of each type of point are constant over the study region. If not, the most extreme alternative is that the different types of points are 'segregated', tending to occupy different parts of the study region [@Baddeley2016].
+
+```{r}
+# multitype (class) point pattern
+foo <- UB4c.ppp
+summary(foo)
+marks(foo) <- marks(foo)[,"class"]
+foo <- subset(foo, foo$marks != "Bone technology")
+foo$marks <- factor(foo$marks)
+plot(split(foo))
+intensity(foo)
+plot(density(split(foo)))
+plot(relrisk(foo, diggle=TRUE))
+
+# multitype (type) point pattern
+foo <- UB4c.ppp[which(UB4c.ppp$marks$class == "Lithic")]
+bar <- UB4c.ppp[which(UB4c.ppp$marks$class == "Fauna")]
+baz <- superimpose(foo, bar)
+summary(baz)
+baz$marks$type <- factor(baz$marks$type)
+levels(baz$marks$type)
+levels(baz$marks$type) <- c("core","debitage","debris","indet","fauna","fauna","tool","fauna")
+baz <- baz[-which(baz$marks$type == "indet")]
+baz$marks$type <- factor(baz$marks$type)
+summary(baz)
+marks(baz) <- marks(baz)[,"type"]
+intensity(baz)
+plot(split(baz))
+plot(density(split(baz)))
+```
+
+      core   debitage     debris      fauna       tool 
+ 0.2068966  5.3103448 25.9655172 10.1034483  1.1724138
+
+### Interaction
+
+> One reason for investigating covariate effects is to adjust for them when studying interaction between points [@Baddeley2016].
+
+> _Interpoint interaction_ is the conventional term for stochastic dependence between points. This cover a wide range of behaviour, since the only point processes which do not exhibit stochastic dependence are the Poisson processes. [...] The main task for analysis may be to decide whether there is stochastic dependence, to determine the type of dependence (e.g., positive or negative association), or to quantify its strength and spatial range [@Baddeley2016].
+
+> Independence between points of type _i_ and _j_ means that two point processes, consisting of points of type _i_ and points of type _j_, respectively, are independent point processes, but does not imply anything about their spatial pattern [@Baddeley2016].
+
+#### Correlation
+
+##### Unmarked point pattern
+
+> A standard statistical tool for measuring dependence is _correlation_, or more generally _covariance_ [@Baddeley2016].
+
+> In the point process context, [...] we must have good knowledge of the intensity before we can trust the correlation. Second, the correlation is merely a summary index of statistical association, not a characterisation of dependence or causality: 'correlation is not causation'. Using only correlation we cannot discriminate between different possible cause of spatial clustering [@Baddeley2016].
+
+```{r}
+# unmarked point pattern, assuming homogeneity
+plot(Kest(unmark(UB4c.ppp)), pty="s")
+plot(pcf(unmark(UB4c.ppp)))
+# pointwise envelopes
+E <- envelope.ppp(unmark(UB4c.ppp), Kest, nsim=19, rank=1, global=FALSE, correction="Ripley"); plot(E, main="Pointwise envelope UB4c")
+# global envelopes
+plot(envelope.ppp(unmark(UB4c.ppp), Kest, nsim=19, rank=1, global=TRUE, correction="Ripley"), main="Global envelope UB4c")
+plot(envelope.ppp(unmark(UB4c.ppp), Lest, nsim=19, global=TRUE, correction="Ripley"), main="Global envelope UB4c")
+```
+
+```{r}
+# unmarked point pattern, accounting for inhomogeneity (covariate)?
+## /!\ the inhomogeneous k-function does not apply to every spatially inhomogeneous point process; it applies only when the point process is correlation-stationary! Substantial differences between the estimates of the inhomgeneous k-function obtained from different subset of the data, or obtained using different edge corrections, would suggest that this assumption is false.
+plot(Kinhom(unmark(UB4c.ppp), UB5a_surf.idw, correction="all"))
+plot(Kinhom(UB4c.ppp[which(UB4c.ppp$marks$type == "debris")], UB5a_surf.idw, correction="all"))
+plot(Kinhom(UB4c.ppp[which(UB4c.ppp$marks$type == "debitage")], UB5a_surf.idw, correction="all"))
+```
+
+> If analysis shows that K(r) > Kpois(r), the careful scientist will not say that this 'indicates' clustering, but that it is 'consistent with' clustering, or that it indicates 'positive association' between points [@Baddeley2016].
+
+> Spatial clustering does not imply that the points are organised into identifiable 'clusters'; merely that they are closer together than would be expected for a completely random pattern [@Baddeley2016].
+
+##### Multitype point pattern
+
+```{r}
+foo <- superimpose(UB4c.ppp, UB5a.ppp)
+summary(foo)
+marks(foo) <- factor(foo$marks$geo_takis)
+plot(split(foo))
+```
+
+```{r}
+# nearest-neighbour distances between pairs of points
+plot(nndist(foo, by=marks(foo)))
+# nearest-neighbour correlation
+nncorr(foo)
+```
+
+```{r}
+# cross-type K function
+## multitype K function which counts the expected number of points of type j within a given distance of a point of type i. It measure the dependence or association between types i and j. Suppose the points of type i and j are independent. The H0 is consistent with independence between points of type i and j. It does not imply that the points are Poisson.
+plot(Kcross(foo, i="UB4c", j="UB5a"))
+plot(alltypes(foo, Kcross))
+plot(envelope.ppp(foo, Kcross, nsim=19, i="UB4c", j="UB5a", rank=1, global=FALSE, correction="Ripley"), main="Pointwise envelope of the homogeneous cross-type K function", legend=FALSE)
+```
+
+```{r}
+# test for independence of components
+E <- envelope.ppp(foo, Kcross, nsim=19, i="UB4c", j="UB5a", global=FALSE, correction="Ripley", simulate=expression(rshift(foo, edge="erode", radius=0.1)))
+## Error: Torus (periodic) boundary is only meaningful for rectangular windows --> edge= options are "torus", "erode" and "none"
+E <- envelope.ppp(foo, Lcross, nsim=19, i="UB4c", j="UB5a", simulate=expression(rshift(foo, edge="erode", radius=0.1)))
+E <- envelope.ppp(foo, pcfcross, nsim=19, i="UB4c", j="UB5a", simulate=expression(rshift(foo, edge="erode", radius=0.1)))
+plot(E, xlim=c(0,.4), ylim=c(0,4), main="")
+```
+
+```{r}
+# test of random labelling
+E <- envelope.ppp(baz, Kdif, nsim=19, i="debris", j="debitage", global=FALSE, correction="Ripley", simulate=expression(rlabel(baz)))
+E <- envelope.ppp(baz, Kdif, nsim=19, i="debris", j="tool", global=FALSE, correction="Ripley", simulate=expression(rlabel(baz)))
+E <- envelope.ppp(baz, Kdif, nsim=19, i="debris", j="core", global=FALSE, correction="Ripley", simulate=expression(rlabel(baz)))
+E <- envelope.ppp(baz, Kdif, nsim=19, i="debris", j="fauna", global=FALSE, correction="Ripley", simulate=expression(rlabel(baz)))
+plot(E)
+```
+
+```{r}
+E <- alltypes(baz, Kcross, nsim=19, envelope=TRUE, global=FALSE, correction="Ripley", verb=TRUE)
+plot(E)
+```
+
+###### Fig.11
+
+```{r}
+# fig.11: area B, multitype correlation (Pointwise envelopes)
+setEPS()
+
+#postscript("./doc/artwork/Fig11.eps", width=20, height=20)
+
+pdf("./doc/artwork/Fig11.pdf", width=20, height=20)
+
+par(mfcol=c(2,2), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+
+set.seed(0979)
+
+E <- envelope.ppp(baz, Kdif, nsim=199, i="debris", j="debitage", global=FALSE, correction="Ripley", simulate=expression(rlabel(baz)))
+plot(E, lwd=2, main="a")
+
+E <- envelope.ppp(baz, Kdif, nsim=199, i="debris", j="core", global=FALSE, correction="Ripley", simulate=expression(rlabel(baz)))
+plot(E, lwd=2, main="c")
+
+E <- envelope.ppp(baz, Kdif, nsim=199, i="debris", j="tool", global=FALSE, correction="Ripley", simulate=expression(rlabel(baz)))
+plot(E, lwd=2, main="b")
+
+E <- envelope.ppp(baz, Kdif, nsim=199, i="debris", j="fauna", global=FALSE, correction="Ripley", simulate=expression(rlabel(baz)))
+plot(E, lwd=2, main="d")
+
+dev.off()
+```
+
+#### Spacing
+
+##### Unmarked point pattern
+
+> Aditional information about a point pattern can often be revealed by measuring _spacings_ or _shortest distances_ in the pattern, such as the 'nearest-neighbour' distance from each data point to the nearest other data point. [...] The shortest distances in a point pattern provide information which is complementary to the correlation structure. A good statistical analysis of spatial point patterns should therefore study both correlation and the shortest distances [@Baddeley2016].
+
+```{r}
+# nearest-neighbour distances
+plot(Gest(unmark(UB4c.ppp)))
+plot(envelope.ppp(unmark(UB4c.ppp), Gest, nsim=19))
+```
+
+```{r}
+# empty-space distances
+plot(Fest(unmark(UB4c.ppp)))
+plot(envelope.ppp(unmark(UB4c.ppp), Fest, nsim=19))
+```
+
+```{r}
+# J-function
+plot(Jest(UB4c.ppp))
+```
+
+##### Multitype point pattern
+
+```{r}
+# G-function
+plot(Gcross(foo, i="UB4c", j="UB5a"))
+plot(Gcross(foo, i="UB5a", j="UB4c"))
+E <- envelope.ppp(foo, Gcross, nsim=19, i="UB4c", j="UB5a")
+plot(E)
+```
+
+### Fig.10
+
+```{r}
+# fig.10: area B
+setEPS()
+
+#postscript("./doc/artwork/Fig10.eps", width=20, height=20)
+
+pdf("./doc/artwork/Fig10.pdf", width=20, height=20)
+
+layout(matrix(c(1,2,3,4,4,5), 2, 3, byrow = TRUE), widths=c(1,1,2), heights=c(1,1))
+#layout.show(nf)
+par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+
+set.seed(0979)
+
+w <- as.owin(unitsB_2015.shp)
+plot(density(unmark(UB4c.ppp), sigma=bw.diggle(unmark(UB4c.ppp)), diggle=TRUE), axes=TRUE, main="a"); plot(w, add=TRUE)
+library(GISTools)
+GISTools::north.arrow(xb=933, yb=610, len=0.1, lab="N", cex.lab=1)
+GISTools::map.scale(xc=933.5, yc=608.5, len=1, units="meter", ndivs=1)
+
+plot(density(unmark(UB5a.ppp), sigma=bw.diggle(unmark(UB5a.ppp)), diggle=TRUE), axes=TRUE, main="b"); plot(w, add=TRUE)
+GISTools::north.arrow(xb=933, yb=610, len=0.1, lab="N", cex.lab=1)
+GISTools::map.scale(xc=933.5, yc=608.5, len=1, units="meter", ndivs=1)
+
+rho <- rhohat(unmark(UB4c.ppp), UB5a_surf.idw, smoother="local", method="transform", horvitz=FALSE)
+plot(rho, main="c")
+
+E <- envelope.ppp(foo, pcfcross, nsim=199, i="UB4c", j="UB5a", simulate=expression(rshift(foo, edge="erode", radius=0.1)))
+plot(E, xlim=c(0,.8), ylim=c(0,4), main="d")
+abline(v=0.3, lty=2, lwd=1, col="grey")
+text(0.35,0, label="0.3", col="grey")
+
+E <- envelope.ppp(foo, Gcross, nsim=199, i="UB4c", j="UB5a")
+plot(E, main="e")
+abline(v=0.3, lty=2, lwd=1, col="grey")
+text(0.35,0, label="0.3", col="grey")
+
+dev.off()
+```
+
+## References
