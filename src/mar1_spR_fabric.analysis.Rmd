@@ -441,7 +441,7 @@ setEPS()
 
 #postscript("./doc/artwork/Fig5.eps", width=20, height=10)
 
-pdf("./doc/artwork/Fig5_.pdf", width=20, height=10)
+pdf("./doc/artwork/Fig5_r.pdf", width=20, height=10)
 
 par(mfcol=c(1,2), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
@@ -467,17 +467,17 @@ abline(3,-1,col="grey",lty=1)
 text(1.7,1.5,label="C=3",col="grey",lwd=.02)
 ##
 PlotPTsmooth(UA3c.fabric$bearing,UA3c.fabric$plunge,x=log(UA3c.s2_s3),y=log(UA3c.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
-text(.8,.4,label="UA3c",col="black",lwd=.04)
+text(.5,.75,label="UA3c",col="black",lwd=.04)
 PlotPTsmooth(UA4.fabric$bearing,UA4.fabric$plunge,x=log(UA4.s2_s3),y=log(UA4.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
-text(1.9,.6,label="UA4",col="black",lwd=.04)
+text(1.5,.5,label="UA4",col="black",lwd=.04)
 #PlotPTsmooth(Elephas.fabric$bearing,Elephas.fabric$plunge,x=log(E.s2_s3),y=log(E.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
 #text(2.1,.1,label="Eleph.",col="black",lwd=.04)
 PlotPTsmooth(Elephas.fabric$bearing,Elephas.fabric$plunge,x=log(E63.s2_s3),y=log(E63.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
-text(1.8,.1,label="Eleph.",col="black",lwd=.04)
+text(1.3,.75,label="Eleph.",col="black",lwd=.04)
 PlotPTsmooth(UB4c_clock.fabric$bearing,UB4c_clock.fabric$plunge,x=log(UB4c_clock.s2_s3),y=log(UB4c_clock.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
-text(.4,.02,label="UB4c (clock)",col="black",lwd=.04)
+text(.4,.35,label="UB4c (clock)",col="black",lwd=.04)
 PlotPTsmooth(UB4c_comp.fabric$bearing,UB4c_comp.fabric$plunge,x=log(UB4c_comp.s2_s3),y=log(UB4c_comp.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
-text(.5,.5,label="UB4c (comp)",col="black",lwd=.04)
+text(.8,.02,label="UB4c (comp)",col="black",lwd=.04)
 
 ##
 text(1.45,1.65,label="WEAK <--> STRONG",col="gray",lwd=.03,srt=45,pos=1)
@@ -491,11 +491,11 @@ lines(x=s1s3_test$N, y=log(s1s3_test$X99.), type="b", col="grey", lty=2, add=TRU
 points(C$V2, log(C$V1), pch=21, bg="#a51e37", col="#a51e37", cex=2, add=TRUE)
 text(10,1, label="RANDOM",col="grey", lwd=.02)
 text(25,2, label="SIGNIFICANT",col="grey",lwd=.02)
-text(49,1.05, label="UA3c",col="black",lwd=.02)
-text(38,2.45, label="UA4",col="black", lwd=.02)
-text(63,2.2, label="Eleph.",col="black", lwd=.02)
-text(86,.4, label="UB4c (clock)",col="black", lwd=.02)
-text(66,.95, label="UB4c (comp)",col="black", lwd=.02)
+text(49,1.07, label="UA3c",col="black",lwd=.02)
+text(38,1.86, label="UA4",col="black", lwd=.02)
+text(63,1.92, label="Eleph.",col="black", lwd=.02)
+text(86,.32, label="UB4c (clock)",col="black", lwd=.02)
+text(65,.45, label="UB4c (comp)",col="black", lwd=.02)
 
 dev.off()
 ```
@@ -549,24 +549,24 @@ setEPS()
 
 #postscript("./doc/artwork/Fig6.eps", width=12, height=10)
 
-pdf("./doc/artwork/Fig6_.pdf", width=12, height=10)
+pdf("./doc/artwork/Fig6_r.pdf", width=12, height=10)
 
 par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 # benn diagram
 triax.plot(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), show.grid=TRUE, pch=16, cex.ticks=.8, cex.axis=1, axis.labels=c("","Elongation Index\n EL=1-(S2/S1)","Isotropy Index\n IS=S3/S1"), tick.labels=list(l=seq(0.1,0.9,by=0.1), r=seq(0.1,0.9,by=0.1), b=NULL)) #, main="Benn diagram")
 triax.points(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
-text(.44,.33, label="UA3c", lwd=.02)
+text(.58,.33, label="UA3c", lwd=.02)
 triax.points(matrix(c(UA4.bs,UA4.el,UA4.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
 text(.4,.11, label="UA4", lwd=.02)
 #triax.points(matrix(c(E.bs,E.el,E.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
 #text(.3,.11, label="Eleph.", lwd=.02)
 triax.points(matrix(c(E63.bs,E63.el,E63.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
-text(.3,.14, label="Eleph.", lwd=.02)
+text(.5,.18, label="Eleph.", lwd=.02)
 triax.points(matrix(c(UB4c_clock.bs,UB4c_clock.el,UB4c_clock.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
-text(.42,.53, label="UB4c (clock)", lwd=.02)
+text(.42,.51, label="UB4c (clock)", lwd=.02)
 triax.points(matrix(c(UB4c_comp.bs,UB4c_comp.el,UB4c_comp.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
-text(.48,.4, label="UB4c (comp)", lwd=.02)
+text(.48,.44, label="UB4c (comp)", lwd=.02)
 text(0.5,0.9, label="isotropic")
 text(-0.1,0, label="planar")
 text(1.1,0, label="linear")
