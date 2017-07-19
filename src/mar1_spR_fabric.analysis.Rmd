@@ -330,16 +330,17 @@ qpoint(deg(bearing), 90-deg(plunge), col=4, pch=16, cex=.5)
 ### Randomness testing in three-dimensional orientation data
 
 ```{r}
-plunge <- UA3c.fabric$plunge
-bearing <- UA3c.fabric$bearing
-plunge <- UA4.fabric$plunge
-bearing <- UA4.fabric$bearing
-plunge <- Elephas.fabric$plunge
-bearing <- Elephas.fabric$bearing
-plunge <- UB4c_clock.fabric$plunge
-bearing <- UB4c_clock.fabric$bearing
-plunge <- UB4c_comp.fabric$plunge
-bearing <- UB4c_comp.fabric$bearing
+# Angles are in radians, not degrees!!!
+plunge <- rad(UA3c.fabric$plunge)
+bearing <- rad(UA3c.fabric$bearing)
+plunge <- rad(UA4.fabric$plunge)
+bearing <- rad(UA4.fabric$bearing)
+plunge <- rad(Elephas.fabric$plunge)
+bearing <- rad(Elephas.fabric$bearing)
+plunge <- rad(UB4c_clock.fabric$plunge)
+bearing <- rad(UB4c_clock.fabric$bearing)
+plunge <- rad(UB4c_comp.fabric$plunge)
+bearing <- rad(UB4c_comp.fabric$bearing)
 ```
 
 > One problem in applying the S1/S3 test is that the eigenvector method cannot cope adeguately with certain types of multimodal data [@Woodcock1977]. For this reason the test, as with most other tests reviewed here, could wrongly return a random result from a dataset consisting of several individually significant modes or superimposed samples. [...] For this reason we recommended inspectiong the form of the data on an equal-area plot before accepting the results of any randomness test. If several modes appear to be present then some independent test for multimodality [e.g. @Bailey1975] should be made, together with some attempt to separate data from the various modes [@Kohlbeck&Scheidegger1977] before proceeding further [@Woodcock1983,p.548].
