@@ -195,17 +195,17 @@ UB5a_comp -- 7 obs (7KN) with bearing/plunge information; elongation index >= 1.
 
 setEPS()
 
-#postscript("./doc/artwork/Fig4.eps", width=25, height=5)
+postscript("./doc/artwork/Fig4.eps", width=25, height=5)
 
-pdf("./doc/artwork/Fig4_.pdf", width=25, height=5)
+pdf("./doc/artwork/Fig4.pdf", width=25, height=5)
 
 par(mfcol=c(1,5), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
-heR.Misc::rose(UA3c.fabric$bearing, bins=12, col="#a51e37", rings=TRUE, labels=TRUE, rscale=2, cex=1, main="a")
-heR.Misc::rose(UA4.fabric$bearing, bins=12, col="#a51e37", rings=TRUE, labels=TRUE, rscale=2, main="b")
-heR.Misc::rose(Elephas.fabric$bearing, bins=12, col="#a51e37", rings=TRUE, labels=TRUE, rscale=2, main="c")
-heR.Misc::rose(UB4c_clock.fabric$bearing, bins=12, col="#a51e37", rings=TRUE, labels=TRUE, rscale=2, main="d")
-heR.Misc::rose(UB4c_comp.fabric$bearing, bins=12, col="#a51e37", rings=TRUE, labels=TRUE, rscale=2, main="e")
+heR.Misc::rose(UA3c.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, cex=1, main="a")
+heR.Misc::rose(UA4.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="b")
+heR.Misc::rose(Elephas.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="c")
+heR.Misc::rose(UB4c_clock.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="d")
+heR.Misc::rose(UB4c_comp.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="e")
 
 dev.off()
 ```
@@ -440,14 +440,14 @@ C <- as.data.frame(cbind(c(UA3c.s1_s3, UA4.s1_s3, E63.s1_s3, UB4c_clock.s1_s3, U
 
 setEPS()
 
-#postscript("./doc/artwork/Fig5.eps", width=20, height=10)
+postscript("./doc/artwork/Fig5.eps", width=10, height=10)
 
 pdf("./doc/artwork/Fig5_r.pdf", width=20, height=10)
 
-par(mfcol=c(1,2), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,1), ps=12, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
 
 ## eigenvalues ratio graph
-plot(log(UA3c.s2_s3),log(UA3c.s1_s2),pch=15,xlim=c(0,3),ylim=c(0,3),xlab="ln S2/S3",ylab="ln S1/S2", main="a")
+plot(log(UA3c.s2_s3),log(UA3c.s1_s2),pch=15,xlim=c(0,3),ylim=c(0,3),xlab="ln S2/S3",ylab="ln S1/S2", main="Woodcock diagram")
 ## shape parameter K=ln(S1/S2)/ln(S2/S3) ranges from 0 (uniaxial girdles) to infinite (uniaxial clusters)
 abline(h=0,col="grey",lty=2)
 abline(v=0,col="grey",lty=2)
@@ -548,25 +548,25 @@ UB4c_comp.bs <- 1-(UB4c_comp.is+UB4c_comp.el)
 
 setEPS()
 
-#postscript("./doc/artwork/Fig6.eps", width=12, height=10)
+postscript("./doc/artwork/Fig6.eps", width=12, height=10)
 
 pdf("./doc/artwork/Fig6_r.pdf", width=12, height=10)
 
-par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+par(ps=12, cex=1, cex.main=1, cex.axis=1, cex.lab=1) # cex.main=2 for pub; 1 for poster 
 
 # benn diagram
-triax.plot(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), show.grid=TRUE, pch=16, cex.ticks=.8, cex.axis=1, axis.labels=c("","Elongation Index\n EL=1-(S2/S1)","Isotropy Index\n IS=S3/S1"), tick.labels=list(l=seq(0.1,0.9,by=0.1), r=seq(0.1,0.9,by=0.1), b=NULL)) #, main="Benn diagram")
-triax.points(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
+triax.plot(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), show.grid=TRUE, pch=16, cex.ticks=.8, cex.axis=1, axis.labels=c("","Elongation Index\n EL=1-(S2/S1)","Isotropy Index\n IS=S3/S1"), tick.labels=list(l=seq(0.1,0.9,by=0.1), r=seq(0.1,0.9,by=0.1), b=NULL), main="Benn diagram")
+triax.points(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.58,.33, label="UA3c", lwd=.02)
-triax.points(matrix(c(UA4.bs,UA4.el,UA4.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
+triax.points(matrix(c(UA4.bs,UA4.el,UA4.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.4,.11, label="UA4", lwd=.02)
-#triax.points(matrix(c(E.bs,E.el,E.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
+#triax.points(matrix(c(E.bs,E.el,E.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 #text(.3,.11, label="Eleph.", lwd=.02)
-triax.points(matrix(c(E63.bs,E63.el,E63.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
+triax.points(matrix(c(E63.bs,E63.el,E63.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.5,.18, label="Eleph.", lwd=.02)
-triax.points(matrix(c(UB4c_clock.bs,UB4c_clock.el,UB4c_clock.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
+triax.points(matrix(c(UB4c_clock.bs,UB4c_clock.el,UB4c_clock.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.42,.51, label="UB4c (clock)", lwd=.02)
-triax.points(matrix(c(UB4c_comp.bs,UB4c_comp.el,UB4c_comp.is),ncol=3,byrow=2), pch=16, col="#a51e37", cex=2)
+triax.points(matrix(c(UB4c_comp.bs,UB4c_comp.el,UB4c_comp.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.48,.44, label="UB4c (comp)", lwd=.02)
 text(0.5,0.9, label="isotropic")
 text(-0.1,0, label="planar")

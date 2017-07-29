@@ -183,7 +183,7 @@ plot(UB5a_surf.idw, axes=TRUE, main="UB4c/5a erosional contact"); plot(w, add=TR
 
 setEPS()
 
-# postscript("./doc/artwork/Fig3.eps", width=30, height=10)
+postscript("./doc/artwork/Fig3.eps", width=30, height=10)
 
 pdf("./doc/artwork/Fig3.pdf", width=30, height=10)
 
