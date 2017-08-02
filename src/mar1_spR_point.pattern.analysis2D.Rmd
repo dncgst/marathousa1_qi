@@ -291,7 +291,7 @@ plot(E)
 # fig.11: area B, multitype correlation (Pointwise envelopes)
 setEPS()
 
-#postscript("./doc/artwork/Fig11.eps", width=20, height=20)
+postscript("./doc/artwork/Fig11.eps", width=20, height=20)
 
 pdf("./doc/artwork/Fig11.pdf", width=20, height=20)
 
@@ -353,13 +353,13 @@ plot(E)
 # fig.10: area B
 setEPS()
 
-#postscript("./doc/artwork/Fig10.eps", width=20, height=20)
+postscript("./doc/artwork/Fig10.eps", width=10, height=10)
 
 pdf("./doc/artwork/Fig10.pdf", width=20, height=20)
 
 layout(matrix(c(1,2,3,4,4,5), 2, 3, byrow = TRUE), widths=c(1,1,2), heights=c(1,1))
 #layout.show(nf)
-par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+par(ps=12, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
 
 set.seed(0979)
 
