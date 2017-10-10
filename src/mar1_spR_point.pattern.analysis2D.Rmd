@@ -86,6 +86,23 @@ UB5a -- 101 points (Window area = 29 square meters; Average intensity 3.482759 p
 
 ## Exploratory Data Analysis
 
+### Fig. 3
+
+```{r}
+# fig.3: distribution maps
+
+
+w <- as.owin(unitsA_2015.shp)
+plot(UA3c.ppp)
+plot(density(unmark(UA3c.ppp), sigma=bw.diggle(unmark(UA3c.ppp)), diggle=TRUE), axes=TRUE, main="a"); plot(w, add=TRUE); plot(b2, lwd=4, border="green", add=TRUE)
+d <- density(UA3c.ppp[UA3c.ppp$marks$class == "Lithic"], sigma=bw.diggle(UA3c.ppp[UA3c.ppp$marks$class == "Lithic"]), diggle=TRUE)
+contour.im(d, add=TRUE) # nlevels=4
+e <- as.owin(Elephas.shp)
+plot(e, add=TRUE, pch=24, lwd=2, col="grey") #, border="red")
+GISTools::north.arrow(xb=937.5, yb=677.5, len=0.05, lab="N", cex.lab=1)  
+GISTools::map.scale(xc=938.5, yc=677.5, len=1, units="meter", ndivs=1)
+```
+
 ### Intensity
 
 #### Unmarked point pattern

@@ -37,7 +37,6 @@
   volume    = {35},
   address   = {Jerusalem},
   journal   = {Publications of the Israel Academy of Sciences and Humanities},
-  keywords  = {Site formation processes, Fabric Analysis,},
 }
 
 @Article{Benito-Calvo2011a,
@@ -328,16 +327,14 @@
 }
 
 @Article{Dominguez-Rodrigo2017,
-  Title                    = {Fluvial spatial taphonomy: a new method for the study of post-depositional processes},
-  Author                   = {Domínguez-Rodrigo, Manuel and Cobo-Sánchez, Lucía and Yravedra, José and Uribelarrea, David and Arriaza, C.Carmen and Organista, Elia and Baquedano, Enrique},
-  Journal                  = {Archaeological and Anthropological Sciences},
-  Year                     = {2017},
-  Pages                    = {1--21},
-
-  Abstract                 = {Traditional taphonomic analyses do not consider the emergent properties resulting from the relationship of variables. Several of these emergent properties are expressed spatially. Here, we present a spatial taphonomic approach to the understanding of post-depositional processes affecting experimental assemblages modified by fluvial currents. Spatial statistical methods are a great tool to understand how different taphonomic variables relate at a spatial scale. The results of the application of this method to bone assemblages affected by low- and high-energy flows show the loss or modification of most of the original spatial taphonomic relationships. It also shows the degree of bone loss according to element, anatomical section and bone structure, and shape types. Anisotropy is identified in both experimental contexts. These results add new criteria to assess the impact of water flows in bone assemblages and contribute to define the properties of lag assemblages.},
-  Doi                      = {10.1007/s12520-017-0497-2},
-  ISSN                     = {1866-9565},
-  Keywords                 = {Site formation processes, Spatia Analysis, Point Pattern Analysis, Fauna Taphonomy,}
+  author   = {Domínguez-Rodrigo, Manuel and Cobo-Sánchez, Lucía and Yravedra, José and Uribelarrea, David and Arriaza, C.Carmen and Organista, Elia and Baquedano, Enrique},
+  title    = {Fluvial spatial taphonomy: a new method for the study of post-depositional processes},
+  journal  = {Archaeological and Anthropological Sciences},
+  year     = {2017},
+  pages    = {1--21},
+  issn     = {1866-9565},
+  abstract = {Traditional taphonomic analyses do not consider the emergent properties resulting from the relationship of variables. Several of these emergent properties are expressed spatially. Here, we present a spatial taphonomic approach to the understanding of post-depositional processes affecting experimental assemblages modified by fluvial currents. Spatial statistical methods are a great tool to understand how different taphonomic variables relate at a spatial scale. The results of the application of this method to bone assemblages affected by low- and high-energy flows show the loss or modification of most of the original spatial taphonomic relationships. It also shows the degree of bone loss according to element, anatomical section and bone structure, and shape types. Anisotropy is identified in both experimental contexts. These results add new criteria to assess the impact of water flows in bone assemblages and contribute to define the properties of lag assemblages.},
+  doi      = {10.1007/s12520-017-0497-2},
 }
 
 @Article{Dominguez-Rodrigo2014b,
@@ -381,7 +378,6 @@
   year      = {1975},
   author    = {Douglas-Hamilton, I. and Douglas-Hamilton, O.},
   address   = {New York},
-  keywords  = {Fauna Taphonomy, Elephantidae,},
 }
 
 @Article{Eren2010,
@@ -458,15 +454,13 @@
 }
 
 @Article{Haynes2012,
-  Title                    = {Elephants (and extinct relatives) as earth-movers and ecosystem engineers},
-  Author                   = {Gary Haynes},
-  Journal                  = {Geomorphology},
-  Year                     = {2012},
-  Note                     = {Special Issue Zoogeomorphology and Ecosystem Engineering Proceedings of the 42nd Binghamton Symposium in Geomorphology, held 21-23 October 2011},
-  Pages                    = {99 - 107},
-  Volume                   = {157–158},
-
-  Doi                      = {http://dx.doi.org/10.1016/j.geomorph.2011.04.045}
+  author  = {Gary Haynes},
+  title   = {Elephants (and extinct relatives) as earth-movers and ecosystem engineers},
+  journal = {Geomorphology},
+  year    = {2012},
+  volume  = {157–158},
+  pages   = {99 - 107},
+  doi     = {http://dx.doi.org/10.1016/j.geomorph.2011.04.045},
 }
 
 @Book{Haynes1991,
@@ -475,7 +469,6 @@
   year      = {1991},
   author    = {Haynes, G.},
   address   = {Cambridge},
-  keywords  = {Elephantidae,},
 }
 
 @InCollection{Hivernel1984,
@@ -532,16 +525,13 @@
 }
 
 @Book{Lenoble2005,
-  Title                    = {Ruissellement et formation des sites préhistoriques. Référentiel actualiste et exemple d'application au fossile},
-  Author                   = {Lenoble, A.},
-  Publisher                = {British Archaeological Report},
-  Year                     = {2005},
-
-  Address                  = {Oxford},
-  Series                   = {International Series},
-  Volume                   = {1363},
-
-  Keywords                 = {Site formation processes,}
+  title     = {Ruissellement et formation des sites préhistoriques. Référentiel actualiste et exemple d'application au fossile},
+  publisher = {British Archaeological Report},
+  year      = {2005},
+  author    = {Lenoble, A.},
+  volume    = {1363},
+  series    = {International Series},
+  address   = {Oxford},
 }
 
 @Article{Lenoble2004,
@@ -734,13 +724,11 @@
 }
 
 @TechReport{Pierson2005,
-  Title                    = {Distinguishing between debris flows and floods from field evidence in small watersheds},
-  Author                   = {Thomas C. Pierson},
-  Institution              = {U.S. Geological Survey},
-  Year                     = {2005},
-  Type                     = {USGS Numbered Series},
-
-  Keywords                 = {Site formation processes,}
+  author      = {Thomas C. Pierson},
+  title       = {Distinguishing between debris flows and floods from field evidence in small watersheds},
+  institution = {U.S. Geological Survey},
+  year        = {2005},
+  type        = {USGS Numbered Series},
 }
 
 @Manual{RCoreTeam2016,
@@ -907,22 +895,19 @@
   volume  = {55},
   number  = {3},
   pages   = {486 - 500},
-  note    = {Paleoanthropology of the Kibish Formation, Southern Ethiopia},
   doi     = {http://dx.doi.org/10.1016/j.jhevol.2008.05.016},
 }
 
 @Article{Stuart2010,
-  author   = {Anthony J. Stuart and Nigel R. Larkin},
-  title    = {{Taphonomy of the West Runton Mammoth}},
-  journal  = {Quaternary International},
-  year     = {2010},
-  volume   = {228},
-  number   = {1–2},
-  pages    = {217 - 232},
-  issn     = {1040-6182},
-  note     = {The West Runton Freshwater Bed and the West Runton Mammoth},
-  doi      = {http://dx.doi.org/10.1016/j.quaint.2010.06.024},
-  keywords = {Elephantidae,Fauna Taphonomy,},
+  author  = {Anthony J. Stuart and Nigel R. Larkin},
+  title   = {{Taphonomy of the West Runton Mammoth}},
+  journal = {Quaternary International},
+  year    = {2010},
+  volume  = {228},
+  number  = {1–2},
+  pages   = {217 - 232},
+  issn    = {1040-6182},
+  doi     = {http://dx.doi.org/10.1016/j.quaint.2010.06.024},
 }
 
 @Article{Tobler1970,
@@ -964,31 +949,26 @@
 }
 
 @Article{Vaquero2015,
-  author   = {Manuel Vaquero and Amèlia Bargalló and María Gema Chacón and Francesca Romagnoli and Pablo Sañudo},
-  title    = {{Lithic recycling in a Middle Paleolithic expedient context: Evidence from the Abric Romaní (Capellades, Spain)}},
-  journal  = {Quaternary International},
-  year     = {2015},
-  volume   = {361},
-  pages    = {212 - 228},
-  issn     = {1040-6182},
-  note     = {The Origins of Recycling: A Paleolithic Perspective},
-  doi      = {https://doi.org/10.1016/j.quaint.2014.05.055},
-  keywords = {Recycling, Refitting Analysis, Spatial Analysis, Middle Paleolithic},
+  author  = {Manuel Vaquero and Amèlia Bargalló and María Gema Chacón and Francesca Romagnoli and Pablo Sañudo},
+  title   = {{Lithic recycling in a Middle Paleolithic expedient context: Evidence from the Abric Romaní (Capellades, Spain)}},
+  journal = {Quaternary International},
+  year    = {2015},
+  volume  = {361},
+  pages   = {212 - 228},
+  issn    = {1040-6182},
+  doi     = {https://doi.org/10.1016/j.quaint.2014.05.055},
 }
 
 @Article{Vaquero2012,
-  Title                    = {{T}ime and space in the formation of lithic assemblages: {T}he example of {A}bric {R}omaní {L}evel {J}},
-  Author                   = {Manuel Vaquero and María Gema Chacón and María Dolores García-Antón and Bruno Gómez de Soler and Kenneth Martínez and Felipe Cuartero},
-  Journal                  = {Quaternary International},
-  Year                     = {2012},
-  Note                     = {<ce:title>The Neanderthal Home: spatial and social behaviours</ce:title>},
-  Number                   = {0},
-  Pages                    = {162 - 181},
-  Volume                   = {247},
-
-  Doi                      = {10.1016/j.quaint.2010.12.015},
-  ISSN                     = {1040-6182},
-  Keywords                 = {Middle, Paleolithic, Europe, Spain, Temporal uncertainty, Raw material, Catchment analysis, Site formation processes, Spatial Analysis,}
+  author  = {Manuel Vaquero and María Gema Chacón and María Dolores García-Antón and Bruno Gómez de Soler and Kenneth Martínez and Felipe Cuartero},
+  title   = {{T}ime and space in the formation of lithic assemblages: {T}he example of {A}bric {R}omaní {L}evel {J}},
+  journal = {Quaternary International},
+  year    = {2012},
+  volume  = {247},
+  number  = {0},
+  pages   = {162 - 181},
+  issn    = {1040-6182},
+  doi     = {10.1016/j.quaint.2010.12.015},
 }
 
 @Article{Villa1990,
@@ -1028,11 +1008,10 @@
 }
 
 @PhdThesis{Voorhies1966,
-  author   = {Voorhies, M.R.},
-  title    = {{Taphonomy and population dynamics of an early Pliocene vertebrate fauna, Knox County, Nebraska}},
-  school   = {University of Wyoming},
-  year     = {1966},
-  keywords = {Site formation processes, Taphonomy,},
+  author = {Voorhies, M.R.},
+  title  = {{Taphonomy and population dynamics of an early Pliocene vertebrate fauna, Knox County, Nebraska}},
+  school = {University of Wyoming},
+  year   = {1966},
 }
 
 @Article{Vugt2000,
@@ -1067,6 +1046,143 @@
   Volume                   = {5},
 
   Doi                      = {http://dx.doi.org/10.1016/0191-8141(83)90058-5}
+}
+
+@Article{Walter2013,
+  author    = {Marius J. Walter and Martin H. Trauth},
+  title     = {A \{MATLAB\} based orientation analysis of Acheulean handaxe accumulations in Olorgesailie and Kariandusi, Kenya Rift},
+  journal   = {Journal of Human Evolution},
+  year      = {2013},
+  volume    = {64},
+  number    = {6},
+  pages     = {569 - 581},
+  issn      = {0047-2484},
+  doi       = {http://dx.doi.org/10.1016/j.jhevol.2013.02.011},
+  timestamp = {2014.06.25},
+}
+
+@Article{Malinsky-Buller2011,
+  author    = {Ariel Malinsky-Buller and Erella Hovers and Ofer Marder},
+  title     = {{M}aking time: ‘{L}iving floors’, ‘palimpsests’ and site formation processes – {A} perspective from the open-air {L}ower {P}aleolithic site of {R}evadim {Q}uarry, {I}srael},
+  journal   = {Journal of Anthropological Archaeology},
+  year      = {2011},
+  volume    = {30},
+  number    = {2},
+  pages     = {89 - 101},
+  issn      = {0278-4165},
+  doi       = {10.1016/j.jaa.2010.11.002},
+  file      = {Malinsky-Buller2011.pdf:science_article/Malinsky-Buller2011.pdf:PDF},
+  keywords  = {Site formation processes, Lower, Paleolithic, Human settlement, Israel, GIS, Elephantidae,},
+  owner     = {dncgst},
+  timestamp = {2012.12.11},
+  url       = {http://www.sciencedirect.com/science/article/pii/S0278416510000632},
+}
+
+@Article{Hovers2014,
+  author    = {Erella Hovers and Ravid Ekshtain and Noam Greenbaum and Ariel Malinsky-Buller and Nadav Nir and Reuven Yeshurun},
+  title     = {{I}slands in a stream? {R}econstructing site formation processes in the late {M}iddle {P}aleolithic site of '{E}in {Q}ashish, northern {I}srael},
+  journal   = {Quaternary International},
+  year      = {2014},
+  number    = {0},
+  pages     = {-},
+  issn      = {1040-6182},
+  doi       = {http://dx.doi.org/10.1016/j.quaint.2014.01.028},
+  file      = {Hovers2014.pdf:science_article/Hovers2014.pdf:PDF},
+  keywords  = {Site formation processes, Israel, Middle, Paleolithic, Open-air},
+  owner     = {dncgst},
+  timestamp = {2014.03.31},
+  url       = {http://www.sciencedirect.com/science/article/pii/S1040618214000433},
+}
+
+@Article{Bailey2007,
+  author    = {Geoff Bailey},
+  title     = {{T}ime perspectives, palimpsests and the archaeology of time},
+  journal   = {Journal of Anthropological Archaeology},
+  year      = {2007},
+  volume    = {26},
+  number    = {2},
+  pages     = {198 - 223},
+  issn      = {0278-4165},
+  doi       = {10.1016/j.jaa.2006.08.002},
+  file      = {Bailey2007.pdf:science_article/Bailey2007.pdf:PDF},
+  keywords  = {Palimpsest, Time perspectivism, Timescale, Site formation processes,},
+  owner     = {dncgst},
+  timestamp = {2013.02.11},
+  url       = {http://www.sciencedirect.com/science/article/pii/S0278416506000481},
+}
+
+@Article{Bargallo2016,
+  author   = {Amèlia Bargalló and Maria Joana Gabucio and Florent Rivals},
+  title    = {Puzzling out a palimpsest: Testing an interdisciplinary study in level O of Abric Romaní},
+  journal  = {Quaternary International},
+  year     = {2016},
+  volume   = {417},
+  number   = {Supplement C},
+  pages    = {51 - 65},
+  issn     = {1040-6182},
+  note     = {Advances in Palimpsest Dissection},
+  doi      = {https://doi.org/10.1016/j.quaint.2015.09.066},
+  file     = {Bargallo2016.pdf:science_article/Bargallo2016.pdf:PDF},
+  keywords = {Site formation processes, Spatial analysis, Lithic taphonomy, Fauna taphonomy, Refitting analysis,},
+  url      = {http://www.sciencedirect.com/science/article/pii/S1040618215009635},
+}
+
+@Article{Gabucio2017,
+  author    = {Maria Joana Gabucio and María Cristina Fernández-Laso and Jordi Rosell},
+  title     = {Turning a rock shelter into a home. Neanderthal use of space in Abric Romaní levels M and O},
+  journal   = {Historical Biology},
+  year      = {2017},
+  volume    = {0},
+  number    = {0},
+  pages     = {1-24},
+  doi       = {10.1080/08912963.2017.1340470},
+  eprint    = {http://dx.doi.org/10.1080/08912963.2017.1340470},
+  file      = {Gabucio2017.pdf:science_article/Gabucio2017.pdf:PDF},
+  keywords  = {Spatial Analysis, Fauna Taphonomy, Neanderthal, Refitting Analysis,},
+  owner     = {dncgst},
+  timestamp = {2017.07.05},
+  url       = { 
+ http://dx.doi.org/10.1080/08912963.2017.1340470
+ 
+},
+}
+
+@Article{Texier2000,
+  author    = {Jean-Pierre Texier},
+  title     = {{A} propos des processus de formation des sites préhistoriques / {A}bout prehistoric site formation processes},
+  journal   = {Paléo},
+  year      = {2000},
+  volume    = {12},
+  number    = {1},
+  pages     = {379--386},
+  issn      = {1145-3370},
+  doi       = {10.3406/pal.2000.1610},
+  file      = {Texier2000.pdf:science_article/Texier2000.pdf:PDF},
+  keywords  = {Site formation processes,},
+  language  = {fre},
+  owner     = {dncgst},
+  publisher = {Société des amis du Musée national de préhistoire et de la recherche archéologique},
+  timestamp = {2012.12.19},
+  url       = {http://www.persee.fr/web/revues/home/prescript/article/pal_1145-3370_2000_num_12_1_1610},
+}
+
+@Article{Villa2004,
+  author   = {Paola Villa},
+  title    = {Taphonomy and stratigraphy in European prehistory},
+  journal  = {Before Farming},
+  year     = {2004},
+  volume   = {2004},
+  number   = {1},
+  pages    = {1-20},
+  abstract = { This paper reports on past and recent studies of archaeological stratigraphy and human occupation features at several Paleolithic cave and open air occurrences seen in the light of refitting, taphonomy and sedimentary context. The Lazaret, Lunel Viel, Fontbrégoua, Caminade, Ambrona and Grotta dei Moscerini occurrences are examined in detail. The adequacy and significance of samples and the value of the refitting method are discussed for some cases. The most successful interpretations of site function, behavioural patterns or models of cultural stratigraphy are those that integrate bone taphonomy or lithic analyses, whether or not based on refitting, with sedimentary and contextual analyses. Some occurrences show that taphonomy without contextual or stratigraphic controls is not likely to produce solid data and that honesty in inference requires that our interpretations do not imply more than we actually know. },
+  doi      = {10.3828/bfarm.2004.1.1},
+  eprint   = {https://doi.org/10.3828/bfarm.2004.1.1},
+  file     = {Villa2004.pdf:science_article/Villa2004.pdf:PDF},
+  keywords = {Site formation processes, Refitting analysis, Vertical distribution,},
+  url      = { 
+        https://doi.org/10.3828/bfarm.2004.1.1
+    
+},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

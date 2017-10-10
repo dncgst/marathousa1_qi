@@ -27,35 +27,32 @@ Text: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) Copyright holder
 
 ## Session info
 
-R version 3.3.3 (2017-03-06)
-Platform: i686-pc-linux-gnu (32-bit)
+R version 3.4.0 (2017-04-21)
+Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: Debian GNU/Linux 9 (stretch)
 
+Matrix products: default
+BLAS: /usr/lib/libblas/libblas.so.3.7.0
+LAPACK: /usr/lib/lapack/liblapack.so.3.7.0
+
 locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8       
+ [4] LC_COLLATE=en_US.UTF-8     LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                  LC_ADDRESS=C              
+[10] LC_TELEPHONE=C             LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods  
-[7] base     
+[1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] spatstat_1.51-0 rpart_4.1-10    nlme_3.1-131    mapproj_1.2-5  
- [5] maps_3.2.0      gtools_3.5.0    maptools_0.9-2  raster_2.5-8   
- [9] heR.Misc_0.0.8  lattice_0.20-34 plotrix_3.6-5   RFOC_3.4-3     
-[13] CircStats_0.2-4 boot_1.3-18     MASS_7.3-47     circular_0.4-93
-[17] sp_1.2-5       
+ [1] spatstat_1.53-2     rpart_4.1-11        nlme_3.1-131        spatstat.data_1.1-0 mapproj_1.2-5      
+ [6] maps_3.2.0          gtools_3.5.0        maptools_0.9-2      raster_2.5-8        rgdal_1.2-13       
+[11] heR.Misc_0.0.8      lattice_0.20-35     plotrix_3.6-6       RFOC_3.4-3          CircStats_0.2-4    
+[16] boot_1.3-19         MASS_7.3-47         circular_0.4-93     sp_1.2-5           
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.11         tensor_1.5           spatstat.utils_1.6-0
- [4] fields_9.0           tools_3.3.3          dotCall64_0.9-04    
- [7] grid_3.3.3           spam_2.1-0           mgcv_1.8-16         
-[10] RPMG_2.2-1           deldir_0.1-14        abind_1.4-5         
-[13] goftest_1.1-1        Matrix_1.2-8         splancs_2.01-40     
-[16] polyclip_1.6-1       GEOmap_2.4-0         MBA_0.0-9           
-[19] RSEIS_3.7-4          Rwave_2.4-5          mvtnorm_1.0-6       
-[22] foreign_0.8-67
+ [1] Rcpp_0.12.13         tensor_1.5           spatstat.utils_1.7-1 fields_9.0           tools_3.4.0         
+ [6] dotCall64_0.9-04     grid_3.4.0           spam_2.1-1           mgcv_1.8-17          RPMG_2.2-1          
+[11] deldir_0.1-14        abind_1.4-5          goftest_1.1-1        yaml_2.1.14          Matrix_1.2-10       
+[16] splancs_2.01-40      polyclip_1.6-1       GEOmap_2.4-0         MBA_0.0-9            compiler_3.4.0      
+[21] RSEIS_3.7-4          Rwave_2.4-5          mvtnorm_1.0-6        foreign_0.8-68

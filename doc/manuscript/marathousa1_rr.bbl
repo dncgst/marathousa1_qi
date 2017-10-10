@@ -1,4 +1,4 @@
-\begin{thebibliography}{76}
+\begin{thebibliography}{82}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -23,6 +23,13 @@ Baddeley, A., Rubak, E., Turner, R., 2015. {Spatial Point Patterns: Methodology
 Bar-Yosef, O., Tchernov, E., 1972. {On the palaeo-ecological history of the
   site of Ubeidiya}. Vol.~35. Israel Academy of Sciences and Humanities,
   Jerusalem.
+
+\bibitem[{Bargalló et~al.(2016)Bargalló, Gabucio, and Rivals}]{Bargallo2016}
+Bargalló, A., Gabucio, M.~J., Rivals, F., 2016. Puzzling out a palimpsest:
+  Testing an interdisciplinary study in level o of abric romaní. Quaternary
+  International 417~(Supplement C), 51 -- 65, advances in Palimpsest
+  Dissection.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S1040618215009635}
 
 \bibitem[{Benito-Calvo and de~la Torre(2011)}]{Benito-Calvo2011}
 Benito-Calvo, A., de~la Torre, I., 2011. {{A}nalysis of orientation patterns in
@@ -74,6 +81,12 @@ Bertran, P., Lenoble, A., Todisco, D., Desrosiers, P.~M., Sørensen, M., 2012.
 Bertran, P., Texier, J.-P., 1995. {F}abric {A}nalysis: {A}pplication to
   {P}aleolithic {S}ites. Journal of Archaeological Science 22~(4), 521 -- 535.
 
+\bibitem[{Bevan et~al.(2013)Bevan, Crema, Li, and Palmisano}]{Bevan2013a}
+Bevan, A., Crema, E., Li, X., Palmisano, A., 2013. {Intensities, Interactions,
+  and Uncertainties: Some New Approaches to Archaeological Distributions}. In:
+  Bevan, A., Lake, M. (Eds.), Computational Approaches to Archaeological
+  Spaces. Left Coast Press, Walnut Creek, pp. 27--52.
+
 \bibitem[{Boschian and Saccà(2010)}]{Boschian2010}
 Boschian, G., Saccà, D., 2010. {A}mbiguities in human and elephant
   interactions? {S}tories of bones, sand and water from {C}astel di {G}uido
@@ -95,6 +108,12 @@ Cobo-Sánchez, L., Aramendi, J., Domínguez-Rodrigo, M., 2014. {Orientation
   patterns of wildebeest bones on the lake Masek floodplain (Serengeti,
   Tanzania) and their relevance to interpret anisotropy in the Olduvai
   lacustrine floodplain}. Quaternary International 322–323~(0), 277 -- 284.
+
+\bibitem[{de~la Torre and Benito-Calvo(2013)}]{Torre2013a}
+de~la Torre, I., Benito-Calvo, A., 2013. {A}pplication of {GIS} methods to
+  retrieve orientation patterns from imagery; a case study from {B}eds {I} and
+  {II}, {O}lduvai {G}orge ({T}anzania). Journal of Archaeological Science
+  40~(5), 2446--2457.
 
 \bibitem[{Diggle(1985)}]{Diggle1985}
 Diggle, P., 1985. A kernel method for smoothing point process data. Applied
@@ -166,6 +185,13 @@ Eren, M.~I., Durant, A., Neudorf, C., Haslam, M., Shipton, C., Bora, J.,
   trampling effects on artifact movement in dry and water saturated substrates:
   a test case from South India}. Journal of Archaeological Science 37~(12),
   3010 -- 3021.
+
+\bibitem[{Gabucio et~al.(2017)Gabucio, Fernández-Laso, and
+  Rosell}]{Gabucio2017}
+Gabucio, M.~J., Fernández-Laso, M.~C., Rosell, J., 2017. Turning a rock
+  shelter into a home. neanderthal use of space in abric romaní levels m and
+  o. Historical Biology 0~(0), 1--24.
+\newline\urlprefix\url{http://dx.doi.org/10.1080/08912963.2017.1340470}
 
 \bibitem[{García-Moreno et~al.(2016)García-Moreno, Smith, Kindler, Pop,
   Roebroeks, Gaudzinski-Windheuser, and Klinkenberg}]{Garcia-Moreno2016}
@@ -244,6 +270,14 @@ López-Ortega, E., Rodríguez, X.~P., Vaquero, M., 2011. {L}ithic refitting and
   movement connections: the {NW} area of level {TD}10-1 at the {G}ran {D}olina
   site ({S}ierra de {A}tapuerca, {B}urgos, {S}pain). Journal of Archaeological
   Science 38~(11), 3112 -- 3121.
+
+\bibitem[{Malinsky-Buller et~al.(2011)Malinsky-Buller, Hovers, and
+  Marder}]{Malinsky-Buller2011}
+Malinsky-Buller, A., Hovers, E., Marder, O., 2011. {M}aking time: ‘{L}iving
+  floors’, ‘palimpsests’ and site formation processes – {A} perspective
+  from the open-air {L}ower {P}aleolithic site of {R}evadim {Q}uarry, {I}srael.
+  Journal of Anthropological Archaeology 30~(2), 89 -- 101.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0278416510000632}
 
 \bibitem[{Marwick(2017)}]{Marwick2017}
 Marwick, B., 2017. Computational reproducibility in archaeological research:
@@ -424,6 +458,11 @@ Villa, P., Courtin, J., 1983. The interpretation of stratified sites: A view
 Voorhies, M., 1966. {Taphonomy and population dynamics of an early Pliocene
   vertebrate fauna, Knox County, Nebraska}. Ph.D. thesis, University of
   Wyoming.
+
+\bibitem[{Walter and Trauth(2013)}]{Walter2013}
+Walter, M.~J., Trauth, M.~H., 2013. A \{MATLAB\} based orientation analysis of
+  acheulean handaxe accumulations in olorgesailie and kariandusi, kenya rift.
+  Journal of Human Evolution 64~(6), 569 -- 581.
 
 \bibitem[{Wood and Johnson(1978)}]{Wood1978}
 Wood, R.~W., Johnson, D.~L., 1978. A survey of disturbance processes in
