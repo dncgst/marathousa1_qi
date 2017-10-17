@@ -1,0 +1,229 @@
+---
+title: "Beyond maps: Patterns of formation processes at the Middle Pleistocene open-air site of Marathousa 1, Megalopolis Basin, Greece"
+subtitle: "Supplementary information: Testing the reliability of the clock-based circular data for fabric analysis"
+author: "Domenico Giusti"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+bibliography: "../doc/manuscript/marathousa_rr.bib"
+output: 
+  html_document: 
+    fig_caption: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# load packages: fabric analysis
+library(circular)
+library(CircStats)
+library(RFOC)
+library(plotrix)
+library(heR.Misc)
+```
+
+In our fabric analysis we compared circular data collected using different methods (namely, the clock and the compass methods).
+
+Here we test the reliability of our data collected with the clock method, using a subset of data for which both methods were used to record the orientation of the item.
+
+## Reading and subsetting data
+
+```{r}
+# reproducible research from here...
+getwd()
+setwd("/home/dncgst/projects/marathousa1_qi")
+
+UB4c_test.fabric <- read.csv("data/UB4c_test.fabric.csv", header=TRUE, sep=",", skip=0)
+summary(UB4c_test.fabric)
+```
+
+The dataset includes:
+
+Summary: 38 obs. (26 KN, 7 LI, 2 LOST.KN, 2 ZN, 1 HZ)
+
+## Comparing the clock and the compass methods for fabric analysis (UB4c)
+
+```{r}
+# mean
+deg(circ.mean(rad(UB4c_test.fabric$bearing_clock)))
+deg(circ.mean(rad(UB4c_test.fabric$bearing_comp)))
+```
+
+Mean direction UB4c clock: 91.65627°
+Mean direction UB4c compass: 151.1705°
+
+```{r}
+# rose diagrams
+heR.Misc::rose(UB4c_test.fabric$bearing_clock, bins=72, col="red", rings=TRUE, labels=TRUE, rscale=2, main="")
+heR.Misc::rose(UB4c_test.fabric$bearing_comp, bins=72, col="red", rings=TRUE, labels=TRUE, rscale=2, main="")
+```
+
+```{r}
+# uniformity tests
+r.test(rad(UB4c_test.fabric$bearing_clock))
+r.test(rad(UB4c_test.fabric$bearing_comp))
+kuiper(rad(UB4c_test.fabric$bearing_clock))
+kuiper(rad(UB4c_test.fabric$bearing_comp))
+watson(rad(UB4c_test.fabric$bearing_clock))
+watson(rad(UB4c_test.fabric$bearing_comp))
+rao.spacing(rad(UB4c_test.fabric$bearing_clock))
+rao.spacing(rad(UB4c_test.fabric$bearing_comp))
+```
+
+Rayleig p-values: 0.05 (bearing_clock) vs 0.10 (bearing_comp)
+Kuiper: 1.8963 vs 1.3944
+Watson: 0.1937 vs 0.1268
+Rao: 255.7895 vs 128.5263
+
+All the tests fail to reject the null hypothesis, but Rao for the clock sample...
+
+### QQ plot
+
+```{r}
+## angular QQ-plot: comapre the distributional shape of two samples, but not any differences in their central directions, as both samples are centred around their median directions in the construction of the plot
+
+cdat1 <- circular(UB4c_test.fabric$bearing_clock, units="degrees", zero=pi/2, rotation="clock")
+plot(cdat1, stack=TRUE, bins=720, cex=1.2, sep=0.04, shrink=0.95)
+arrows.circular(mean(cdat1), y=rho.circular(cdat1), lty=1, lwd=2)
+arrows.circular(median(cdat1), y=rho.circular(cdat1), lty=2, lwd=3)
+
+cdat2 <- circular(UB4c_test.fabric$bearing_comp, units="degrees", zero=pi/2, rotation="clock")
+plot(cdat2, stack=TRUE, bins=720, cex=1.2, sep=0.04, shrink=0.95)
+arrows.circular(mean(cdat2), y=rho.circular(cdat2), lty=1, lwd=2)
+arrows.circular(median(cdat2), y=rho.circular(cdat2), lty=2, lwd=3)
+
+cdat1 <- circular(UB4c_test.fabric$bearing_clock*2*pi/360)
+cdat2 <- circular(UB4c_test.fabric$bearing_comp*2*pi/360)
+
+TwoSampleQQ(cdat1, cdat2)
+```
+
+### Watson's Two-sample Test
+
+```{r}
+# test for a common distribution
+## Performs Watson's test for homogeneity on two samples of circular data.
+watson.two.test(cdat1,cdat2)
+watson.two.test(cdat1,cdat2,alpha = 0.05)
+```
+
+
+### Woodcock diagram
+
+```{r}
+# Angles are in radians, not degrees!!!
+plunge <- rad(UB4c_test.fabric$plunge_clock)
+bearing <- rad(UB4c_test.fabric$bearing_clock)
+plunge <- rad(UB4c_test.fabric$plunge_comp)
+bearing <- rad(UB4c_test.fabric$bearing_comp)
+
+# Woodcock diagram
+## step 1) express each direction in the sample as a set of three direction cosines. If the data are in the form of trend and plunge, the formulae are:
+### l=cos(plunge)*cos(trend)
+l <- c(cos(plunge)*cos(bearing))
+### m=cos(plunge)*sin(trend)
+m <- c(cos(plunge)*sin(bearing))
+### n=sin(plunge)
+n <- c(sin(plunge))
+## step 2) and 3) compute the products of each direction-cosine set. sum the products over the whole data sample to give the orientation tensor
+b <- matrix(c(
+  sum(l^2),sum(l*m),sum(l*n),
+  sum(m*l),sum(m^2),sum(m*n),
+  sum(n*l),sum(n*m),sum(n^2)),
+  ncol=3, byrow=TRUE)
+## step 4) compute the eigenvectors and eigenvalues of this matrix
+### the eigenvectors (v1,v2,v3) of this matrix correspond to three orthogonal 'principal axes' of the data sample. Axis v1 is an estimate of the mean direction of the data; v3 is the pole to any girdle present in the data [@Watson1966]
+eigenvectors <- eigen(b)$vectors
+dimnames(eigenvectors) <- list(c("v1","v2","v3"),c("l","m","n"))
+### The eigenvalues (λ1,λ2,λ3), associated with (v1,v2,v3) respectively, describe the shape of the data sample [@Watson1966; @Mark1974; @Woodcock1973; @Woodcock1977]
+eigenvalues <- eigen(b)$values
+names(eigenvalues) <- c("λ1","λ2","λ3")
+## step 5) compute the eigenvalue ratio, particularly the ratio of the largest to smallest eigenvalue (S1/S3=λ1/λ3)
+### since λ1+λ2+λ3=N then normalized eigenvalues Sj=λj/N are related by S1+S2+S3=1. A data cluster has S1>S2~=S3 and a data girdle has S1~=S2>S3
+s1 <- eigenvalues["λ1"]/length(plunge)
+s2 <- eigenvalues["λ2"]/length(plunge)
+s3 <- eigenvalues["λ3"]/length(plunge)
+
+# save UB4c_clock
+clock.s1_s2 <- s1/s2
+clock.s2_s3 <- s2/s3
+clock.s1_s3 <- s1/s3
+clock.is <- s3/s1
+clock.el <- 1-(s2/s1)
+clock.bs <- 1-(clock.is+clock.el)
+
+# save UB4c_comp
+comp.s1_s2 <- s1/s2
+comp.s2_s3 <- s2/s3
+comp.s1_s3 <- s1/s3
+comp.is <- s3/s1
+comp.el <- 1-(s2/s1)
+comp.bs <- 1-(comp.is+comp.el)
+```
+
+```{r}
+## Woodcock diagram
+#setEPS()
+
+#pdf("./doc/artwork/FigSI1.pdf", width=10, height=10)
+
+#par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+
+plot(log(comp.s2_s3),log(comp.s1_s2),pch=15,xlim=c(0,3),ylim=c(0,3),xlab="ln S2/S3",ylab="ln S1/S2", main="Woodcock diagram")
+## shape parameter K=ln(S1/S2)/ln(S2/S3) ranges from 0 (uniaxial girdles) to infinite (uniaxial clusters)
+abline(h=0,col="grey",lty=2)
+abline(v=0,col="grey",lty=2)
+abline(0,1,col="grey",lty=2)
+abline(0,2,col="grey",lty=2)
+abline(0,.5,col="grey",lty=2)
+abline(0,5,col="grey",lty=2)
+abline(0,.2,col="grey",lty=2)
+text(2.95,2.8,label="K=1",col="grey",lwd=.02)
+text(2.95,.1,label="K=0",col="grey",lwd=.02)
+text(.2,3,label=expression(paste("K=",infinity)),col="grey",lwd=.02)
+text(2.95,.75,label="K=0.2",col="grey",lwd=.02)
+text(2.95,1.65,label="K=0.5",col="grey",lwd=.02)
+text(.8,3,label="K=5",col="grey",lwd=.02)
+text(1.7,3,label="K=2",col="grey",lwd=.02)
+## complementary to the shape parameter is the parameter C=ln(S1/S3) which expresses the 'strength' of the preferred orientation in the data sample [@Woodcock1977]. Strongly organized samples have larger C and plot further from the origin of the ratio graph. A perfect uniform distribution of data would have C=0 and would plot at the origin with S1=S2=S3=1/3. Random samples will also plot close to the origin and have low C values, suggesting that this parameter might be used as a test statistic for randomness
+abline(3,-1,col="grey",lty=1)
+text(1.7,1.5,label="C=3",col="grey",lwd=.02)
+##
+
+PlotPTsmooth(deg(UB4c_test.fabric$bearing_clock),deg(UB4c_test.fabric$plunge_clock),x=log(clock.s2_s3),y=log(clock.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
+text(.25,.40,label="UB4c (clock)",col="black",lwd=.02)
+
+PlotPTsmooth(deg(UB4c_test.fabric$bearing_comp),deg(UB4c_test.fabric$plunge_comp),x=log(comp.s2_s3),y=log(comp.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
+text(.80,.20,label="UB4c (comp)",col="black",lwd=.02)
+
+text(1.45,1.65,label="WEAK <--> STRONG",col="gray",lwd=.03,srt=45,pos=1)
+text(2.55,2.63,label="<-- CLUSTERS | GIRDLES -->",col="gray",lwd=.03,srt=-45,pos=1)
+
+#dev.off()
+```
+
+### Benn diagram
+
+```{r}
+## Benn diagram
+#setEPS()
+
+#pdf("./doc/artwork/FigSI2.pdf", width=12, height=10)
+
+#par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+
+triax.plot(matrix(c(comp.bs,comp.el,comp.is),ncol=3,byrow=2), show.grid=TRUE, pch=16, cex.ticks=.8, cex.axis=1, axis.labels=c("","Elongation Index\n EL=1-(S2/S1)","Isotropy Index\n IS=S3/S1"), tick.labels=list(l=seq(0.1,0.9,by=0.1), r=seq(0.1,0.9,by=0.1), b=NULL), main="Benn diagram")
+
+triax.points(matrix(c(clock.bs,clock.el,clock.is),ncol=3,byrow=2), pch=16, cex=2, col="#a51e37")
+text(.42,.53,label="UB4c clock")
+
+triax.points(matrix(c(comp.bs,comp.el,comp.is),ncol=3,byrow=2), pch=16, cex=2, col="#a51e37")
+text(.48,.40,label="UB4c comp")
+
+text(0.5,0.9,label="isotropic")
+text(-0.1,0,label="planar")
+text(1.1,0,label="linear")
+
+#dev.off()
+```

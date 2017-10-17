@@ -62,7 +62,7 @@ summary(A)
 ## Elephas (skeleton)
 ### read GK database
 library(readxl)
-E.skeleton <- read_xlsx("~/Dropbox/MAR-1_database/FOSSIL_LIST_MAR.xlsx", sheet = "Area A")
+E.skeleton <- read_xlsx("~/Dropbox/MAR-1_database/mar1_fossil_list.xlsx", sheet = "Area A")
 names(E.skeleton)
 ### subset Elephas (skeleton), excluding ?Elephas (skeleton)
 E.skeleton <- E.skeleton[which(E.skeleton$GENUS == "Elephas (skeleton)"),c(2,3,4,16:22)]
@@ -85,7 +85,7 @@ fabric <- subset(B, geo_takis == "UB4c")
 fabric <- subset(B, geo_takis == "UB5a")
 summary(fabric)
 
-# duplicate dip_degree/orient_degree columns in plunge/bearing
+# duplicate dip_degree/orient_degree columns in plunge/bearing (UA3c,UA4,E.skeleton,UB4c_clock)
 fabric$plunge <- fabric[,"dip_degree"]
 fabric$bearing <- fabric[,"orient_degree"]
 is.numeric(fabric$plunge)
@@ -112,6 +112,7 @@ fabric <- fabric[which(fabric$length >= 20),]
 ## subset elements with elengation index >= 1.6
 fabric$elong_index <- fabric$length/fabric$width
 fabric <- fabric[which(fabric$elong_index >= 1.6),]
+
 ## subset Elephas skeletal elements
 fabric <- fabric[which(fabric$edm_best == "Elephant bone"),] # exclude Elephant skull, teeth and tusks
 fabric$SKELETAL.ELEMENT <- as.factor(fabric$SKELETAL.ELEMENT)
@@ -122,8 +123,10 @@ fabric$SKELETAL.ELEMENT <- as.factor(fabric$SKELETAL.ELEMENT)
 fabric <- fabric[-grep(pattern="astragalus", x=fabric$SKELETAL.ELEMENT),]
 fabric <- fabric[-grep(pattern="rotule", x=fabric$SKELETAL.ELEMENT),]
 fabric <- fabric[-grep(pattern="intermedium", x=fabric$SKELETAL.ELEMENT),]
+
 ## remove MF from UA3c
 fabric <- fabric[-which(fabric$edm_best == "MF"),]
+
 ## remove MO from UB4c
 fabric <- fabric[-which(fabric$edm_best == "MO"),]
 
@@ -132,19 +135,45 @@ summary(fabric)
 
 # save and export
 UA3c.fabric <- fabric
-write.csv(UA3c.fabric, file="../marathousa1_qi/data/UA3c.fabric.csv", row.names=TRUE, na="NA")
+write.csv(UA3c.fabric, file="data/UA3c.fabric.csv", row.names=TRUE, na="NA")
 UA4.fabric <- fabric
-write.csv(UA4.fabric, file="../marathousa1_qi/data/UA4.fabric.csv", row.names=TRUE, na="NA")
+write.csv(UA4.fabric, file="data/UA4.fabric.csv", row.names=TRUE, na="NA")
 Elephas.fabric <- fabric
-write.csv(Elephas.fabric, file="../marathousa1_qi/data/Elephas.fabric.csv", row.names=TRUE, na="NA")
+write.csv(Elephas.fabric, file="data/Elephas.fabric.csv", row.names=TRUE, na="NA")
 UB4c_clock.fabric <- fabric
-write.csv(UB4c_clock.fabric, file="../marathousa1_qi/data/UB4c_clock.fabric.csv", row.names=TRUE, na="NA")
+write.csv(UB4c_clock.fabric, file="data/UB4c_clock.fabric.csv", row.names=TRUE, na="NA")
 UB4c_comp.fabric <- fabric
-write.csv(UB4c_comp.fabric, file="../marathousa1_qi/data/UB4c_comp.fabric.csv", row.names=TRUE, na="NA")
+write.csv(UB4c_comp.fabric, file="data/UB4c_comp.fabric.csv", row.names=TRUE, na="NA")
 UB5a_clock.fabric <- fabric
-write.csv(UB5a_clock.fabric, file="../marathousa1_qi/data/UB5a_clock.fabric.csv", row.names=TRUE, na="NA")
+write.csv(UB5a_clock.fabric, file="data/UB5a_clock.fabric.csv", row.names=TRUE, na="NA")
 UB5a_comp.fabric <- fabric
-write.csv(UB5a_comp.fabric, file="../marathousa1_qi/data/UB5a_comp.fabric.csv", row.names=TRUE, na="NA")
+write.csv(UB5a_comp.fabric, file="data/UB5a_comp.fabric.csv", row.names=TRUE, na="NA")
+```
+
+```{r}
+# subset elongated elements with both clock and compass measurements from UB4c
+fabric$plunge_clock <- fabric[,"dip_degree"]
+fabric$bearing_clock <- fabric[,"orient_degree"]
+fabric$plunge_comp <- fabric[,"dip_comp"]
+fabric$bearing_comp <- fabric[,"orient_comp"]
+fabric$plunge_comp <- gsub(pattern=" [A-Z]+$", replacement="", x=fabric$plunge_comp, ignore.case=FALSE)
+fabric$plunge_comp <- as.numeric(fabric$plunge_comp)
+
+summary(fabric)
+
+fabric <- fabric[-which(is.na(fabric$bearing_comp)),]
+fabric <- fabric[-which(is.na(fabric$bearing_clock)),]
+
+fabric <- fabric[which(fabric$length >= 20),]
+fabric$elong_index <- fabric$length/fabric$width
+fabric <- fabric[which(fabric$elong_index >= 1.6),]
+
+# summary
+summary(fabric)
+
+# save and export
+UB4c_test.fabric <- fabric
+write.csv(UB4c_test.fabric, file="data/UB4c_test.fabric.csv", row.names=TRUE, na="NA")
 ```
 
 ```{r}
@@ -172,7 +201,7 @@ UA4 -- 38 obs (30HZ + 8KN) with bearing/plunge information; elongation index >= 
 
 Elephas (skeleton) -- 43 obs with bearing/plunge information (4 limb bones; pelvis (2 parts); 29 complete and rib frags; 2 calcaneus; 4 metatarsals/metacarpals; 1 pyramidal; 1 trapezoid)
 
-Elephas (skeleton) -- 63 obs with bearing/plunge information (4 limb bones; pelvis (2 parts); 29 complete and rib frags; 2 calcaneus; 4 metatarsals/metacarpals; 1 pyramidal; 1 trapezoid; 1 atlas; 1 axis; 2 phalanx; 16 vertebra)
+Elephas (skeleton) -- 63 obs with bearing/plunge information (4 limb bones; pelvis (2 parts); 29 complete and rib frags; 2 calcaneus; 4 metatarsals/metacarpals; 1 pyramidal; 1 trapezoid + 1 atlas; 1 axis; 2 phalanx; 16 vertebra)
 
 Area B
 
@@ -188,16 +217,17 @@ UB5a_comp -- 7 obs (7KN) with bearing/plunge information; elongation index >= 1.
 
 ### Rose diagrams (bearing)
 
-#### Fig.4
+#### Fig.5
 
 ```{r}
-# fig.4: rose diagram, 12 bins (30 degrees)
+# fig.5: rose diagram, 12 bins (30 degrees)
+# (double column - full page width: 190mm/539pt/7.48inches; lettering: 7pt)
 
 setEPS()
 
-postscript("./doc/artwork/Fig4.eps", width=25, height=5)
+#postscript("./doc/artwork/Fig5.eps", width=25, height=5)
 
-pdf("./doc/artwork/Fig4.pdf", width=25, height=5)
+pdf("./doc/artwork/Fig5.pdf", width=25, height=5, family="Helvetica")
 
 par(mfcol=c(1,5), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
@@ -259,9 +289,9 @@ UA3c -- Mean direction: 77.17° (E), circular variance: 41.95°; Mean dip: 20.35
 
 UA4 -- Mean direction: 35.79° (N-NE), circular variance: 35.19°; Mean dip: 11.36°, variance: 2.15°
 
-Elephas (skeleton) 43 obs -- Mean direction: 64.49° (NE), circular variance: 27.89°; Mean plunge: 10.68°, variance: 1.66°
+---Elephas (skeleton) 43 obs -- Mean direction: 64.49° (NE), circular variance: 27.89°; Mean plunge: 10.68°, variance: 1.66°
 
-Elephas (skeleton) 63 obs -- Mean direction: 54.64° (NE), circular variance: 29.25°; Mean plunge: 10.99°, variance: 3.13°
+Elephas (skeleton) 63 obs -- Mean direction: 54.64° (NE), circular variance: 29.25°; Mean plunge: 10.99°, variance: 2.13°
 
 Area B
 
@@ -277,23 +307,32 @@ To test the significance of the directional mean with Rayleigh z test: `r length
 # Isotropy (uniformity) tests
 # As a general rule of thumb, for those cases where the null hypothesis is actually true, we do not want to incorrectly reject H0 (Type 1 error) more than 5% of the time. This correspond to a significance level of alpha=0.05 (95% confidence interval). Similarly, using a 99% confidence interval to evaluate a hypothesis is equivalent to a significance level of alpha=0.01.  The p-value is a way of quantifying he strength of evidence against the H0 and in favor of the alternative. We evaluate the hypotheses by comparing the p-value to the significance level: smaller p-value --> we reject H0!
 
-## Rayleigh test
+## Rayleigh test: test for unimodal departure from uniformity
 ## test of uniformity, assessing the significance of the mean resultant length
 ### assumptions: data are not diametrically bidirectional; data are unimodal (there are no more than one cluster of points around the circle)
 ### uses the Vector Magnitude L parameter, that makes sense only if the distribution of orientations is not bi- or plurimodal
 r.test(bearing)
 
+## omnibus tests: "test for a wider variety of types of departure from uniformity. such tests will perform a little less well than rayleigh test in terms of their ability to detect unimodal deviations from uniformity, but have superior power with respect to more complex deviations" (Pewsey,Neuhauser&Ruxton, 2013, Circular Statistics in R, p.81)
+
 ## omnibus Kuiper test
 ## one-sample test of uniformity on the circle.
+kuiper(bearing)
 kuiper(bearing, alpha=0.01)
+kuiper(bearing, alpha=0.05)
 
 ## omnibus Watson test
 ## goodness of fit test for the von Mises (dist="vm") or circular uniform (dist="uniform") distribution
+## If dist = 'vm', estimates of the population parameters are used to evaluate the von Mises distribution function at all data points, thereby arriving at a sample of approximately uniformly distributed data, if the original observations have a von Mises distribution. The one-sample Watson test is then applied to the transformed data as above.
+watson(bearing)
 watson(bearing, alpha=0.01, dist = "uniform")
+watson(bearing, alpha=0.05, dist = "vm")
 
 ## omnibus Rao's spacing test
-## test of uniformity
+## uses the space between observations to determine if the data shows significant directionality. If the data is uniform, observations should tend to be evenly spaced apart.
+rao.spacing(bearing)
 rao.spacing(bearing, alpha=0.01)
+rao.spacing(bearing, alpha=0.05)
 
 ## Rao's tests for homogeneity
 ## rao.homogeneity(as.list(bearing), alpha=0.01)
@@ -405,15 +444,15 @@ UA3c.s1_s3 <- s1/s3
 UA4.s1_s2 <- s1/s2
 UA4.s2_s3 <- s2/s3
 UA4.s1_s3 <- s1/s3
-# Elephant (43 obs)
-E.s1_s2 <- s1/s2
-E.s2_s3 <- s2/s3
-E.s1_s3 <- s1/s3
-# Elephant (63 obs)
+## ---Elephant (43 obs)
+#E.s1_s2 <- s1/s2
+#E.s2_s3 <- s2/s3
+#E.s1_s3 <- s1/s3
+## Elephant (63 obs)
 E63.s1_s2 <- s1/s2
 E63.s2_s3 <- s2/s3
 E63.s1_s3 <- s1/s3
-# UB4c_clock
+## UB4c_clock
 UB4c_clock.s1_s2 <- s1/s2
 UB4c_clock.s2_s3 <- s2/s3
 UB4c_clock.s1_s3 <- s1/s3
@@ -433,18 +472,18 @@ str(s1s3_test)
 C <- as.data.frame(cbind(c(UA3c.s1_s3, UA4.s1_s3, E63.s1_s3, UB4c_clock.s1_s3, UB4c_comp.s1_s3),c(49, 38, 63, 86, 65)))
 ```
 
-#### Fig.5
+#### Fig.6
 
 ```{r}
-# fig.5: Woodcock diagram
+# fig.6: Woodcock diagram
 
 setEPS()
 
-postscript("./doc/artwork/Fig5.eps", width=10, height=10)
+#postscript("./doc/artwork/Fig6.eps", width=10, height=10)
 
-pdf("./doc/artwork/Fig5_r.pdf", width=20, height=10)
+pdf("./doc/artwork/Fig6.pdf", width=20, height=10)
 
-par(mfcol=c(1,1), ps=12, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,2), ps=12, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
 
 ## eigenvalues ratio graph
 plot(log(UA3c.s2_s3),log(UA3c.s1_s2),pch=15,xlim=c(0,3),ylim=c(0,3),xlab="ln S2/S3",ylab="ln S1/S2", main="Woodcock diagram")
@@ -519,7 +558,7 @@ UB4c_comp -- (65 obs.) The C value: 2.309044 (`r UB4c_comp.s1_s3`) is higher tha
 # isotropy index
 UA3c.is <- s3/s1
 UA4.is <- s3/s1
-E.is <- s3/s1
+#E.is <- s3/s1
 E63.is <- s3/s1
 UB4c_clock.is <- s3/s1
 UB4c_comp.is <- s3/s1
@@ -527,7 +566,7 @@ UB4c_comp.is <- s3/s1
 # elongation index
 UA3c.el <- 1-(s2/s1)
 UA4.el <- 1-(s2/s1)
-E.el <- 1-(s2/s1)
+#E.el <- 1-(s2/s1)
 E63.el <- 1-(s2/s1)
 UB4c_clock.el <- 1-(s2/s1)
 UB4c_comp.el <- 1-(s2/s1)
@@ -535,24 +574,24 @@ UB4c_comp.el <- 1-(s2/s1)
 # 3rd axis
 UA3c.bs <- 1-(UA3c.is+UA3c.el)
 UA4.bs <- 1-(UA4.is+UA4.el)
-E.bs <- 1-(E.is+E.el)
+#E.bs <- 1-(E.is+E.el)
 E63.bs <- 1-(E63.is+E63.el)
 UB4c_clock.bs <- 1-(UB4c_clock.is+UB4c_clock.el)
 UB4c_comp.bs <- 1-(UB4c_comp.is+UB4c_comp.el)
 ```
 
-#### Fig.6
+#### Fig.7
 
 ```{r}
-# fig.6: Benn diagram
+# fig.7: Benn diagram
 
 setEPS()
 
-postscript("./doc/artwork/Fig6.eps", width=12, height=10)
+#postscript("./doc/artwork/Fig7.eps", width=12, height=10)
 
-pdf("./doc/artwork/Fig6_r.pdf", width=12, height=10)
+pdf("./doc/artwork/Fig7.pdf", width=12, height=10)
 
-par(ps=12, cex=1, cex.main=1, cex.axis=1, cex.lab=1) # cex.main=2 for pub; 1 for poster 
+par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1) # cex.main=2 for pub; 1 for poster 
 
 # benn diagram
 triax.plot(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), show.grid=TRUE, pch=16, cex.ticks=.8, cex.axis=1, axis.labels=c("","Elongation Index\n EL=1-(S2/S1)","Isotropy Index\n IS=S3/S1"), tick.labels=list(l=seq(0.1,0.9,by=0.1), r=seq(0.1,0.9,by=0.1), b=NULL), main="Benn diagram")

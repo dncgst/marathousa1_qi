@@ -1185,4 +1185,33 @@
 },
 }
 
+@Article{Brantingham2007,
+  author    = {P. Jeffrey Brantingham and Todd A. Surovell and Nicole M. Waguespack},
+  title     = {Modeling post-depositional mixing of archaeological deposits},
+  journal   = {Journal of Anthropological Archaeology},
+  year      = {2007},
+  volume    = {26},
+  number    = {4},
+  pages     = {517 - 540},
+  issn      = {0278-4165},
+  doi       = {http://dx.doi.org/10.1016/j.jaa.2007.08.003},
+  file      = {Brantingham2007.pdf:science_article/Brantingham2007.pdf:PDF},
+  keywords  = {Post-depositional mixing, Site formation processes, Mathematical model,},
+  owner     = {dncgst},
+  timestamp = {2014.06.30},
+  url       = {http://www.sciencedirect.com/science/article/pii/S0278416507000359},
+}
+
+@Article{Marwick2017a,
+  author  = {Ben Marwick and Jade d'Alpoim Guedes and C. Michael Barton and Lynsey A. Bates and Michael Baxter and Andrew Beavan and Elizabeth A. Bollwerk and R. Kyle Bocinsky and Tom Brughams and Alison K. Carter and Cyler Conrad and Daniel A. Contreras and Stefano Costa and Enrico R. Crema and Adrianne Daggett and Benjamin Davies and B. Lee Drake and Thomas S. Dye and Phoebe France and Richard Fullager and Domenico Giusti and Shawn Graham and Matthew D. Harris and John Hawks and Sebastian Heath and Damien Huffer and Eric C. Kansa and Sarah Whitcher Kansa and Mark E. Madsen and Jennifer Melcher and Joan Negre and Fraser D. Neiman and Rachel Opitz and David C. Orton and Paulina Przystupa and Maria Raviele and Julien Riel-Salvatore and Philip Riris and Iza Romanowska and Jolene Smith and N\'{e}h\'{e}mie Strupler and Isaac I. Ullah and Hannah G. Van Vlack and Nathaniel VanValkenberg and Ethan C. Watrall and Chris Webster and Joshua Wells and Judith Winters and Colin D. Wren},
+  title   = {Open Science in Archaeology},
+  journal = {SAA Archaeological Record},
+  year    = {2017},
+  volume  = {17},
+  number  = {4},
+  pages   = {8--14},
+  file    = {Marwick2017a.pdf:open_science/Marwick2017a.pdf:PDF},
+  url     = {http://bit.ly/OSIG-SAAAR},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
