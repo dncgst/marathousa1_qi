@@ -55,8 +55,8 @@ Mean direction UB4c compass: 151.1705°
 
 ```{r}
 # rose diagrams
-heR.Misc::rose(UB4c_test.fabric$bearing_clock, bins=72, col="red", rings=TRUE, labels=TRUE, rscale=2, main="")
-heR.Misc::rose(UB4c_test.fabric$bearing_comp, bins=72, col="red", rings=TRUE, labels=TRUE, rscale=2, main="")
+heR.Misc::rose(UB4c_test.fabric$bearing_clock, bins=12, col="red", rings=TRUE, labels=TRUE, rscale=2, main="")
+heR.Misc::rose(UB4c_test.fabric$bearing_comp, bins=12, col="red", rings=TRUE, labels=TRUE, rscale=2, main="")
 ```
 
 ```{r}
@@ -99,13 +99,29 @@ cdat2 <- circular(UB4c_test.fabric$bearing_comp*2*pi/360)
 TwoSampleQQ(cdat1, cdat2)
 ```
 
-### Watson's Two-sample Test
+### Test for a common distribution
 
 ```{r}
-# test for a common distribution
-## Performs Watson's test for homogeneity on two samples of circular data.
+# Watson's Two-sample Test
+## Performs Watson's test for homogeneity on two samples of circular data. Data should be two independent random samples of circular observations drawn from populations with a continuous distribution. Data should not be grouped, or if it must be grouped, class intervals should be no larger than 5 degrees. For large samples of grouped data (where there are likely to be many ties), the test may not be applicable. Null hypothesis Ho: The two samples belong to the same parent population. Decision rule: If U2 < critical value: the null hypothesis cannot be dismissed. If U2 > critical value: reject the null hypothesis, and conclude that the two samples differ significantly. The larger the value for U2, the more likely that the 2 samples belong to different populations. The smaller the value for U2, the more likely that the 2 samples belong to same population. 
+
 watson.two.test(cdat1,cdat2)
 watson.two.test(cdat1,cdat2,alpha = 0.05)
+
+# Chi-squared test
+## "If the data in each of the g samples are grouped using the same n (class intervals), or we decide to group the original data into such class intervals, then the data in the g samples can be represented as a g x n contingency table. Testing whether the samples were drawn from a common distribution is then equivalent to testing the contingecy table for independence using the standard chi-squared test" [@Pewsey2013].
+
+cdat1
+
+## group compass based dataset
+foo <- rvonmises(200, 3, 10)
+foo
+group <- seq(min(foo) - 0.1, max(foo) + 0.1, length = 6)
+bar <- cut(foo, breaks = group, length = 6)
+
+group <- seq(0, 359, length=12)
+cdat1.g <- cut(cdat1, breaks=group, length=12)
+cdat2.g <- cut(cdat2, breaks=group, length=12)
 ```
 
 

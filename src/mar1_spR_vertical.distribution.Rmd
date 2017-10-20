@@ -174,29 +174,159 @@ plot(UB5a_surf)
 # IDW interpolation
 UB5a_surf.idw <- spatstat::idw(UB5a_surf, power=10, at="pixels", eps=0.01)
 plot(UB5a_surf.idw, axes=TRUE, main="UB4c/5a erosional contact"); plot(w, add=TRUE)
+str(UB5a_surf.idw)
+class(UB5a_surf.idw)
 ```
 
-### Fig.3
+## Kriging interpolation
 
 ```{r}
-# fig.3: IDW interpolated UA3c/UA4 and UB4c/UB5a surfaces
+# read selection of surface points, Area A
+UA4_surf <- read.csv("data/UA4_surf.csv", header=TRUE, sep=",", skip=0)
+
+# convert to spatial.points.dataframe
+coordinates(UA4_surf) <- ~x+y
+proj4string(UA4_surf) <- CRS(as.character(NA))
+bbox(UA4_surf)
+str(UA4_surf)
+plot(UA4_surf); plot(unitsA_2015.shp, add=TRUE)
+
+# sample variogram
+## cutoff: spatial separation distance up to which point pairs are included in semivariance estimates; as a default, the length of the diagonal of the box spanning the data is divided by three.
+## width: the width of subsequent distance intervals into which data point pairs are grouped for semivariance estimates
+UA4_surf.var <- gstat::variogram(z~1, UA4_surf)
+#UA4_surf.var <- gstat::variogram(z~1, UA4_surf, cutoff=2)
+plot(UA4_surf.var)
+
+# fitting a variogram model
+## psill: (partial) sill of the variogram model component, or model
+## model: model type, e.g. "Exp", "Sph", "Gau", "Mat"... Calling vgm() without a model argument returns a data.frame with available models.
+## range: range parameter of the variogram model component
+## kappa: smoothness parameter for the Matern class of variogram models
+## nugget: nugget component of the variogram (this basically adds a nugget compontent to the model); if missing, nugget component is omitted
+gstat::vgm()
+gstat::show.vgms()
+UA4_surf.mod1 <- gstat::vgm(psill=.004, model="Wav", range=2, nugget=.001)
+#UA4_surf.mod2 <- gstat::vgm(psill=.004, model="Gau", range=2, nugget=.001)
+UA4_surf.fit <- gstat::fit.variogram(UA4_surf.var, model=UA4_surf.mod1)
+UA4_surf.fit <- gstat::fit.variogram(UA4_surf.var, model=UA4_surf.mod2)
+plot(UA4_surf.var, UA4_surf.fit)
+UA4_surf.fit
+
+# spatial grid
+str(unitsA_2015.shp)
+unitsA_2015.grid <- spsample(unitsA_2015.shp, type="regular", cellsize=.1)
+str(unitsA_2015.grid)
+plot(unitsA_2015.grid)
+unitsA_2015.grid <- as(unitsA_2015.grid, "SpatialPixels")
+
+# spatial prediction
+## ordinary kriging
+UA4_surf.ok <- gstat::krige(z~1, UA4_surf, unitsA_2015.grid, UA4_surf.fit)
+plot(UA4_surf.ok)
+str(UA4_surf.ok)
+
+# model diagnostics
+UA4_surf.cv <- gstat::krige.cv(z~1, UA4_surf, UA4_surf.mod1, nfold=5)
+bubble(UA4_surf.cv, "residual", main="5-fold CV residuals")
+summary(UA4_surf.cv)
+
+# convert SpatialPixelsDataFrame to im
+UA4_surf.ok <- as(UA4_surf.ok, "SpatialGridDataFrame") 
+UA4_surf.ok.im <- as(UA4_surf.ok, "im")
+str(UA4_surf.ok.im)
+plot(UA4_surf.ok.im)
+
+## --- ##
+
+# read selection of surface points, Area B
+UB5a_surf <- read.csv("data/UB5a_surf.csv", header=TRUE, sep=",", skip=0)
+str(UB5a_surf)
+
+# convert to spatial.points.dataframe
+coordinates(UB5a_surf) <- ~x+y
+proj4string(UB5a_surf) <- CRS(as.character(NA))
+bbox(UB5a_surf)
+str(UB5a_surf)
+plot(UB5a_surf); plot(unitsB_2015.shp, add=TRUE)
+
+# what's the max/min distance between points?
+max(spDists(UB5a_surf))
+min(spDists(UB5a_surf))
+
+# sample variogram
+UB5a_surf.var <- gstat::variogram(z~1, UB5a_surf, cutoff=2)
+plot(UB5a_surf.var)
+
+# fitting a variogram model
+gstat::vgm()
+gstat::show.vgms()
+UB5a_surf.mod <- gstat::vgm(psill=.003, model="Sph", range=.8, nugget=.0008)
+UB5a_surf.fit <- gstat::fit.variogram(UB5a_surf.var, model=UB5a_surf.mod)
+plot(UB5a_surf.var, UB5a_surf.fit)
+UB5a_surf.fit
+
+# spatial grid (method 1)
+str(unitsB_2015.shp)
+unitsB_2015.grid <- spsample(unitsB_2015.shp, type="regular", cellsize=.1)
+str(unitsB_2015.grid)
+plot(unitsB_2015.grid)
+unitsB_2015.grid <- as(unitsB_2015.grid, "SpatialPixels")
+# spatial grid (method 2)
+unitsB_2015.grid2 <- makegrid(unitsB_2015.shp, cellsize=.01)
+str(unitsB_2015.grid2)
+colnames(unitsB_2015.grid2) <- c('x','y')
+outline <- unitsB_2015.shp@polygons[[2]]@Polygons[[1]]@coords
+require(splancs)
+unitsB_2015.grid2 <- unitsB_2015.grid2[inout(unitsB_2015.grid2,outline), ]
+plot(unitsB_2015.grid2)
+
+# spatial prediction
+## simple kriging
+UB5a_surf.sk
+
+## ordinary kriging
+UB5a_surf.ok <- gstat::krige(z~1, UB5a_surf, unitsB_2015.grid, UB5a_surf.fit)
+plot(UB5a_surf.ok)
+str(UB5a_surf.ok)
+
+## universal kriging
+UB5a_surf.uk
+
+# model diagnostics
+UB5a_surf.cv <- gstat::krige.cv(z~1, UB5a_surf, UB5a_surf.mod, nfold=5)
+bubble(UB5a_surf.cv, "residual", main="5-fold CV residuals")
+summary(UB5a_surf.cv)
+
+# convert SpatialPixelsDataFrame to im
+UB5a_surf.ok <- as(UB5a_surf.ok, "SpatialGridDataFrame") 
+UB5a_surf.ok.im <- as(UB5a_surf.ok, "im")
+str(UB5a_surf.ok.im)
+plot(UB5a_surf.ok.im)
+```
+
+### Fig.4
+
+```{r}
+# fig.4: IDW interpolated UA3c/UA4 and UB4c/UB5a surfaces
 
 setEPS()
 
-postscript("./doc/artwork/Fig3.eps", width=10, height=10)
+postscript("./doc/artwork/Fig4.eps", width=30, height=10)
 
-pdf("./doc/artwork/Fig3.pdf", width=30, height=10)
+pdf("./doc/artwork/Fig4.pdf", width=30, height=10)
 
-par(mfcol=c(1,3), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,3), ps=28, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
 
 w <- as.owin(unitsA_2015.shp)
-plot(UA4_surf.idw, axes=TRUE, main="a"); plot(w, add=TRUE)
+plot(UA4_surf.ok.im, axes=TRUE, main="a"); plot(w, add=TRUE)
 library(GISTools)
 GISTools::north.arrow(xb=937.5, yb=677.5, len=0.05, lab="N", cex.lab=1)  
 GISTools::map.scale(xc=938.5, yc=677.5, len=1, units="meter", ndivs=1)
 
 w <- as.owin(unitsB_2015.shp)
-plot(UB5a_surf.idw, axes=TRUE, main="b"); plot(w, add=TRUE)
+#plot(UB5a_surf.idw, axes=TRUE, main="b"); plot(w, add=TRUE)
+plot(UB5a_surf.ok.im, axes=TRUE, main="b"); plot(w, add=TRUE)
 GISTools::north.arrow(xb=933, yb=610, len=0.1, lab="N", cex.lab=1)
 GISTools::map.scale(xc=933.5, yc=608.5, len=1, units="meter", ndivs=1)
 
@@ -247,7 +377,7 @@ UA4      : 61
 ```{r}
 # calculate minimum distance?  Difficult to quantify due to its not sharp nature --> "Likewise, in Area A the relative vertical distribution of remains from UA3c was estimated relative to the absolute elevation of the elephant remains and the range of elevations of the UA3c/4 surface.""
 summary(Xa.ppp)
-S <- UA4_surf.idw[Xa.ppp]
+S <- UA4_surf.ok.im[Xa.ppp]
 summary(S)
 d <- Xa.ppp$marks$z-S
 Da <- cbind(as.data.frame(Xa.ppp), d)
@@ -341,7 +471,7 @@ UB5a   : 101
 ```{r}
 # extract surface elevation at X positions and calculate minimum distance
 summary(Xb.ppp)
-S <- UB5a_surf.idw[Xb.ppp]
+S <- UB5a_surf.ok.im[Xb.ppp]
 summary(S)
 d <- Xb.ppp$marks$z-S
 Db <- cbind(as.data.frame(Xb.ppp), d)
