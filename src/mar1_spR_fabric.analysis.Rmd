@@ -222,19 +222,19 @@ UB5a_comp -- 7 obs (7KN) with bearing/plunge information; elongation index >= 1.
 
 ### Rose diagrams (bearing)
 
-#### Fig.5
+#### Fig.6
 
 ```{r}
-# fig.5: rose diagram, 12 bins (30 degrees)
+# fig.6: rose diagram, 12 bins (30 degrees)
 # (double column - full page width: 190mm/539pt/7.48inches; lettering: 7pt)
 
 setEPS()
 
-#postscript("./doc/artwork/Fig5.eps", width=25, height=5)
+postscript("./doc/artwork/Fig6.eps", width=30, height=5, family="Helvetica")
 
-pdf("./doc/artwork/Fig5.pdf", width=25, height=5, family="Helvetica")
+#pdf("./doc/artwork/Fig6.pdf", width=25, height=5, family="Helvetica")
 
-par(mfcol=c(1,5), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,5), ps=28, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
 
 heR.Misc::rose(UA3c.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, cex=1, main="a")
 heR.Misc::rose(UA4.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="b")
@@ -330,7 +330,7 @@ kuiper(bearing, alpha=0.05)
 ## goodness of fit test for the von Mises (dist="vm") or circular uniform (dist="uniform") distribution
 ## If dist = 'vm', estimates of the population parameters are used to evaluate the von Mises distribution function at all data points, thereby arriving at a sample of approximately uniformly distributed data, if the original observations have a von Mises distribution. The one-sample Watson test is then applied to the transformed data as above.
 watson(bearing)
-watson(bearing, alpha=0.01, dist = "uniform")
+watson(bearing, alpha=0.05, dist = "uniform")
 watson(bearing, alpha=0.05, dist = "vm")
 
 ## omnibus Rao's spacing test
@@ -477,21 +477,21 @@ str(s1s3_test)
 C <- as.data.frame(cbind(c(UA3c.s1_s3, UA4.s1_s3, E63.s1_s3, UB4c_clock.s1_s3, UB4c_comp.s1_s3),c(49, 38, 63, 86, 65)))
 ```
 
-#### Fig.6
+#### Fig.7
 
 ```{r}
-# fig.6: Woodcock diagram
+# fig.7: Woodcock diagram
 
 setEPS()
 
-#postscript("./doc/artwork/Fig6.eps", width=10, height=10)
+postscript("./doc/artwork/Fig7.eps", width=30, height=15, family="Helvetica")
 
-pdf("./doc/artwork/Fig6.pdf", width=20, height=10)
+#pdf("./doc/artwork/Fig7.pdf", width=20, height=10)
 
-par(mfcol=c(1,2), ps=12, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,2), ps=28, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
 
 ## eigenvalues ratio graph
-plot(log(UA3c.s2_s3),log(UA3c.s1_s2),pch=15,xlim=c(0,3),ylim=c(0,3),xlab="ln S2/S3",ylab="ln S1/S2", main="Woodcock diagram")
+plot(log(UA3c.s2_s3),log(UA3c.s1_s2),pch=15,xlim=c(0,3),ylim=c(0,3),xlab="ln S2/S3",ylab="ln S1/S2", main="a")
 ## shape parameter K=ln(S1/S2)/ln(S2/S3) ranges from 0 (uniaxial girdles) to infinite (uniaxial clusters)
 abline(h=0,col="grey",lty=2)
 abline(v=0,col="grey",lty=2)
@@ -553,9 +553,11 @@ Elephant -- (43 obs.) The s1/s3 value: 10.85199 (`r E.s1_s3`) is definitely high
 
 Elephant -- (63 obs.)
 
-UB4c_clock -- (86 obs.) The C value: 1.71685 (`r UB4c_clock.s1_s3`) is slightly higher than, yet very close to, the critical S1/S3 test value (1.70) for N=90 at 95% confidence, thus the data sample cannot reject the hypothesis of randomness in favor of a strong organized sample. The K value: 0.506163 (`r log(UB4c_clock.s1_s2)/log(UB4c_clock.s2_s3)`) plots the data sample between K=0 and K=1, indicating weak uniaxial girdles.
+K=0.4831335 
 
-UB4c_comp -- (65 obs.) The C value: 2.309044 (`r UB4c_comp.s1_s3`) is higher than the critical S1/S3 test value (1.83) for N=70 at 95% confidence, thus the data sample reject the hypothesis of randomness in favor of a weak organized sample. The K value: 0.7039872 (`r log(UB4c_comp.s1_s2)/log(UB4c_comp.s2_s3)`) plots the data sample close to K=1.
+UB4c_clock -- (86 obs.) The C value: 1.71685 (`r UB4c_clock.s1_s3`) is slightly higher than, yet very close to, the critical S1/S3 test value (1.70) for N=90 at 95% confidence, thus the data sample cannot reject the hypothesis of randomness in favor of a strong organized sample. The K value: 0.6579965 (`r log(UB4c_clock.s1_s2)/log(UB4c_clock.s2_s3)`) plots the data sample between K=0 and K=1, indicating weak uniaxial girdles.
+
+UB4c_comp -- (65 obs.) The C value: 2.309044 (`r UB4c_comp.s1_s3`) is higher than the critical S1/S3 test value (1.83) for N=70 at 95% confidence, thus the data sample reject the hypothesis of randomness in favor of a weak organized sample. The K value: 0.2502574 (`r log(UB4c_comp.s1_s2)/log(UB4c_comp.s2_s3)`) plots the data sample close to K=1.
 
 ### Benn diagram
 
@@ -585,21 +587,21 @@ UB4c_clock.bs <- 1-(UB4c_clock.is+UB4c_clock.el)
 UB4c_comp.bs <- 1-(UB4c_comp.is+UB4c_comp.el)
 ```
 
-#### Fig.7
+#### Fig.8
 
 ```{r}
-# fig.7: Benn diagram
+# fig.8: Benn diagram
 
 setEPS()
 
-#postscript("./doc/artwork/Fig7.eps", width=12, height=10)
+postscript("./doc/artwork/Fig8.eps", width=12, height=10, family="Helvetica")
 
-pdf("./doc/artwork/Fig7.pdf", width=12, height=10)
+#pdf("./doc/artwork/Fig8.pdf", width=12, height=10)
 
-par(ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1) # cex.main=2 for pub; 1 for poster 
+par(ps=28, cex=1, cex.main=1, cex.axis=1, cex.lab=1) # cex.main=2 for pub; 1 for poster 
 
 # benn diagram
-triax.plot(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), show.grid=TRUE, pch=16, cex.ticks=.8, cex.axis=1, axis.labels=c("","Elongation Index\n EL=1-(S2/S1)","Isotropy Index\n IS=S3/S1"), tick.labels=list(l=seq(0.1,0.9,by=0.1), r=seq(0.1,0.9,by=0.1), b=NULL), main="Benn diagram")
+triax.plot(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), show.grid=TRUE, pch=16, cex.ticks=.8, cex.axis=1, axis.labels=c("","Elongation Index\n EL=1-(S2/S1)","Isotropy Index\n IS=S3/S1"), tick.labels=list(l=seq(0.1,0.9,by=0.1), r=seq(0.1,0.9,by=0.1), b=NULL), main="")
 triax.points(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.58,.33, label="UA3c", lwd=.02)
 triax.points(matrix(c(UA4.bs,UA4.el,UA4.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)

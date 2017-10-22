@@ -119,17 +119,17 @@ hist(nn, prob=TRUE, xlab="meter", main="b")
 lines(density(nn, bw="nrd"), col="#a51e37", lwd=2)
 ```
 
-## Fig.9
+## Fig.11
 
 ```{r}
-# fig.: area A
+# fig.11: area A
 setEPS()
 
-#postscript("./doc/artwork/Fig9.eps", width=30, height=10)
+postscript("./doc/artwork/Fig11.eps", width=30, height=10, family="Helvetica")
 
-pdf("./doc/artwork/Fig9.pdf", width=30, height=10)
+#pdf("./doc/artwork/Fig9.pdf", width=30, height=10)
 
-par(mfcol=c(1,3), ps=12, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,3), ps=24, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 set.seed(0979)
 

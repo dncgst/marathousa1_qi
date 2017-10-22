@@ -1,10 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.18)  11 OCT 2017 17:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.6.23)  22 OCT 2017 22:46
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input marathousa1_rr.tex
+**marathousa1_rr.tex
 (./marathousa1_rr.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 11 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
 \@bls=\dimen102
@@ -863,17 +864,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-(./marathousa1_rr.aux
-
-LaTeX Warning: Label `fig:3' multiply defined.
-
-)
+(./marathousa1_rr.aux)
 \openout1 = `marathousa1_rr.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 37.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 37.
 
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 37.
@@ -976,32 +974,32 @@ LaTeX Info: Redefining \nameref on input line 37.
 \@outlinefile=\write4
 \openout4 = `marathousa1_rr.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 72.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 72.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 72.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 72.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 72.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 72.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1009,310 +1007,432 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+txss on input line 76.
+LaTeX Font Info:    Try loading font information for T1+txss on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 4.74998pt on input line 76.
-
-
-Package natbib Warning: Citation `Texier2000' on page 2 undefined on input line
- 80.
-
-
-Package natbib Warning: Citation `Villa2004' on page 2 undefined on input line 
-80.
-
-
-Package natbib Warning: Citation `Bailey2007' on page 2 undefined on input line
- 80.
-
-
-Package natbib Warning: Citation `Brantingham2007' on page 2 undefined on input
- line 80.
-
-[2]
+(Font)              scaled to size 4.74998pt on input line 72.
+ [2]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 100.
+               Default added (so using `tbp') on input line 94.
 
-<../artwork/Fig1.png, id=162, 468.0687pt x 377.7312pt>
+<../artwork/Fig1.png, id=183, 468.0687pt x 377.7312pt>
 File: ../artwork/Fig1.png Graphic file (type png)
 
 <use ../artwork/Fig1.png>
-Package pdftex.def Info: ../artwork/Fig1.png used on input line 102.
+Package pdftex.def Info: ../artwork/Fig1.png used on input line 96.
 (pdftex.def)             Requested size: 345.0pt x 278.41583pt.
 
 
-LaTeX Warning: Reference `fig:2' on page 3 undefined on input line 108.
+LaTeX Warning: Reference `fig:2' on page 3 undefined on input line 102.
 
-[3] [4 <../artwork/Fig1.png>]
-Overfull \hbox (6.12013pt too wide) in paragraph at lines 118--119
-[]\T1/txr/m/n/10 The sed-i-men-tary se-quence of the site (Fig. [][]3[][]) in-c
+[3 <../artwork/Fig1.png>]
+Overfull \hbox (6.12013pt too wide) in paragraph at lines 112--113
+[]\T1/txr/m/n/10 The sed-i-men-tary se-quence of the site (Fig. [][]2[][]) in-c
 ludes la-cus-trine and fluvio-lacustrine
  []
 
 
-Overfull \hbox (0.66013pt too wide) in paragraph at lines 122--123
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 114.
+
+<../artwork/Fig3.pdf, id=200, 3324.62143pt x 3076.54399pt>
+File: ../artwork/Fig3.pdf Graphic file (type pdf)
+
+<use ../artwork/Fig3.pdf>
+Package pdftex.def Info: ../artwork/Fig3.pdf used on input line 116.
+(pdftex.def)             Requested size: 345.0pt x 319.2207pt.
+ [4 <../artwork/Fig3.pdf>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 123.
+
+<../artwork/Fig4.jpg, id=230, 724.6272pt x 481.8pt>
+File: ../artwork/Fig4.jpg Graphic file (type jpg)
+ <use ../artwork/Fig4.jpg>
+Package pdftex.def Info: ../artwork/Fig4.jpg used on input line 125.
+(pdftex.def)             Requested size: 345.0pt x 229.38669pt.
+
+Overfull \hbox (9.63013pt too wide) in paragraph at lines 130--131
+\T1/txr/m/n/10 sional con-tacts be-tween the fos-sil-if-er-ous hori-zons in the
+ two ar-eas (UA3c/4 and UB4c/5a),
+ []
+
+
+Package natbib Warning: Citation `Binford1981a' on page 5 undefined on input li
+ne 133.
+
+
+Package natbib Warning: Citation `Binford1987' on page 5 undefined on input lin
+e 133.
+
+[5 <../artwork/Fig4.jpg>]
+
+Package natbib Warning: Citation `Fernandez-Lopez' on page 6 undefined on input
+ line 141.
+
+
+Package natbib Warning: Citation `Fernandez-Lopez' on page 6 undefined on input
+ line 141.
+
+
+Overfull \hbox (0.66013pt too wide) in paragraph at lines 141--142
 \T1/txr/m/n/10 ing), thereby en-train-ing clas-tic ma-te-rial (in-clud-ing prob
 -a-bly arte-facts) and re-depositing
  []
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 124.
-
-<../artwork/Fig3.pdf, id=196, 3324.62143pt x 3076.54399pt>
-File: ../artwork/Fig3.pdf Graphic file (type pdf)
-
-<use ../artwork/Fig3.pdf>
-Package pdftex.def Info: ../artwork/Fig3.pdf used on input line 126.
-(pdftex.def)             Requested size: 345.0pt x 319.2207pt.
+Package natbib Warning: Citation `Eberth2007' on page 6 undefined on input line
+ 150.
 
 
-Package natbib Warning: Citation `Binford1981a' on page 5 undefined on input li
-ne 134.
+Package natbib Warning: Citation `Kluskens1990' on page 6 undefined on input li
+ne 150.
 
 
-Package natbib Warning: Citation `Binford1987' on page 5 undefined on input lin
-e 134.
+Package natbib Warning: Citation `Dibble1997' on page 6 undefined on input line
+ 150.
 
-[5] [6 <../artwork/Fig3.pdf>] [7]
+
+Package natbib Warning: Citation `Enloe2006' on page 6 undefined on input line 
+150.
+
+
+Overfull \hbox (13.93015pt too wide) in paragraph at lines 150--151
+[]\T1/txr/m/n/10 The widespread use of a com-pass and in-cli-nome-ter to record
+ ori-en-ta-tion data ([][]Voorhies[][],
+ []
+
+
+Overfull \hbox (9.79012pt too wide) in paragraph at lines 150--151
+[][]\T1/txr/m/n/10 Eren et al.[][], [][]2010[][]; [][]Benito-Calvo et al.[][], 
+[][]2011[][]; [][]Domínguez-Rodrigo et al.[][], [][]2012[][]; [][]Domínguez-
+ []
+
+[6]
+
+Package natbib Warning: Citation `Toots1965' on page 7 undefined on input line 
+155.
+
+
+Package natbib Warning: Citation `Voorhies1969' on page 7 undefined on input li
+ne 155.
+
+
+Package natbib Warning: Citation `Ebert2007' on page 7 undefined on input line 
+155.
+
+
+Package natbib Warning: Citation `Aramendi2017' on page 7 undefined on input li
+ne 155.
+
+
+Overfull \hbox (20.32011pt too wide) in paragraph at lines 154--157
+\T1/txr/m/n/10 et al.[][], [][]2016[][]; [][]Sánchez-Romero et al.[][], [][]201
+6[][]). How-ever, the ex-per-i-men-tal works of [][]Domínguez-
+ []
+
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 155.
+(Font)              scaled to size 9.49997pt on input line 162.
 
-Overfull \hbox (2.6501pt too wide) in paragraph at lines 160--162
+Overfull \hbox (2.6501pt too wide) in paragraph at lines 167--168
 \T1/txr/m/n/10 Rodrigo et al.[][], [][]2012[][]; [][]Domínguez-Rodrigo and Garc
 ía-Pérez[][], [][]2013[][]; [][]Domínguez-Rodrigo
  []
 
-[8] [9]
+[7]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 176.
+               Default added (so using `tbp') on input line 190.
 
 
-Overfull \hbox (1.97015pt too wide) in paragraph at lines 198--199
+Overfull \hbox (1.97015pt too wide) in paragraph at lines 212--215
 \T1/txr/m/n/10 tests ([][]Jam-mala-madaka et al.[][], [][]2001[][]), were used 
 to vi-su-alise and eval-u-ate cir-cu-lar isotropy
  []
 
-[10] [11]
+[8]
+
+Package natbib Warning: Citation `McPherron2005a' on page 9 undefined on input 
+line 223.
+
+
+Overfull \hbox (7.4301pt too wide) in paragraph at lines 223--224
+\T1/txr/m/n/10 dimensional dis-tri-bu-tions of ar-chae-o-log-i-cal re-mains (\T
+1/txr/bx/n/10 ?[][]\T1/txr/m/n/10 An-der-son and Burke[][], [][]2008[][], among
+
+ []
+
+[9]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 220.
-
-[12]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 247.
-
-File: ../artwork/Fig3.pdf Graphic file (type pdf)
-<use ../artwork/Fig3.pdf>
-Package pdftex.def Info: ../artwork/Fig3.pdf used on input line 249.
-(pdftex.def)             Requested size: 345.0pt x 319.2207pt.
- [13] [14] [15] [16] [17]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 285.
-
-<../artwork/Fig4.pdf, id=471, 2062.58348pt x 632.61945pt>
-File: ../artwork/Fig4.pdf Graphic file (type pdf)
-
-<use ../artwork/Fig4.pdf>
-Package pdftex.def Info: ../artwork/Fig4.pdf used on input line 287.
-(pdftex.def)             Requested size: 345.0pt x 105.816pt.
+               Default added (so using `tbp') on input line 233.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 292.
+               Default added (so using `tbp') on input line 262.
 
-LaTeX Font Info:    Try loading font information for TS1+txr on input line 309.
+Package epstopdf Info: Source file: <../artwork/Fig5.eps>
+(epstopdf)                    date: 2017-10-22 17:55:02
+(epstopdf)                    size: 955055 bytes
+(epstopdf)             Output file: <../artwork/Fig5-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=../artwork/Fig5-eps-conver
+ted-to.pdf ../artwork/Fig5.eps>
+(epstopdf)             \includegraphics on input line 264.
+runsystem(repstopdf --outfile=../artwork/Fig5-eps-converted-to.pdf ../artwork/F
+ig5.eps)...executed safely (allowed).
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
-File: ts1txr.fd 2000/12/15 v3.1
-) [18 <../artwork/Fig4.pdf>]
+Package epstopdf Info: Result file: <../artwork/Fig5-eps-converted-to.pdf>.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 330.
-
-
-LaTeX Warning: File `../artwork/Fig5_.pdf' not found on input line 332.
-
-
-./marathousa1_rr.tex:332: Package pdftex.def Error: File `../artwork/Fig5_.pdf'
- not found.
+! Package pdftex.def Error: File `../artwork/Fig5-eps-converted-to.pdf' not fou
+nd.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.332 ...[width=1\textwidth]{../artwork/Fig5_.pdf}
+l.264 ...s[width=1\textwidth]{../artwork/Fig5.eps}
                                                   
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[19] [20]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 342.
-
-<../artwork/Fig6_.pdf, id=567, 1411.40201pt x 683.42926pt>
-File: ../artwork/Fig6_.pdf Graphic file (type pdf)
-
-<use ../artwork/Fig6_.pdf>
-Package pdftex.def Info: ../artwork/Fig6_.pdf used on input line 344.
-(pdftex.def)             Requested size: 345.0pt x 167.05057pt.
- [21 <../artwork/Fig6_.pdf>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 361.
-
-<../artwork/Fig7.pdf, id=664, 689.11052pt x 509.17697pt>
-File: ../artwork/Fig7.pdf Graphic file (type pdf)
-
-<use ../artwork/Fig7.pdf>
-Package pdftex.def Info: ../artwork/Fig7.pdf used on input line 363.
-(pdftex.def)             Requested size: 345.0pt x 254.92194pt.
- [22] [23 <../artwork/Fig7.pdf>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 377.
-
-<../artwork/Fig8.pdf, id=726, 688.11877pt x 644.82906pt>
-File: ../artwork/Fig8.pdf Graphic file (type pdf)
-
-<use ../artwork/Fig8.pdf>
-Package pdftex.def Info: ../artwork/Fig8.pdf used on input line 379.
-(pdftex.def)             Requested size: 345.0pt x 323.29926pt.
- [24 <../artwork/Fig8.pdf>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 399.
-
-<../artwork/Fig9.pdf, id=754, 1410.81877pt x 685.74191pt>
-File: ../artwork/Fig9.pdf Graphic file (type pdf)
-
-<use ../artwork/Fig9.pdf>
-Package pdftex.def Info: ../artwork/Fig9.pdf used on input line 401.
-(pdftex.def)             Requested size: 345.0pt x 167.68909pt.
- [25] [26 <../artwork/Fig9.pdf>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 422.
-
-<../artwork/Fig10.pdf, id=831, 2168.1pt x 722.7pt>
-File: ../artwork/Fig10.pdf Graphic file (type pdf)
- <use ../artwork/Fig10.pdf>
-Package pdftex.def Info: ../artwork/Fig10.pdf used on input line 424.
-(pdftex.def)             Requested size: 345.0pt x 114.99477pt.
-
-[27]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 431.
-
-<../artwork/Fig11.pdf, id=841, 1445.4pt x 1445.4pt>
-File: ../artwork/Fig11.pdf Graphic file (type pdf)
- <use ../artwork/Fig11.pdf>
-Package pdftex.def Info: ../artwork/Fig11.pdf used on input line 433.
-(pdftex.def)             Requested size: 345.0pt x 344.9843pt.
-
-[28 <../artwork/Fig10.pdf>] [29 <../artwork/Fig11.pdf>] [30]
-Overfull \hbox (5.68011pt too wide) in paragraph at lines 471--472
-\T1/txr/m/n/10 cesses ([][]Domínguez-Rodrigo and García-Pérez[][], [][]2013[][]
-; [][]Domínguez-Rodrigo et al.[][], [][]2014c[][]).
- []
-
-[31] [32]
-Overfull \hbox (3.16013pt too wide) in paragraph at lines 506--507
-[]\T1/txr/m/n/10 Field ob-ser-va-tions of cracks in the clayey UB5a unit tes-ti
-fy to shrink-ing and swelling
- []
-
-[33]
-
-Package natbib Warning: Citation `Hovers2014' on page 34 undefined on input lin
-e 534.
-
-[34] [35] [36] (./marathousa1_rr.bbl [37]
-Underfull \hbox (badness 10000) in paragraph at lines 28--33
-\T1/txr/m/n/10 URL [][]$\T1/cmtt/m/n/10 http : / / www . sciencedirect . com / 
-science / article / pii /
- []
-
-[38] [39] [40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 276--281
-\T1/txr/m/n/10 URL [][]$\T1/cmtt/m/n/10 http : / / www . sciencedirect . com / 
-science / article / pii /
- []
-
-[42] [43] [44] [45])
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 589.
-[46]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 589.
- (./marathousa1_rr.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 589.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 589.
-
-
-Package rerunfilecheck Warning: File `marathousa1_rr.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `marathousa1_rr.out':
-(rerunfilecheck)             Before: D725EBB6E8925B62EEEA02454EFC1D2B;903
-(rerunfilecheck)             After:  9917B1F70D5CF3471A4D881BB68457EA;917.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 589.
- ) 
+? X
+ 
 Here is how much of TeX's memory you used:
- 9238 strings out of 493013
- 127885 string characters out of 6135682
- 218372 words of memory out of 5000000
- 12410 multiletter control sequences out of 15000+600000
- 61417 words of font info for 112 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 34i,12n,34p,2076b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.6} has been referenced but does not exist
-, replaced by a fixed one
+ 8918 strings out of 494845
+ 122187 string characters out of 6177326
+ 212846 words of memory out of 5000000
+ 11957 multiletter control sequences out of 15000+600000
+ 58647 words of font info for 105 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 34i,10n,34p,1762b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.Anderson2008} has been referenced but does not
+ exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{subsection.5.3} has been referenced but does not ex
+pdfTeX warning (dest): name{cite.Morton2004} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Benn1994} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Woodcock1983} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Jammalamadaka2001} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Bar-Yosef1972} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Marwick2017a} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Marwick2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.RCoreTeam2016} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Benito-Calvo2009} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Sanchez-Romero2016} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Garcia-Moreno2016} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Walter2013} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Torre2013a} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Benito-Calvo2011} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Boschian2010} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Bernatchez2010} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.McPherron2005} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Cobo-Sanchez2014} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Dominguez-Rodrigo2014} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Dominguez-Rodrigo2013} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Benito-Calvo2011a} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Eren2010} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Lenoble2004} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Bertran1997} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Bertran1995} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Voorhies1966} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Dominguez-Rodrigo2012} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Nickel1996} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Vugt2000} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Harvati2016} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Panagopoulou2015} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Hivernel1984} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Organista2017} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Giusti2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Carrer2015} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Dominguez-Rodrigo2017} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Dominguez-Rodrigo2014c} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Dominguez-Rodrigo2014b} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Lenoble2008} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Orton1982} has been referenced but does not ex
 ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{subsection.5.2} has been referenced but does not ex
+pdfTeX warning (dest): name{cite.Hodder1976} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Bevan2013a} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Bargallo2016} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Vaquero2012} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Malinsky-Buller2011} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Brantingham2007} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Bailey2007} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Villa2004} has been referenced but does not ex
 ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{subsection.5.1} has been referenced but does not ex
+pdfTeX warning (dest): name{cite.Texier2000} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Petraglia1994} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Petraglia1987} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Schick1987} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Schick1986} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Schick1984} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Wood1978} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Shackley1978} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Schiffer1987} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Schiffer1983} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Schiffer1972} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Isaac1967} has been referenced but does not ex
 ist, replaced by a fixed one
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/
-texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/tex
--gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on marathousa1_rr.pdf (46 pages, 9260059 bytes).
+pdfTeX warning (dest): name{section.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/dncgst/.texl
+ive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk></usr/share/texmf/
+fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-g
+yre/qhvr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on marathousa1_rr.pdf (9 pages, 10562978 bytes).
 PDF statistics:
- 1103 PDF objects out of 1200 (max. 8388607)
- 916 compressed objects within 10 object streams
- 172 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 514 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

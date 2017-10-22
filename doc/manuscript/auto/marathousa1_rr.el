@@ -31,13 +31,15 @@
     "tab:1"
     "tab:2"
     "fig:5"
-    "tab:3"
     "fig:6"
+    "tab:3"
     "fig:7"
     "fig:8"
     "fig:9"
     "fig:10"
-    "fig:11")
+    "fig:11"
+    "fig:12"
+    "fig:13")
    (LaTeX-add-bibliographies
     "marathousa_rr"))
  :latex)
