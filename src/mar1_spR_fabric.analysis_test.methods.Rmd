@@ -35,6 +35,7 @@ getwd()
 setwd("/home/dncgst/projects/marathousa1_qi")
 
 UB4c_test.fabric <- read.csv("data/UB4c_test.fabric.csv", header=TRUE, sep=",", skip=0)
+UB4c_test.fabric$edm_best <- factor(UB4c_test.fabric$edm_best)
 summary(UB4c_test.fabric)
 ```
 

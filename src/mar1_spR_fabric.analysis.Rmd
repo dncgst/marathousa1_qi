@@ -227,20 +227,21 @@ UB5a_comp -- 7 obs (7KN) with bearing/plunge information; elongation index >= 1.
 ```{r}
 # fig.6: rose diagram, 12 bins (30 degrees)
 # (double column - full page width: 190mm/539pt/7.48inches; lettering: 7pt)
-
 setEPS()
 
-postscript("./doc/artwork/Fig6.eps", width=30, height=5, family="Helvetica")
+postscript("./doc/artwork/Fig6.eps", width=20, height=10, family="Helvetica")
 
-#pdf("./doc/artwork/Fig6.pdf", width=25, height=5, family="Helvetica")
+pdf("./doc/artwork/Fig6.pdf", width=20, height=10, family="Helvetica")
 
-par(mfcol=c(1,5), ps=28, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
+par(mfcol=c(2,3), ps=18, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 heR.Misc::rose(UA3c.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, cex=1, main="a")
 heR.Misc::rose(UA4.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="b")
 heR.Misc::rose(Elephas.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="c")
-heR.Misc::rose(UB4c_clock.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="d")
-heR.Misc::rose(UB4c_comp.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="e")
+heR.Misc::rose(UB4c_test.fabric$bearing_clock, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="d")
+heR.Misc::rose(UB4c_test.fabric$bearing_comp, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="e")
+#heR.Misc::rose(UB4c_clock.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="d")
+#heR.Misc::rose(UB4c_comp.fabric$bearing, bins=12, col="#a01d3bff", rings=TRUE, labels=TRUE, rscale=2, main="e")
 
 dev.off()
 ```
@@ -474,21 +475,21 @@ UB4c_comp.s1_s3 <- s1/s3
 s1s3_test <- read.csv(url("https://raw.githubusercontent.com/dncgst/woodcock/master/vignettes/Woodcock%26Naylor1983_fig9.csv"), header=TRUE, sep=",", skip=0)
 str(s1s3_test)
 #C <- as.data.frame(cbind(c(UA3c.s1_s3, UA4.s1_s3, E.s1_s3, UB4c_clock.s1_s3, UB4c_comp.s1_s3),c(49, 38, 43, 86, 65)))
-C <- as.data.frame(cbind(c(UA3c.s1_s3, UA4.s1_s3, E63.s1_s3, UB4c_clock.s1_s3, UB4c_comp.s1_s3),c(49, 38, 63, 86, 65)))
+#C <- as.data.frame(cbind(c(UA3c.s1_s3, UA4.s1_s3, E63.s1_s3, UB4c_clock.s1_s3, UB4c_comp.s1_s3),c(49, 38, 63, 86, 65)))
+C <- as.data.frame(cbind(c(UA3c.s1_s3, UA4.s1_s3, E63.s1_s3, clock.s1_s3, comp.s1_s3),c(49, 38, 63, 38, 38)))
 ```
 
 #### Fig.7
 
 ```{r}
 # fig.7: Woodcock diagram
-
 setEPS()
 
-postscript("./doc/artwork/Fig7.eps", width=30, height=15, family="Helvetica")
+postscript("./doc/artwork/Fig7.eps", width=20, height=10, family="Helvetica")
 
-#pdf("./doc/artwork/Fig7.pdf", width=20, height=10)
+pdf("./doc/artwork/Fig7.pdf", width=20, height=10)
 
-par(mfcol=c(1,2), ps=28, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,2), mar= c(6,6,6,6), ps=18, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 ## eigenvalues ratio graph
 plot(log(UA3c.s2_s3),log(UA3c.s1_s2),pch=15,xlim=c(0,3),ylim=c(0,3),xlab="ln S2/S3",ylab="ln S1/S2", main="a")
@@ -519,10 +520,14 @@ text(1.5,.5,label="UA4",col="black",lwd=.04)
 #text(2.1,.1,label="Eleph.",col="black",lwd=.04)
 PlotPTsmooth(Elephas.fabric$bearing,Elephas.fabric$plunge,x=log(E63.s2_s3),y=log(E63.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
 text(1.3,.75,label="Eleph.",col="black",lwd=.04)
-PlotPTsmooth(UB4c_clock.fabric$bearing,UB4c_clock.fabric$plunge,x=log(UB4c_clock.s2_s3),y=log(UB4c_clock.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
-text(.4,.35,label="UB4c (clock)",col="black",lwd=.04)
-PlotPTsmooth(UB4c_comp.fabric$bearing,UB4c_comp.fabric$plunge,x=log(UB4c_comp.s2_s3),y=log(UB4c_comp.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
-text(.8,.02,label="UB4c (comp)",col="black",lwd=.04)
+#PlotPTsmooth(UB4c_clock.fabric$bearing,UB4c_clock.fabric$plunge,x=log(UB4c_clock.s2_s3),y=log(UB4c_clock.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
+#text(.4,.35,label="UB4c (clock)",col="black",lwd=.04)
+PlotPTsmooth(deg(UB4c_test.fabric$bearing_clock),deg(UB4c_test.fabric$plunge_clock),x=log(clock.s2_s3),y=log(clock.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
+text(.25,.40,label="UB4c (clock)",col="black",lwd=.02)
+#PlotPTsmooth(UB4c_comp.fabric$bearing,UB4c_comp.fabric$plunge,x=log(UB4c_comp.s2_s3),y=log(UB4c_comp.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
+#text(.8,.02,label="UB4c (comp)",col="black",lwd=.04)
+PlotPTsmooth(deg(UB4c_test.fabric$bearing_comp),deg(UB4c_test.fabric$plunge_comp),x=log(comp.s2_s3),y=log(comp.s1_s2),siz=0.1,IMAGE=TRUE,CONT=TRUE,add=TRUE)
+text(.95,.20,label="UB4c (comp)",col="black",lwd=.02)
 
 ##
 text(1.45,1.65,label="WEAK <--> STRONG",col="gray",lwd=.03,srt=45,pos=1)
@@ -539,8 +544,8 @@ text(25,2, label="SIGNIFICANT",col="grey",lwd=.02)
 text(49,1.07, label="UA3c",col="black",lwd=.02)
 text(38,1.86, label="UA4",col="black", lwd=.02)
 text(63,1.92, label="Eleph.",col="black", lwd=.02)
-text(86,.32, label="UB4c (clock)",col="black", lwd=.02)
-text(65,.45, label="UB4c (comp)",col="black", lwd=.02)
+text(38,.8, label="UB4c (clock)",col="black", lwd=.02)
+text(38,.45, label="UB4c (comp)",col="black", lwd=.02)
 
 dev.off()
 ```
@@ -591,14 +596,13 @@ UB4c_comp.bs <- 1-(UB4c_comp.is+UB4c_comp.el)
 
 ```{r}
 # fig.8: Benn diagram
-
 setEPS()
 
 postscript("./doc/artwork/Fig8.eps", width=12, height=10, family="Helvetica")
 
-#pdf("./doc/artwork/Fig8.pdf", width=12, height=10)
+pdf("./doc/artwork/Fig8.pdf", width=12, height=10, family="Helvetica")
 
-par(ps=28, cex=1, cex.main=1, cex.axis=1, cex.lab=1) # cex.main=2 for pub; 1 for poster 
+par(ps=18, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 # benn diagram
 triax.plot(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), show.grid=TRUE, pch=16, cex.ticks=.8, cex.axis=1, axis.labels=c("","Elongation Index\n EL=1-(S2/S1)","Isotropy Index\n IS=S3/S1"), tick.labels=list(l=seq(0.1,0.9,by=0.1), r=seq(0.1,0.9,by=0.1), b=NULL), main="")
@@ -610,10 +614,14 @@ text(.4,.11, label="UA4", lwd=.02)
 #text(.3,.11, label="Eleph.", lwd=.02)
 triax.points(matrix(c(E63.bs,E63.el,E63.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.5,.18, label="Eleph.", lwd=.02)
-triax.points(matrix(c(UB4c_clock.bs,UB4c_clock.el,UB4c_clock.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
-text(.42,.51, label="UB4c (clock)", lwd=.02)
-triax.points(matrix(c(UB4c_comp.bs,UB4c_comp.el,UB4c_comp.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
-text(.48,.44, label="UB4c (comp)", lwd=.02)
+#triax.points(matrix(c(UB4c_clock.bs,UB4c_clock.el,UB4c_clock.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
+#text(.42,.51, label="UB4c (clock)", lwd=.02)
+triax.points(matrix(c(clock.bs,clock.el,clock.is),ncol=3,byrow=2), pch=16, cex=2, col="#a01d3bff")
+text(.48,.40,label="UB4c (clock)")
+#triax.points(matrix(c(UB4c_comp.bs,UB4c_comp.el,UB4c_comp.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
+#text(.48,.44, label="UB4c (comp)", lwd=.02)
+triax.points(matrix(c(comp.bs,comp.el,comp.is),ncol=3,byrow=2), pch=16, cex=2, col="#a01d3bff")
+text(.42,.53,label="UB4c (comp)")
 text(0.5,0.9, label="isotropic")
 text(-0.1,0, label="planar")
 text(1.1,0, label="linear")

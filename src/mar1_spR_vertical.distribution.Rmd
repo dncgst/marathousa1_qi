@@ -123,8 +123,11 @@ write.csv(Elephas.ppp, file="../marathousa1_qi/data/Elephas.ppp.csv", row.names=
 getwd()
 setwd("/home/dncgst/projects/marathousa1_qi")
 Xa <- read.csv("data/Xa.csv", header=TRUE, sep=",", skip=0)
+summary(Xa)
 Xb <- read.csv("data/Xb.csv", header=TRUE, sep=",", skip=0)
+summary(Xb)
 Elephas.ppp <- read.csv("data/Elephas.ppp.csv", header=TRUE, sep=",", skip=0)
+summary(Eleph.ppp)
 ```
 
 ## IDW interpolation
@@ -309,19 +312,18 @@ plot(UB5a_surf.ok.im)
 
 ```{r}
 # fig.5: IDW interpolated UA3c/UA4 and UB4c/UB5a surfaces
-
 setEPS()
 
 postscript("./doc/artwork/Fig5.eps", width=30, height=10, family="Helvetica")
 
-#pdf("./doc/artwork/Fig5.pdf", width=30, height=10)
+pdf("./doc/artwork/Fig5.pdf", width=20, height=10, family="Helvetica")
 
-par(mfcol=c(1,3), ps=28, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,3), mar= c(6,6,6,6), ps=18, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 w <- as.owin(unitsA_2015.shp)
 plot(UA4_surf.ok.im, axes=TRUE, main="a"); plot(w, add=TRUE)
 library(GISTools)
-GISTools::north.arrow(xb=937.5, yb=677.5, len=0.05, lab="N", cex.lab=1)  
+GISTools::north.arrow(xb=937.5, yb=677.5, len=0.05, lab="N", cex.lab=1)
 GISTools::map.scale(xc=938.5, yc=677.5, len=1, units="meter", ndivs=1)
 
 w <- as.owin(unitsB_2015.shp)
@@ -387,27 +389,47 @@ summary(Da)
 Da: 405 obs.
 
 ```{r}
-Da <- as.data.frame(Xa.ppp)
+#Da <- as.data.frame(Xa.ppp)
 ```
-
 
 #### Fig.9
 
 ```{r}
 # fig.9: Vertical distribution area A
-
 setEPS()
 
 postscript("./doc/artwork/Fig9.eps", width=10, height=10, family="Helvetica")
 
-#pdf("./doc/artwork/Fig9.pdf", width=10, height=10)
+pdf("./doc/artwork/Fig9.pdf", width=10, height=10, family="Helvetica")
 
-par(ps=24, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+par(mar= c(6,6,6,6), ps=18, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 ## UA3c
+hist(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0),]$d, nclass=5, prob=TRUE, xlim=c(-0.6,1), ylim=c(0,10), xlab="d (meters)", main="")
+#hist(Da[which(Da$geo_takis == "UA3c"),]$d, nclass=5, prob=TRUE, xlim=c(-1,1), ylim=c(0,4), xlab="d (meters)", main="a")
+rug(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "debris"),]$d, col="#e41a1c", lwd=2)
+lines(density(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "debris"),]$d, bw="nrd"), col="#e41a1c", lwd=4)
+abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "debris"),]$d), col="#e41a1c", lwd=2, lty=4)
+rug(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "KN"),]$d, col="#377eb8", lwd=2)
+lines(density(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "KN"),]$d, bw="nrd"), col="#377eb8", lwd=4)
+abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "KN"),]$d), col="#377eb8", lwd=2, lty=4)
+rug(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "ZN"),]$d, col="#4daf4a", lwd=2)
+lines(density(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "ZN"),]$d, bw="nrd"), col="#4daf4a", lwd=4)
+abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "ZN"),]$d), col="#4daf4a", lwd=2, lty=4)
+rug(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "MF"),]$d, col="#984ea3", lwd=2)
+lines(density(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "MF"),]$d, bw="nrd"), col="#984ea3", lwd=4)
+abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "MF"),]$d), col="#984ea3", lwd=2, lty=4)
+rug(Da[which(Da$geo_takis == "UA4" & Da$d <= 0 & Da$class == "Fauna"),]$d, col="#ff7f00", lwd=2)
+lines(density(Da[which(Da$geo_takis == "UA4" & Da$d <= 0 & Da$class == "Fauna"),]$d, bw="nrd"), col="#ff7f00", lwd=4)
+abline(v=mean(Da[which(Da$geo_takis == "UA4" & Da$d <= 0 & Da$class == "Fauna"),]$d), col="#ff7f00", lwd=2, lty=4)
+legend(x="topright", c("debris/chip","bone","tooth","microfauna","UA4 fauna"), lty=1, lwd=4, col=c("#e41a1c","#377eb8","#4daf4a","#984ea3","#ff7f00"))
+
+dev.off()
+
+## Fig.7 - first submission 
 hist(0, prob=TRUE, xlim=c(348.5,350), ylim=c(0,4), xlab=" meters a.s.l.", main="")
-rug(UA4_surf$marks, col="grey")
-rect(xleft=quantile(UA4_surf$marks, .25), xright=quantile(UA4_surf$marks, .75), ybottom=0, ytop=7, col="grey", border=NA, lwd=2)
+rug(UA4_surf$z, col="grey")
+rect(xleft=quantile(UA4_surf$z, .25), xright=quantile(UA4_surf$z, .75), ybottom=0, ytop=7, col="grey", border=NA, lwd=2)
 ### Elephas
 hist(Elephas.ppp$z, nclass=30, prob=TRUE, col=NA, add=TRUE)
 ### debris UA3c
@@ -426,10 +448,7 @@ abline(v=mean(Da[which(Da$geo_takis == "UA3c" & Da$class == "Fauna"),]$z), col="
 ### fauna UA4
 lines(density(Da[which(Da$geo_takis == "UA4" & Da$class == "Fauna"),]$z, bw="nrd"), col="#ff7f00", lwd=2)
 abline(v=mean(Da[which(Da$geo_takis == "UA4" & Da$class == "Fauna"),]$z), col="#ff7f00", lwd=1, lty=2)
-
 legend(x="topright", c("UA3c/UA4 surface","debris/chip","flake","tool","fauna"), lty=1, lwd=2, col=c("grey","#e41a1c", "#377eb8", "#4daf4a", "#ff7f00"))
-
-dev.off()
 ```
 
 ### Area B
@@ -489,48 +508,46 @@ Db: 1433 obs.
 
 ```{r}
 # fig.10: Vertical distribution area B
-
 setEPS()
 
-postscript("./doc/artwork/Fig10.eps", width=10, height=10, family="Helvetica")
+postscript("./doc/artwork/Fig10.eps", width=20, height=10, family="Helvetica")
 
-#pdf("./doc/artwork/Fig10.pdf", width=20, height=10)
+pdf("./doc/artwork/Fig10.pdf", width=20, height=10, family="Helvetica")
 
-par(ps=24, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
-par(mfcol=c(1,2), ps=12, cex=1, cex.main=1, cex.axis=1, cex.lab=1)
+par(mfcol=c(1,2), mar= c(6,6,6,6), ps=18, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 ## UB5a
 hist(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0),]$d, nclass=5, prob=TRUE, xlim=c(-0.6,0.1), ylim=c(0,14), xlab="d (meters)", main="a")
 rug(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debris"),]$d, col="#e41a1c", lwd=2)
-lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debris"),]$d, bw="nrd"), col="#e41a1c", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debris"),]$d), col="#e41a1c", lwd=1, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debris"),]$d, bw="nrd"), col="#e41a1c", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debris"),]$d), col="#e41a1c", lwd=2, lty=4)
 rug(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debitage"),]$d, col="#377eb8", lwd=2)
-lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debitage"),]$d, bw="nrd"), col="#377eb8", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debitage"),]$d), col="#377eb8", lwd=1, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debitage"),]$d, bw="nrd"), col="#377eb8", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "debitage"),]$d), col="#377eb8", lwd=2, lty=2)
 rug(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "tool"),]$d, col="#4daf4a", lwd=2)
-lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "tool"),]$d, bw="nrd"), col="#4daf4a", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "tool"),]$d), col="#4daf4a", lwd=1, lty=2)
-lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$class == "Fauna"),]$d, bw="nrd"), col="#ff7f00", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$class == "Fauna"),]$d), col="#ff7f00", lwd=1, lty=2)
-legend(x="topright", c("debris","flake","tool","fossil"), lty=1, lwd=2, col=c("#e41a1c", "#377eb8", "#4daf4a", "#ff7f00"))
+lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "tool"),]$d, bw="nrd"), col="#4daf4a", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$type == "tool"),]$d), col="#4daf4a", lwd=2, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$class == "Fauna"),]$d, bw="nrd"), col="#ff7f00", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB5a" & Db$d <= 0 & Db$class == "Fauna"),]$d), col="#ff7f00", lwd=2, lty=2)
+legend(x="topright", c("debris/chip","flake","tool","fauna"), lty=1, lwd=4, col=c("#e41a1c", "#377eb8", "#4daf4a", "#ff7f00"))
 
 ## UB4c
-hist(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0),]$d, nclass=10, prob=TRUE, xlim=c(-0.1,0.6), ylim=c(0,7), xlab="d (meters)", main="b")
+hist(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0),]$d, nclass=10, prob=TRUE, xlim=c(-0.1,0.6), ylim=c(0,14), xlab="d (meters)", main="b")
 rug(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debris"),]$d, col="#e41a1c", lwd=2)
-lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debris"),]$d, bw="nrd"), col="#e41a1c", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debris"),]$d), col="#e41a1c", lwd=1, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debris"),]$d, bw="nrd"), col="#e41a1c", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debris"),]$d), col="#e41a1c", lwd=2, lty=2)
 rug(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debitage"),]$d, col="#377eb8", lwd=2)
-lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debitage"),]$d, bw="nrd"), col="#377eb8", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debitage"),]$d), col="#377eb8", lwd=1, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debitage"),]$d, bw="nrd"), col="#377eb8", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "debitage"),]$d), col="#377eb8", lwd=2, lty=2)
 rug(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "tool"),]$d, col="#4daf4a", lwd=2)
-lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "tool"),]$d, bw="nrd"), col="#4daf4a", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "tool"),]$d), col="#4daf4a", lwd=1, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "tool"),]$d, bw="nrd"), col="#4daf4a", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "tool"),]$d), col="#4daf4a", lwd=2, lty=2)
 rug(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "core"),]$d, col="#984ea3", lwd=2)
-lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "core"),]$d, bw="nrd"), col="#984ea3", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "core"),]$d), col="#984ea3", lwd=1, lty=2)
-lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$class == "Fauna"),]$d, bw="nrd"), col="#ff7f00", lwd=2)
-abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$class == "Fauna"),]$d), col="#ff7f00", lwd=1, lty=2)
-legend(x="topright", c("debris","flake","tool","core","fossil"), lty=1, lwd=2, col=c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00"))
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "core"),]$d, bw="nrd"), col="#984ea3", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$type == "core"),]$d), col="#984ea3", lwd=2, lty=2)
+lines(density(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$class == "Fauna"),]$d, bw="nrd"), col="#ff7f00", lwd=4)
+abline(v=mean(Db[which(Db$geo_takis == "UB4c" & Db$d >= 0 & Db$class == "Fauna"),]$d), col="#ff7f00", lwd=2, lty=2)
+legend(x="topright", c("debris/chip","flake","tool","core","fauna"), lty=1, lwd=4, col=c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00"))
 
 dev.off()
 ```
