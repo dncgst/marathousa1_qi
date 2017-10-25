@@ -1,8 +1,13 @@
-;; This buffer is for notes you don't want to save, and for Lisp evaluation.
-;; If you want to create a file, visit that file with C-x C-f,
-;; then enter the text in that file's own buffer.
+%% Hypothesis testing
+Two contrasting hypotheses are tested: the autochthonous model \citep[][sensu]{Dominguez-Rodrigo2012} states that the flow event, represented by units UA3c and UB4c, eroded and scoured the exposed surface (where the elephant was lying), thereby entraining clastic material (including artefacts) and re-depositing \citep[][sensu]{Fernandez-Lopez} this material at a close distance. This model implies the loss of any original, pristine spatial relations between remains, but minor transport from the primary depositional \emph{loci}. On the other hand, the allochthonous model \citep[][sensu]{Dominguez-Rodrigo2012} implies significant transport from the original \emph{loci} of deposition and re-elaboration \citep[][sensu]{Fernandez-Lopez}. According to this model, the spurious spatial association between the lithic artefacts and faunal remains does not support any behavioural interpretation.
 
-allochthonous VS autochthonous
+AUTOCHTHONOUS model: random, chaotic process erode in situ material
+-vertical distribution concentrated around the erosional surface
+-original fabric randomized by the mass process
+-non-random spatial distribution (produced by humans or other processes before the mass event)
+-no size sorting, produed by humans
+-size sorting produced by winnowing before mass process
+-non-random spatial dependence (better segregation) with the underlying units
 
 ALLOCHTHONOUS model: random, chaotic, mass process
 -homogeneous/random vertical distribution throughout the sequence (but grading can occur with decreasing energy)
@@ -13,20 +18,10 @@ ALLOCHTHONOUS model: random, chaotic, mass process
 
 Resultant deposit may exhibit diagnostic inverse grading \citep{Lowe1982}, or a continuously aggrading bed \citep{Sohn1997}.
 
-AUTOCHTHONOUS model: random, chaotic process erode in situ material
--vertical distribution concentrated around the erosional surface
--original fabric randomized by the mass process
--non-random spatial distribution (produced by humans or other processes before the mass event)
--no size sorting, produed by humans
--size sorting produced by winnowing before mass process
--non-random spatial dependence (better segregation) with the underlying units
 
-* cite Binford!
-* Fig2. -> distribution maps    
-* Fig4. -> pics of the stratigraphy
-* Fig5. -> vertical dispersion method
-* Fig6. -> rose diagrams
-* 
+
+NOTES on floods
+---------------
 
 flood: overbank flow (hyperconcentrated flow, water flow)
 

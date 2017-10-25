@@ -26,6 +26,7 @@
     "amsmath")
    (LaTeX-add-labels
     "fig:1"
+    "fig:2"
     "fig:3"
     "fig:4"
     "tab:1"

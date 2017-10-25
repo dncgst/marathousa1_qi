@@ -1,4 +1,4 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{89}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -8,6 +8,17 @@
 Anderson, K.~L., Burke, A., 2008. {{R}efining the definition of cultural levels
   at {K}arabi {T}amchin: a quantitative approach to vertical intra-site spatial
   analysis}. Journal of Archaeological Science 35~(8), 2274--2285.
+
+\bibitem[{Aramendi et~al.(2017)Aramendi, Uribelarrea, Arriaza, Arráiz,
+  Barboni, Yravedra, Ortega, Gidna, Mabulla, Baquedano, and
+  Domínguez-Rodrigo}]{Aramendi2017}
+Aramendi, J., Uribelarrea, D., Arriaza, M.~C., Arráiz, H., Barboni, D.,
+  Yravedra, J., Ortega, M.~C., Gidna, A., Mabulla, A., Baquedano, E.,
+  Domínguez-Rodrigo, M., 2017. The paleoecology and taphonomy of \{AMK\} (bed
+  i, olduvai gorge) and its contributions to the understanding of the
+  “zinj” paleolandscape. Palaeogeography, Palaeoclimatology, Palaeoecology,
+  --.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0031018216308112}
 
 \bibitem[{Baddeley et~al.(2012)Baddeley, Chang, Song, and
   Turner}]{Baddeley2012}
@@ -61,6 +72,14 @@ Benito-Calvo, A., Martínez-Moreno, J., Pardo, J. F.~J., de~la Torre, I.,
 Benn, D., 1994. {Fabric shape and the interpretation of sedimentary fabric
   data}. Journal of Sedimentary Research 64~(4a), 910--915.
 
+\bibitem[{Benvenuti and Martini(2002)}]{Benvenuti2002}
+Benvenuti, M., Martini, I.~P., 2002. Analysis of terrestrial hyperconcentrated
+  flows and their deposit. In: Martini, I.~P., Baker, V.~R., Garzón, G.
+  (Eds.), Flood and Megaflood Processes and Deposits. Vol.~32 of Special
+  Publication of the International Association of Sedimentologists. Blackwell
+  Publishing Ltd., pp. 167--193.
+\newline\urlprefix\url{http://dx.doi.org/10.1002/9781444304299.ch10}
+
 \bibitem[{Berman(1986)}]{Berman1986}
 Berman, M., 1986. {Testing for spatial association between a point process and
   another stochastic process}. Applied Statistics 35, 54--62.
@@ -84,6 +103,10 @@ Bevan, A., Crema, E., Li, X., Palmisano, A., 2013. {Intensities, Interactions,
   and Uncertainties: Some New Approaches to Archaeological Distributions}. In:
   Bevan, A., Lake, M. (Eds.), Computational Approaches to Archaeological
   Spaces. Left Coast Press, Walnut Creek, pp. 27--52.
+
+\bibitem[{Binford(1981)}]{Binford1981}
+Binford, L.~R., 1981. Behavioral archaeology and the "pompeii premise". Journal
+  of Anthropological Research 37~(3), 195--208.
 
 \bibitem[{Boschian and Saccà(2010)}]{Boschian2010}
 Boschian, G., Saccà, D., 2010. {A}mbiguities in human and elephant
@@ -114,6 +137,13 @@ de~la Torre, I., Benito-Calvo, A., 2013. {A}pplication of {GIS} methods to
   retrieve orientation patterns from imagery; a case study from {B}eds {I} and
   {II}, {O}lduvai {G}orge ({T}anzania). Journal of Archaeological Science
   40~(5), 2446--2457.
+
+\bibitem[{Dibble et~al.(1997)Dibble, Chase, McPherron, and
+  Tuffreau}]{Dibble1997}
+Dibble, H.~L., Chase, P.~G., McPherron, S.~P., Tuffreau, A., Oct. 1997. Testing
+  the reality of a "living floor" with archaeological data. American Antiquity
+  62~(4), 629--651.
+\newline\urlprefix\url{http://www.jstor.org/stable/281882}
 
 \bibitem[{Diggle(1985)}]{Diggle1985}
 Diggle, P., 1985. A kernel method for smoothing point process data. Applied
@@ -178,6 +208,17 @@ Domínguez-Rodrigo, M., Uribelarrea, D., Santonja, M., Bunn, H.,
   orientation patterns at the Olduvai sites }. Journal of Archaeological
   Science 41~(0), 44 -- 68.
 
+\bibitem[{Eberth et~al.(2007)Eberth, Rogers, and Fiorillo}]{Eberth2007}
+Eberth, D.~A., Rogers, R.~R., Fiorillo, A.~R., 2007. A practical approach to
+  the study of bonebeds. In: Rogers, R.~R., Eberth, D.~A., Fiorillo, A.~R.
+  (Eds.), Bonebeds. Genesis, Analysis, and Paleobiological Significance. The
+  University of Chicago Press, pp. 265--332.
+
+\bibitem[{Enloe(2006)}]{Enloe2006}
+Enloe, J.~G., 2006. Geological processes and site structure: assessing
+  integrity at a late paleolithic open-air site in northern france.
+  Geoarchaeology 21~(6), 523–540.
+
 \bibitem[{Eren et~al.(2010)Eren, Durant, Neudorf, Haslam, Shipton, Bora,
   Korisettar, and Petraglia}]{Eren2010}
 Eren, M.~I., Durant, A., Neudorf, C., Haslam, M., Shipton, C., Bora, J.,
@@ -185,6 +226,16 @@ Eren, M.~I., Durant, A., Neudorf, C., Haslam, M., Shipton, C., Bora, J.,
   trampling effects on artifact movement in dry and water saturated substrates:
   a test case from South India}. Journal of Archaeological Science 37~(12),
   3010 -- 3021.
+
+\bibitem[{Fernández-López(1991)}]{Fernandez-Lopez1991}
+Fernández-López, S.~R., 1991. Taphonomic concepts for a theoretical
+  biochronology. Revista Espa\~{n}ola de Paleontología 6, 37--49.
+
+\bibitem[{Fiorillo(1991)}]{Fiorillo1991}
+Fiorillo, A.~R., 1991. Taphonomy and depositional setting of careless creek
+  quarry (judith river formation), wheatland county, montana, u.s.a.
+  Palaeogeography, Palaeoclimatology, Palaeoecology 81~(3), 281--311.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/003101829190151G}
 
 \bibitem[{García-Moreno et~al.(2016)García-Moreno, Smith, Kindler, Pop,
   Roebroeks, Gaudzinski-Windheuser, and Klinkenberg}]{Garcia-Moreno2016}
@@ -222,7 +273,7 @@ Hodder, I., Orton, C., 1976. {S}patial {A}nalysis in {A}rchaeology. New Studies
 Hovers, E., Ekshtain, R., Greenbaum, N., Malinsky-Buller, A., Nir, N.,
   Yeshurun, R., 2014. {I}slands in a stream? {R}econstructing site formation
   processes in the late {M}iddle {P}aleolithic site of '{E}in {Q}ashish,
-  northern {I}srael. Quaternary International~(0), --.
+  northern {I}srael. Quaternary International 331, 216--233.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S1040618214000433}
 
 \bibitem[{Isaac(1967)}]{Isaac1967}
@@ -235,6 +286,32 @@ Isaac, G.~L., 1967. Towards the interpretation of occupation debris: Some
 Jammalamadaka, S., Sengupta, A., Sengupta, A., 2001. {Topics in Circular
   Statistics}. Series on multivariate analysis. World Scientific.
 
+\bibitem[{Karkanas et~al.(this issue)Karkanas, Tourloukis, Thompson, Giusti,
+  Panagopoulou, and Harvati}]{Karkanas}
+Karkanas, P., Tourloukis, V., Thompson, N., Giusti, D., Panagopoulou, E.,
+  Harvati, K., this issue. Sedimentology and micromorphology of the lower
+  palaeolithic lakeshore site marathousa 1, megalopolis basin, greece.
+  Quaternary International.
+
+\bibitem[{Kluskens(1990)}]{Kluskens1990}
+Kluskens, S.~L., 1990. Orientation and density analysis of stone artefacts at
+  combe-capelle bas, périgord, france. Master's thesis, University of
+  Pennsylvania.
+
+\bibitem[{Konidaris et~al.(this issue)Konidaris, Athanassiou, Tourloukis,
+  Thompson, Giusti, Panagopoulou, and Harvati}]{Konidaris}
+Konidaris, G., Athanassiou, A., Tourloukis, V., Thompson, N., Giusti, D.,
+  Panagopoulou, E., Harvati, K., this issue. The elephas (palaeoloxodon)
+  antiquus skeleton and other large mammals from the lower palaeolithic
+  locality marathousa-1 (megalopolis basin, greece): preliminary results on
+  taxonomy, biochronology, palaeoecology and taphonomy. Quaternary
+  International.
+
+\bibitem[{Krumbein(1941)}]{Krumbein1941}
+Krumbein, W.~C., 1941. Measurement and geological significance of shape and
+  roundness of sedimentary particles. JOURNAL OF SEDIMENTARY PETROLOGY 11~(2),
+  64--72.
+
 \bibitem[{Lenoble and Bertran(2004)}]{Lenoble2004}
 Lenoble, A., Bertran, P., 2004. {F}abric of {P}alaeolithic levels: methods and
   implications for site formation processes. Journal of Archaeological Science
@@ -245,6 +322,17 @@ Lenoble, A., Bertran, P., Lacrampe, F., 2008. {S}olifluction-induced
   modifications of archaeological levels: simulation based on experimental data
   from a modern periglacial slope and application to {F}rench {P}alaeolithic
   sites. Journal of Archaeological Science 35~(1), 99 -- 110.
+
+\bibitem[{Lindsay(1968)}]{Lindsay1968}
+Lindsay, J.~F., 1968. The development of clast fabric in mudflows. Journal of
+  Sedimentary Research 38~(4), 1242--1253.
+\newline\urlprefix\url{http://jsedres.geoscienceworld.org/content/38/4/1242}
+
+\bibitem[{Macdonald and Jefferson(1985)}]{Macdonald1985}
+Macdonald, D. I.~M., Jefferson, T.~H., 1985. Orientation studies of waterlogged
+  wood; a paleocurrent indicator? Journal of Sedimentary Research 55~(2),
+  235--239.
+\newline\urlprefix\url{http://jsedres.geoscienceworld.org/content/55/2/235}
 
 \bibitem[{Malinsky-Buller et~al.(2011)Malinsky-Buller, Hovers, and
   Marder}]{Malinsky-Buller2011}
@@ -283,6 +371,12 @@ Marwick, B., d'Alpoim Guedes, J., Barton, C.~M., Bates, L.~A., Baxter, M.,
 McPherron, S.~J., 2005. {A}rtifact orientations and site formation processes
   from total station proveniences. Journal of Archaeological Science 32~(7),
   1003 -- 1014.
+
+\bibitem[{McPherron et~al.(2005)McPherron, Dibble, and
+  Goldberg}]{McPherron2005a}
+McPherron, S.~J., Dibble, H.~L., Goldberg, P., 2005. Z. Geoarchaeology 20~(3),
+  243--262.
+\newline\urlprefix\url{http://dx.doi.org/10.1002/gea.20048}
 
 \bibitem[{Morton(2004)}]{Morton2004}
 Morton, A. G.~T., 2004. Archaeological Site Formation: Understanding Lake
@@ -397,6 +491,18 @@ Texier, J.-P., 2000. {A} propos des processus de formation des sites
   12~(1), 379--386.
 \newline\urlprefix\url{http://www.persee.fr/web/revues/home/prescript/article/pal_1145-3370_2000_num_12_1_1610}
 
+\bibitem[{Toots(1965)}]{Toots1965}
+Toots, H., 1965. Orientation and distribution of fossils as environmental
+  indicators. In: Nineteenth Field Conference of the Wyoming Geological
+  Association. pp. 219--292.
+
+\bibitem[{Tourloukis et~al.(this issue)Tourloukis, Thompson, Panagopoulou,
+  Giusti, Konidaris, Karkanas, and Harvati}]{Tourloukis}
+Tourloukis, V., Thompson, N., Panagopoulou, E., Giusti, D., Konidaris, G.,
+  Karkanas, P., Harvati, K., this issue. Lithic and osseous artifacts from the
+  lower palaeolithic site of marathousa 1, megalopolis, greece: preliminary
+  results. Quaternary International.
+
 \bibitem[{van Vugt et~al.(2000)van Vugt, de~Bruijn, van Kolfschoten, and
   Langereis}]{Vugt2000}
 van Vugt, N., de~Bruijn, H., van Kolfschoten, M., Langereis, C.~G., 2000.
@@ -416,10 +522,10 @@ Villa, P., 2004. Taphonomy and stratigraphy in european prehistory. Before
   Farming 2004~(1), 1--20.
 \newline\urlprefix\url{https://doi.org/10.3828/bfarm.2004.1.1}
 
-\bibitem[{Voorhies(1966)}]{Voorhies1966}
-Voorhies, M., 1966. {Taphonomy and population dynamics of an early Pliocene
-  vertebrate fauna, Knox County, Nebraska}. Ph.D. thesis, University of
-  Wyoming.
+\bibitem[{Voorhies(1969)}]{Voorhies1969}
+Voorhies, M., 1969. Taphonomy and population dynamics of an early pliocene
+  vertebrate fauna, knox county, nebraska. Contributions to Geology, University
+  of Wyoming Special Paper 1, 1--69.
 
 \bibitem[{Walter and Trauth(2013)}]{Walter2013}
 Walter, M.~J., Trauth, M.~H., 2013. A \{MATLAB\} based orientation analysis of

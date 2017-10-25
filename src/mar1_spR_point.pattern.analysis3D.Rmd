@@ -125,16 +125,19 @@ lines(density(nn, bw="nrd"), col="#a51e37", lwd=2)
 # fig.11: area A
 setEPS()
 
-postscript("./doc/artwork/Fig11.eps", width=30, height=10, family="Helvetica")
+postscript("./doc/artwork/Fig11.eps", width=20, height=20, family="Helvetica")
 
-#pdf("./doc/artwork/Fig9.pdf", width=30, height=10)
+pdf("./doc/artwork/Fig11.pdf", width=20, height=20, family="Helvetica")
 
-par(mfcol=c(1,3), ps=24, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
+layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE), widths=c(1,1,2), heights=c(1,1))
+#layout.show(nf)
+
+par(mar= c(6,6,6,6), ps=18, cex=1, cex.main=2, cex.axis=1, cex.lab=1)
 
 set.seed(0979)
 
 w <- as.owin(unitsA_2015.shp)
-plot(density(unmark(UA3c.ppp), sigma=bw.diggle(unmark(UA3c.ppp)), diggle=TRUE), axes=TRUE, main="a"); plot(w, add=TRUE); plot(b2, lwd=4, border="green", add=TRUE)
+plot(density(UA3c.ppp[UA3c.ppp$marks$class == "Fauna"], sigma=bw.diggle(UA3c.ppp[UA3c.ppp$marks$class == "Fauna"]), diggle=TRUE), axes=TRUE, main="a"); plot(w, add=TRUE); plot(b2, lwd=4, border="green", add=TRUE)
 d <- density(UA3c.ppp[UA3c.ppp$marks$class == "Lithic"], sigma=bw.diggle(UA3c.ppp[UA3c.ppp$marks$class == "Lithic"]), diggle=TRUE)
 contour.im(d, add=TRUE) # nlevels=4
 e <- as.owin(Elephas.shp)
@@ -142,15 +145,14 @@ plot(e, add=TRUE, pch=24, lwd=2, col="grey") #, border="red")
 GISTools::north.arrow(xb=937.5, yb=677.5, len=0.05, lab="N", cex.lab=1)  
 GISTools::map.scale(xc=938.5, yc=677.5, len=1, units="meter", ndivs=1)
 
-
 E <- envelope.pp3(lithic.A.pp3, fun=pcf3est, nsim=199, correction="iso", global=FALSE)
-plot(E, xlim=c(0,1), lwd=2, legend=TRUE, main="b")
-abline(v=0.35, lty=2, lwd=1, col="grey"); abline(v=0.65, lty=2, lwd=1, col="grey")
+plot(E, xlim=c(0,1), lwd=4, legend=TRUE, main="b")
+abline(v=0.35, lty=2, lwd=2, col="grey"); abline(v=0.65, lty=2, lwd=1, col="grey")
 text(0.37,0, label="0.35", col="grey"); text(0.67,0, label="0.65", col="grey")
 
 nn <- nncross(lithic.A.pp3, Eleph.pp3, what="dist")
 hist(nn, prob=TRUE, xlab="meter", main="c")
-lines(density(nn, bw="nrd"), col="#a51e37", lwd=2)
+lines(density(nn, bw="nrd"), col="#a51e37", lwd=4)
 
 dev.off()
 ```
