@@ -48,7 +48,14 @@ Summary: 38 obs. (26 KN, 7 LI, 2 LOST.KN, 2 ZN, 1 HZ)
 ```{r}
 # mean
 deg(circ.mean(rad(UB4c_test.fabric$bearing_clock)))
+deg(circ.disp(rad(UB4c_test.fabric$bearing_clock)))
+deg(circ.mean(rad(UB4c_test.fabric$plunge_clock)))
+deg(circ.disp(rad(UB4c_test.fabric$plunge_clock)))
+
 deg(circ.mean(rad(UB4c_test.fabric$bearing_comp)))
+deg(circ.disp(rad(UB4c_test.fabric$bearing_comp)))
+deg(circ.mean(rad(UB4c_test.fabric$plunge_comp)))
+deg(circ.disp(rad(UB4c_test.fabric$plunge_comp)))
 ```
 
 Mean direction UB4c clock: 91.65627°
@@ -66,8 +73,8 @@ r.test(rad(UB4c_test.fabric$bearing_clock))
 r.test(rad(UB4c_test.fabric$bearing_comp))
 kuiper(rad(UB4c_test.fabric$bearing_clock))
 kuiper(rad(UB4c_test.fabric$bearing_comp))
-watson(rad(UB4c_test.fabric$bearing_clock))
-watson(rad(UB4c_test.fabric$bearing_comp))
+watson(rad(UB4c_test.fabric$bearing_clock), dist="uniform")
+watson(rad(UB4c_test.fabric$bearing_comp), dist="uniform")
 rao.spacing(rad(UB4c_test.fabric$bearing_clock))
 rao.spacing(rad(UB4c_test.fabric$bearing_comp))
 ```

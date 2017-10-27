@@ -6,14 +6,14 @@ Database file #1: marathousa_rr.bib
 Warning--I didn't find a database entry for "Thompson"
 You've used 89 entries,
             2821 wiz_defined-function locations,
-            1250 strings with 25777 characters,
-and the built_in function-call counts, 48724 in all, are:
+            1236 strings with 24975 characters,
+and the built_in function-call counts, 48682 in all, are:
 = -- 4758
 > -- 2900
 < -- 70
 + -- 1108
 - -- 997
-* -- 4411
+* -- 4383
 := -- 8834
 add.period$ -- 283
 call.type$ -- 89
@@ -27,13 +27,13 @@ if$ -- 9768
 int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 94
-newline$ -- 289
+newline$ -- 275
 num.names$ -- 368
 pop$ -- 711
 preamble$ -- 1
 purify$ -- 684
 quote$ -- 0
-skip$ -- 1289
+skip$ -- 1303
 stack$ -- 0
 substring$ -- 2678
 swap$ -- 246
@@ -44,5 +44,5 @@ type$ -- 774
 warning$ -- 0
 while$ -- 379
 width$ -- 0
-write$ -- 1002
+write$ -- 988
 (There was 1 warning)

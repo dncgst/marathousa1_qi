@@ -278,6 +278,7 @@ plunge <- rad(UA4.fabric$plunge)
 bearing <- rad(UA4.fabric$bearing)
 plunge <- rad(Elephas.fabric$plunge)
 bearing <- rad(Elephas.fabric$bearing)
+
 plunge <- rad(UB4c_clock.fabric$plunge)
 bearing <- rad(UB4c_clock.fabric$bearing)
 plunge <- rad(UB4c_comp.fabric$plunge)
@@ -339,7 +340,8 @@ kuiper(bearing, alpha=0.05)
 ## omnibus Watson test
 ## goodness of fit test for the von Mises (dist="vm") or circular uniform (dist="uniform") distribution
 ## If dist = 'vm', estimates of the population parameters are used to evaluate the von Mises distribution function at all data points, thereby arriving at a sample of approximately uniformly distributed data, if the original observations have a von Mises distribution. The one-sample Watson test is then applied to the transformed data as above.
-watson(bearing)
+watson(bearing, dist="uniform")
+watson(bearing, dist="vm")
 watson(bearing, alpha=0.05, dist = "uniform")
 watson(bearing, alpha=0.05, dist = "vm")
 
