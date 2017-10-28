@@ -555,24 +555,27 @@ dev.off()
 ## Tests
 
 ```{r}
-# test normality assumption for the elephas
+# test normality assumption for the elephas/UA3c debris
 foo <- Elephas.ppp$z
+foo <- Da[which(Da$geo_takis == "UA3c" & Da$d >= 0 & Da$type == "debris"),]$d
 boxplot(foo)
 m <- mean(foo)
 s <- sd(foo)
+skewness(foo)
+kurtosis(foo)
 hist(foo, prob=TRUE)
 curve(dnorm(x, mean=m, sd=s), col="red", lwd=2, add=TRUE)
 qqnorm(foo); qqline(foo, col="red", lwd=2)
 shapiro.test(foo)
-ks.test(foo, "pnorm")
+ks.test(foo, "pnorm", mean(foo),sqrt(var(foo)))
 
 # mean & sd elevation of erosional contact UA3c/UA4
 summary(UA4_surf)
 sd(UA4_surf$marks)
 
 # student's t-test: compare debris/fauna distributions
-foo <- Da[which(Da$geo_takis == "UA3c" & Da$type == "debris"),]$z
-bar <- Da[which(Da$geo_takis == "UA3c" & Da$class == "Fauna"),]$z
+foo <- Da[which(Da$geo_takis == "UA3c" & Da$class == "Lithic"),]$d
+bar <- Da[which(Da$geo_takis == "UA3c" & Da$class == "Fauna"),]$d
 boxplot(foo)
 m <- mean(foo)
 s <- sd(foo)

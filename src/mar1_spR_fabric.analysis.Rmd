@@ -186,6 +186,13 @@ UA4.fabric <- read.csv("data/UA4.fabric.csv", header=TRUE, sep=",", skip=0)
 summary(UA4.fabric)
 Elephas.fabric <- read.csv("data/Elephas.fabric.csv", header=TRUE, sep=",", skip=0)
 summary(Elephas.fabric)
+
+# E43
+Elephas43.fabric <- Elephas.fabric[-grep(pattern="vertebra", x=Elephas.fabric$SKELETAL.ELEMENT),]
+Elephas43.fabric <- Elephas43.fabric[-grep(pattern="atlas", x=Elephas43.fabric$SKELETAL.ELEMENT),]
+Elephas43.fabric <- Elephas43.fabric[-grep(pattern="axis", x=Elephas43.fabric$SKELETAL.ELEMENT),]
+Elephas43.fabric <- Elephas43.fabric[-grep(pattern="phalanx", x=Elephas43.fabric$SKELETAL.ELEMENT),]
+
 UB4c_clock.fabric <- read.csv("data/UB4c_clock.fabric.csv", header=TRUE, sep=",", skip=0)
 summary(UB4c_clock.fabric)
 UB4c_comp.fabric <- read.csv("data/UB4c_comp.fabric.csv", header=TRUE, sep=",", skip=0)
@@ -393,6 +400,8 @@ plunge <- rad(UA4.fabric$plunge)
 bearing <- rad(UA4.fabric$bearing)
 plunge <- rad(Elephas.fabric$plunge)
 bearing <- rad(Elephas.fabric$bearing)
+#plunge <- rad(Elephas43.fabric$plunge)
+#bearing <- rad(Elephas43.fabric$bearing)
 plunge <- rad(UB4c_clock.fabric$plunge)
 bearing <- rad(UB4c_clock.fabric$bearing)
 plunge <- rad(UB4c_comp.fabric$plunge)
@@ -462,9 +471,9 @@ UA4.s1_s2 <- s1/s2
 UA4.s2_s3 <- s2/s3
 UA4.s1_s3 <- s1/s3
 ## ---Elephant (43 obs)
-#E.s1_s2 <- s1/s2
-#E.s2_s3 <- s2/s3
-#E.s1_s3 <- s1/s3
+#E43.s1_s2 <- s1/s2
+#E43.s2_s3 <- s2/s3
+#E43.s1_s3 <- s1/s3
 ## Elephant (63 obs)
 E63.s1_s2 <- s1/s2
 E63.s2_s3 <- s2/s3
@@ -581,7 +590,7 @@ UB4c_comp -- (65 obs.) The C value: 2.309044 (`r UB4c_comp.s1_s3`) is higher tha
 # isotropy index
 UA3c.is <- s3/s1
 UA4.is <- s3/s1
-#E.is <- s3/s1
+#E43.is <- s3/s1
 E63.is <- s3/s1
 UB4c_clock.is <- s3/s1
 UB4c_comp.is <- s3/s1
@@ -589,7 +598,7 @@ UB4c_comp.is <- s3/s1
 # elongation index
 UA3c.el <- 1-(s2/s1)
 UA4.el <- 1-(s2/s1)
-#E.el <- 1-(s2/s1)
+#E43.el <- 1-(s2/s1)
 E63.el <- 1-(s2/s1)
 UB4c_clock.el <- 1-(s2/s1)
 UB4c_comp.el <- 1-(s2/s1)
@@ -597,7 +606,7 @@ UB4c_comp.el <- 1-(s2/s1)
 # 3rd axis
 UA3c.bs <- 1-(UA3c.is+UA3c.el)
 UA4.bs <- 1-(UA4.is+UA4.el)
-#E.bs <- 1-(E.is+E.el)
+#E43.bs <- 1-(E.is+E.el)
 E63.bs <- 1-(E63.is+E63.el)
 UB4c_clock.bs <- 1-(UB4c_clock.is+UB4c_clock.el)
 UB4c_comp.bs <- 1-(UB4c_comp.is+UB4c_comp.el)
@@ -621,7 +630,7 @@ triax.points(matrix(c(UA3c.bs,UA3c.el,UA3c.is),ncol=3,byrow=2), pch=16, col="#a0
 text(.58,.33, label="UA3c", lwd=.02)
 triax.points(matrix(c(UA4.bs,UA4.el,UA4.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.4,.11, label="UA4", lwd=.02)
-#triax.points(matrix(c(E.bs,E.el,E.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
+#triax.points(matrix(c(E43.bs,E43.el,E43.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 #text(.3,.11, label="Eleph.", lwd=.02)
 triax.points(matrix(c(E63.bs,E63.el,E63.is),ncol=3,byrow=2), pch=16, col="#a01d3bff", cex=2)
 text(.5,.18, label="Eleph.", lwd=.02)
