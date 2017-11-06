@@ -1,4 +1,4 @@
-\begin{thebibliography}{89}
+\begin{thebibliography}{88}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -24,10 +24,6 @@ Aramendi, J., Uribelarrea, D., Arriaza, M.~C., Arráiz, H., Barboni, D.,
 Baddeley, A., Chang, Y.-M., Song, Y., Turner, R., 2012. {Nonparametric
   estimation of the dependence of a point process on spatial covariates}.
   Statistics and Its Interface 5~(2), 221--236.
-
-\bibitem[{Baddeley et~al.(2015)Baddeley, Rubak, and Turner}]{spatstatBook}
-Baddeley, A., Rubak, E., Turner, R., 2015. {Spatial Point Patterns: Methodology
-  and Applications with {R}}. Chapman and Hall/CRC, London.
 
 \bibitem[{Bailey(2007)}]{Bailey2007}
 Bailey, G., 2007. {T}ime perspectives, palimpsests and the archaeology of time.
@@ -293,11 +289,10 @@ Kluskens, S.~L., 1990. Orientation and density analysis of stone artefacts at
 \bibitem[{Konidaris et~al.(this issue)Konidaris, Athanassiou, Tourloukis,
   Thompson, Giusti, Panagopoulou, and Harvati}]{Konidaris}
 Konidaris, G., Athanassiou, A., Tourloukis, V., Thompson, N., Giusti, D.,
-  Panagopoulou, E., Harvati, K., this issue. The elephas (palaeoloxodon)
-  antiquus skeleton and other large mammals from the lower palaeolithic
-  locality marathousa-1 (megalopolis basin, greece): preliminary results on
-  taxonomy, biochronology, palaeoecology and taphonomy. Quaternary
-  International.
+  Panagopoulou, E., Harvati, K., this issue. The skeleton of a straight-tusked
+  elephant (\emph{Palaeoloxodon antiquus}) and other large mammals from the
+  middle pleistocene locality marathousa 1 (megalopolis basin, greece):
+  preliminary results. Quaternary International.
 
 \bibitem[{Krumbein(1941)}]{Krumbein1941}
 Krumbein, W.~C., 1941. Measurement and geological significance of shape and

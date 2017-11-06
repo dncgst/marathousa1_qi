@@ -39,8 +39,7 @@
     "fig:9"
     "fig:10"
     "fig:11"
-    "fig:12"
-    "fig:13")
+    "fig:12")
    (LaTeX-add-bibliographies
     "marathousa_rr"))
  :latex)
