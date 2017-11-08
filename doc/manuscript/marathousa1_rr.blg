@@ -5,42 +5,42 @@ The style file: elsarticle-harv.bst
 Database file #1: marathousa_rr.bib
 You've used 88 entries,
             2821 wiz_defined-function locations,
-            1228 strings with 24781 characters,
-and the built_in function-call counts, 48237 in all, are:
-= -- 4717
+            1224 strings with 24732 characters,
+and the built_in function-call counts, 48078 in all, are:
+= -- 4783
 > -- 2873
 < -- 70
-+ -- 1098
++ -- 1090
 - -- 988
-* -- 4344
-:= -- 8752
+* -- 4318
+:= -- 8735
 add.period$ -- 280
 call.type$ -- 88
-change.case$ -- 776
+change.case$ -- 773
 chr.to.int$ -- 86
 cite$ -- 88
-duplicate$ -- 1619
-empty$ -- 3110
+duplicate$ -- 1615
+empty$ -- 3045
 format.name$ -- 1221
-if$ -- 9678
+if$ -- 9555
 int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 92
 newline$ -- 272
 num.names$ -- 364
-pop$ -- 699
+pop$ -- 697
 preamble$ -- 1
 purify$ -- 677
 quote$ -- 0
-skip$ -- 1291
+skip$ -- 1295
 stack$ -- 0
-substring$ -- 2667
+substring$ -- 2647
 swap$ -- 244
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 768
 warning$ -- 0
-while$ -- 376
+while$ -- 414
 width$ -- 0
-write$ -- 978
+write$ -- 979

@@ -47,17 +47,17 @@
   volume  = {38},
   number  = {12},
   pages   = {3652--3661},
-  doi     = {http://dx.doi.org/10.1016/j.jas.2011.08.036},
+  doi     = {10.1016/j.jas.2011.08.036},
 }
 
 @Article{Benito-Calvo2009,
   author  = {Alfonso Benito-Calvo and Jorge Martínez-Moreno and Jesús F. Jordá Pardo and Ignacio de la Torre and Rafael Mora Torcal},
-  title   = {{{S}edimentological and archaeological fabrics in {P}alaeolithic levels of the {S}outh-{E}astern {P}yrenees: {C}ova {G}ran and {R}oca dels {B}ous {S}ites ({L}leida, {S}pain)}},
+  title   = {{{S}edimentological and archaeological fabrics in {P}alaeolithic levels of the {S}outh-{E}astern {P}yrenees: {C}ova {G}ran and {R}oca del {B}ous {S}ites ({L}leida, {S}pain)}},
   journal = {Journal of Archaeological Science},
   year    = {2009},
   volume  = {36},
   number  = {11},
-  pages   = {2566 - 2577},
+  pages   = {2566--2577},
   doi     = {10.1016/j.jas.2009.07.012},
 }
 
@@ -68,7 +68,7 @@
   year    = {2011},
   volume  = {61},
   number  = {1},
-  pages   = {50 - 60},
+  pages   = {50--60},
   doi     = {10.1016/j.jhevol.2011.02.011},
 }
 
@@ -79,7 +79,7 @@
   year    = {1994},
   volume  = {64},
   number  = {4a},
-  pages   = {910-915},
+  pages   = {910--915},
   doi     = {10.1306/D4267F05-2B26-11D7-8648000102C1865D},
 }
 
@@ -99,7 +99,7 @@
   year    = {2010},
   volume  = {59},
   number  = {3–4},
-  pages   = {274 - 288},
+  pages   = {274--288},
   doi     = {10.1016/j.jhevol.2010.07.005},
 }
 
@@ -109,7 +109,7 @@
   journal = {Paléo},
   year    = {2006},
   volume  = {18},
-  pages   = {7-36},
+  pages   = {7--36},
 }
 
 @Article{Bertran1997,
@@ -119,45 +119,42 @@
   year      = {1997},
   volume    = {44},
   number    = {1},
-  pages     = {1 - 16},
+  pages     = {1--16},
   doi       = {10.1111/j.1365-3091.1997.tb00421.x},
   publisher = {Blackwell Publishing Ltd},
 }
 
 @Article{Bertran2012,
-  Title                    = {{P}article size distribution of lithic assemblages and taphonomy of {P}alaeolithic sites},
-  Author                   = {Pascal Bertran and Arnaud Lenoble and Dominique Todisco and Pierre M. Desrosiers and Mikkel Sørensen},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {2012},
-  Number                   = {10},
-  Pages                    = {3148 - 3166},
-  Volume                   = {39},
-
-  Doi                      = {10.1016/j.jas.2012.04.055}
+  author  = {Pascal Bertran and Arnaud Lenoble and Dominique Todisco and Pierre M. Desrosiers and Mikkel Sørensen},
+  title   = {{P}article size distribution of lithic assemblages and taphonomy of {P}alaeolithic sites},
+  journal = {Journal of Archaeological Science},
+  year    = {2012},
+  volume  = {39},
+  number  = {10},
+  pages   = {3148--3166},
+  doi     = {10.1016/j.jas.2012.04.055},
 }
 
 @Article{Bertran1995,
-  Title                    = {{F}abric {A}nalysis: {A}pplication to {P}aleolithic {S}ites},
-  Author                   = {Pascal Bertran and Jean-Pierre Texier},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {1995},
-  Number                   = {4},
-  Pages                    = {521 - 535},
-  Volume                   = {22},
-
-  Doi                      = {10.1006/jasc.1995.0050}
+  author  = {Pascal Bertran and Jean-Pierre Texier},
+  title   = {{F}abric {A}nalysis: {A}pplication to {P}aleolithic {S}ites},
+  journal = {Journal of Archaeological Science},
+  year    = {1995},
+  volume  = {22},
+  number  = {4},
+  pages   = {521--535},
+  doi     = {10.1006/jasc.1995.0050},
 }
 
 @InCollection{Bevan2006,
-  Title                    = {Multiscalar approaches to settlement pattern analysis},
-  Author                   = {Bevan, A. and Conolly, J.},
-  Booktitle                = {Confronting Scale in Archaeology: Issues of Theory and Practice},
-  Publisher                = {Springer},
-  Year                     = {2006},
-  Editor                   = {Lock, G. and Molyneaux, B.L.},
-  Pages                    = {217-234},
-
-  Doi                      = {10.1007/0-387-32772-3_14}
+  author    = {Bevan, A. and Conolly, J.},
+  title     = {Multiscalar approaches to settlement pattern analysis},
+  booktitle = {Confronting Scale in Archaeology: Issues of Theory and Practice},
+  publisher = {Springer},
+  year      = {2006},
+  editor    = {Lock, G. and Molyneaux, B.L.},
+  pages     = {217--234},
+  doi       = {10.1007/0-387-32772-3_14},
 }
 
 @Book{Bevan2013c,
@@ -169,15 +166,14 @@
 }
 
 @Article{Bevan2009,
-  Title                    = {{M}odelling spatial heterogeneity and nonstationarity in artifact-rich landscapes},
-  Author                   = {Andrew Bevan and James Conolly},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {2009},
-  Number                   = {4},
-  Pages                    = {956 - 964},
-  Volume                   = {36},
-
-  Doi                      = {10.1016/j.jas.2008.11.023}
+  author  = {Andrew Bevan and James Conolly},
+  title   = {{M}odelling spatial heterogeneity and nonstationarity in artifact-rich landscapes},
+  journal = {Journal of Archaeological Science},
+  year    = {2009},
+  volume  = {36},
+  number  = {4},
+  pages   = {956--964},
+  doi     = {10.1016/j.jas.2008.11.023},
 }
 
 @InCollection{Bevan2013a,
@@ -187,20 +183,19 @@
   publisher = {Left Coast Press},
   year      = {2013},
   editor    = {Andrew Bevan and Mark Lake},
-  pages     = {27-52},
+  pages     = {27--52},
   address   = {Walnut Creek},
 }
 
 @Article{Bevan2013,
-  Title                    = {{M}odels of settlement hierarchy based on partial evidence },
-  Author                   = {Andrew Bevan and Alan Wilson},
-  Journal                  = {Journal of Archaeological Science },
-  Year                     = {2013},
-  Number                   = {5},
-  Pages                    = {2415 - 2427},
-  Volume                   = {40},
-
-  Doi                      = {http://dx.doi.org/10.1016/j.jas.2012.12.025}
+  author  = {Andrew Bevan and Alan Wilson},
+  title   = {{M}odels of settlement hierarchy based on partial evidence},
+  journal = {Journal of Archaeological Science},
+  year    = {2013},
+  volume  = {40},
+  number  = {5},
+  pages   = {2415--2427},
+  doi     = {10.1016/j.jas.2012.12.025},
 }
 
 @Article{Boschian2010,
@@ -210,8 +205,8 @@
   year    = {2010},
   volume  = {214},
   number  = {1–2},
-  pages   = {3 - 16},
-  doi     = {http://dx.doi.org/10.1016/j.quaint.2009.10.016},
+  pages   = {3--16},
+  doi     = {10.1016/j.quaint.2009.10.016},
 }
 
 @Book{Butzer1982,
@@ -251,9 +246,9 @@
   journal = {Quaternary International},
   year    = {2014},
   volume  = {322–323},
-  number  = {0},
-  pages   = {277 - 284},
-  doi     = {http://dx.doi.org/10.1016/j.quaint.2013.07.130},
+  number  = {Supplement C},
+  pages   = {277--284},
+  doi     = {10.1016/j.quaint.2013.07.130},
 }
 
 @InCollection{Crema2015,
@@ -263,20 +258,19 @@
   publisher = {CRC Press},
   year      = {2015},
   editor    = {Juan A. Barcelo, Igor Bogdanovic},
-  pages     = {314-334},
+  pages     = {314--334},
   doi       = {10.1201/b18530-20},
 }
 
 @Article{Crema2010,
-  Title                    = {{A} probabilistic framework for assessing spatio-temporal point patterns in the archaeological record},
-  Author                   = {Enrico R. Crema and Andrew Bevan and Mark W. Lake},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {2010},
-  Number                   = {5},
-  Pages                    = {1118 - 1130},
-  Volume                   = {37},
-
-  Doi                      = {10.1016/j.jas.2009.12.012}
+  author  = {Enrico R. Crema and Andrew Bevan and Mark W. Lake},
+  title   = {{A} probabilistic framework for assessing spatio-temporal point patterns in the archaeological record},
+  journal = {Journal of Archaeological Science},
+  year    = {2010},
+  volume  = {37},
+  number  = {5},
+  pages   = {1118--1130},
+  doi     = {10.1016/j.jas.2009.12.012},
 }
 
 @InCollection{Crema2013,
@@ -295,7 +289,7 @@
   journal = {Applied Statistics (Journal of the Royal Statistical Society, Series C)},
   year    = {1985},
   volume  = {34},
-  pages   = {138–147},
+  pages   = {138--147},
 }
 
 @Article{Dominguez-Rodrigo2014c,
@@ -310,15 +304,14 @@
 }
 
 @Article{Dominguez-Rodrigo2012,
-  Title                    = {{A}utochthony and orientation patterns in {O}lduvai {B}ed {I}: a re-examination of the status of post-depositional biasing of archaeological assemblages from {FLK} {N}orth ({FLKN})},
-  Author                   = {M. Domínguez-Rodrigo and H.T. Bunn and T.R. Pickering and A.Z.P. Mabulla and C.M. Musiba and E. Baquedano and G.M. Ashley and F. Diez-Martin and M. Santonja and D. Uribelarrea and R. Barba and J. Yravedra and D. Barboni and C. Arriaza and A. Gidna},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {2012},
-  Number                   = {7},
-  Pages                    = {2116 - 2127},
-  Volume                   = {39},
-
-  Doi                      = {10.1016/j.jas.2012.02.027}
+  author  = {M. Domínguez-Rodrigo and H.T. Bunn and T.R. Pickering and A.Z.P. Mabulla and C.M. Musiba and E. Baquedano and G.M. Ashley and F. Diez-Martin and M. Santonja and D. Uribelarrea and R. Barba and J. Yravedra and D. Barboni and C. Arriaza and A. Gidna},
+  title   = {{A}utochthony and orientation patterns in {O}lduvai {B}ed {I}: a re-examination of the status of post-depositional biasing of archaeological assemblages from {FLK} {N}orth ({FLKN})},
+  journal = {Journal of Archaeological Science},
+  year    = {2012},
+  volume  = {39},
+  number  = {7},
+  pages   = {2116--2127},
+  doi     = {10.1016/j.jas.2012.02.027},
 }
 
 @Article{Dominguez-Rodrigo2017,
@@ -326,8 +319,6 @@
   title   = {Fluvial spatial taphonomy: a new method for the study of post-depositional processes},
   journal = {Archaeological and Anthropological Sciences},
   year    = {2017},
-  pages   = {1--21},
-  issn    = {1866-9565},
   doi     = {10.1007/s12520-017-0497-2},
 }
 
@@ -361,9 +352,9 @@
   journal = {Journal of Archaeological Science},
   year    = {2014},
   volume  = {41},
-  number  = {0},
-  pages   = {44 - 68},
-  doi     = {http://dx.doi.org/10.1016/j.jas.2013.07.025},
+  number  = {Supplement C},
+  pages   = {44--68},
+  doi     = {10.1016/j.jas.2013.07.025},
 }
 
 @Book{Douglas-Hamilton1975,
@@ -381,19 +372,18 @@
   year    = {2010},
   volume  = {37},
   number  = {12},
-  pages   = {3010 - 3021},
-  doi     = {http://dx.doi.org/10.1016/j.jas.2010.06.024},
+  pages   = {3010--3021},
+  doi     = {10.1016/j.jas.2010.06.024},
 }
 
 @Article{Eve2014,
-  Title                    = {{A} {H}ouse with a {V}iew? {M}ulti-model inference, visibility fields, and point process analysis of a {B}ronze {A}ge settlement on {L}eskernick {H}ill ({C}ornwall, {UK}) },
-  Author                   = {Stuart James Eve and Enrico Ryunosuke Crema},
-  Journal                  = {Journal of Archaeological Science },
-  Year                     = {2014},
-  Pages                    = {267--277},
-  Volume                   = {43},
-
-  Doi                      = {http://dx.doi.org/10.1016/j.jas.2013.12.019}
+  author  = {Stuart James Eve and Enrico Ryunosuke Crema},
+  title   = {{A} {H}ouse with a {V}iew? {M}ulti-model inference, visibility fields, and point process analysis of a {B}ronze {A}ge settlement on {L}eskernick {H}ill ({C}ornwall, {UK})},
+  journal = {Journal of Archaeological Science},
+  year    = {2014},
+  volume  = {43},
+  pages   = {267--277},
+  doi     = {10.1016/j.jas.2013.12.019},
 }
 
 @Article{Garcia-Moreno2016,
@@ -402,8 +392,8 @@
   journal = {Journal of Archaeological Science: Reports},
   year    = {2016},
   volume  = {6},
-  pages   = {82 - 93},
-  doi     = {http://dx.doi.org/10.1016/j.jasrep.2016.01.023},
+  pages   = {82--93},
+  doi     = {10.1016/j.jasrep.2016.01.023},
 }
 
 @Article{Gifford-Gonzalez1985,
@@ -424,8 +414,8 @@
   year    = {1999},
   volume  = {18},
   number  = {4},
-  pages   = {397 - 440},
-  doi     = {http://dx.doi.org/10.1006/jaar.1999.0337},
+  pages   = {397--440},
+  doi     = {10.1006/jaar.1999.0337},
 }
 
 @Article{Giusti2016,
@@ -434,8 +424,8 @@
   journal = {Journal of Archaeological Science: Reports},
   year    = {2016},
   volume  = {8},
-  pages   = {235 - 249},
-  doi     = {http://dx.doi.org/10.1016/j.jasrep.2016.06.014},
+  pages   = {235--249},
+  doi     = {10.1016/j.jasrep.2016.06.014},
 }
 
 @Conference{Harvati2016,
@@ -453,8 +443,8 @@
   journal = {Geomorphology},
   year    = {2012},
   volume  = {157–158},
-  pages   = {99 - 107},
-  doi     = {http://dx.doi.org/10.1016/j.geomorph.2011.04.045},
+  pages   = {99--107},
+  doi     = {10.1016/j.geomorph.2011.04.045},
 }
 
 @Book{Haynes1991,
@@ -509,17 +499,17 @@
 }
 
 @Article{Kintigh1982,
-  Title                    = {Heuristic Approaches to Spatial Analysis in Archaeology},
-  Author                   = {Kintigh, Keith W. and Ammerman, Albert J.},
-  Journal                  = {American Antiquity},
-  Year                     = {1982},
-  Number                   = {1},
-  Pages                    = {31-63},
-  Volume                   = {47}
+  author  = {Kintigh, Keith W. and Ammerman, Albert J.},
+  title   = {Heuristic Approaches to Spatial Analysis in Archaeology},
+  journal = {American Antiquity},
+  year    = {1982},
+  volume  = {47},
+  number  = {1},
+  pages   = {31--63},
 }
 
 @Book{Lenoble2005,
-  title     = {Ruissellement et formation des sites préhistoriques. Référentiel actualiste et exemple d'application au fossile},
+  title     = {{Ruissellement et formation des sites préhistoriques. Référentiel actualiste et exemple d'application au fossile}},
   publisher = {British Archaeological Report},
   year      = {2005},
   author    = {Lenoble, A.},
@@ -529,27 +519,25 @@
 }
 
 @Article{Lenoble2004,
-  Title                    = {{F}abric of {P}alaeolithic levels: methods and implications for site formation processes},
-  Author                   = {Arnaud Lenoble and Pascal Bertran},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {2004},
-  Number                   = {4},
-  Pages                    = {457 - 469},
-  Volume                   = {31},
-
-  Doi                      = {10.1016/j.jas.2003.09.013}
+  author  = {Arnaud Lenoble and Pascal Bertran},
+  title   = {{{F}abric of {P}alaeolithic levels: methods and implications for site formation processes}},
+  journal = {Journal of Archaeological Science},
+  year    = {2004},
+  volume  = {31},
+  number  = {4},
+  pages   = {457--469},
+  doi     = {10.1016/j.jas.2003.09.013},
 }
 
 @Article{Lenoble2008,
-  Title                    = {{S}olifluction-induced modifications of archaeological levels: simulation based on experimental data from a modern periglacial slope and application to {F}rench {P}alaeolithic sites},
-  Author                   = {Arnaud Lenoble and Pascal Bertran and François Lacrampe},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {2008},
-  Number                   = {1},
-  Pages                    = {99 - 110},
-  Volume                   = {35},
-
-  Doi                      = {10.1016/j.jas.2007.02.011}
+  author  = {Arnaud Lenoble and Pascal Bertran and François Lacrampe},
+  title   = {{{S}olifluction-induced modifications of archaeological levels: simulation based on experimental data from a modern periglacial slope and application to {F}rench {P}alaeolithic sites}},
+  journal = {Journal of Archaeological Science},
+  year    = {2008},
+  volume  = {35},
+  number  = {1},
+  pages   = {99--110},
+  doi     = {10.1016/j.jas.2007.02.011},
 }
 
 @Article{Lopez-Ortega2015,
@@ -557,45 +545,43 @@
   title   = {{Quartz and quartzite refits at Gran Dolina (Sierra de Atapuerca, Burgos): Connecting lithic artefacts in the Middle Pleistocene unit of TD10.1}},
   journal = {Quaternary International},
   year    = {2015},
-  pages   = {-},
-  doi     = {http://dx.doi.org/10.1016/j.quaint.2015.09.026},
+  volume  = {443},
+  number  = {Part A},
+  pages   = {85--102},
+  doi     = {10.1016/j.quaint.2015.09.026},
 }
 
 @Article{Lopez-Ortega2011,
-  Title                    = {{L}ithic refitting and movement connections: the {NW} area of level {TD}10-1 at the {G}ran {D}olina site ({S}ierra de {A}tapuerca, {B}urgos, {S}pain)},
-  Author                   = {Esther López-Ortega and Xosé Pedro Rodríguez and Manuel Vaquero},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {2011},
-  Number                   = {11},
-  Pages                    = {3112 - 3121},
-  Volume                   = {38},
-
-  Doi                      = {10.1016/j.jas.2011.07.011}
+  author  = {Esther López-Ortega and Xosé Pedro Rodríguez and Manuel Vaquero},
+  title   = {{L}ithic refitting and movement connections: the {NW} area of level {TD}10-1 at the {G}ran {D}olina site ({S}ierra de {A}tapuerca, {B}urgos, {S}pain)},
+  journal = {Journal of Archaeological Science},
+  year    = {2011},
+  volume  = {38},
+  number  = {11},
+  pages   = {3112--3121},
+  doi     = {10.1016/j.jas.2011.07.011},
 }
 
 @Article{Marwick2017,
-  Title                    = {Computational Reproducibility in Archaeological Research: Basic Principles and a Case Study of Their Implementation},
-  Author                   = {Marwick, Ben},
-  Journal                  = {Journal of Archaeological Method and Theory},
-  Year                     = {2017},
-  Number                   = {2},
-  Pages                    = {424--450},
-  Volume                   = {24},
-
-  Doi                      = {10.1007/s10816-015-9272-9},
-  ISSN                     = {1573-7764}
+  author  = {Marwick, Ben},
+  title   = {Computational Reproducibility in Archaeological Research: Basic Principles and a Case Study of Their Implementation},
+  journal = {Journal of Archaeological Method and Theory},
+  year    = {2017},
+  volume  = {24},
+  number  = {2},
+  pages   = {424--450},
+  doi     = {10.1007/s10816-015-9272-9},
 }
 
 @Article{McPherron2005,
-  Title                    = {{A}rtifact orientations and site formation processes from total station proveniences},
-  Author                   = {Shannon J.P. McPherron},
-  Journal                  = {Journal of Archaeological Science},
-  Year                     = {2005},
-  Number                   = {7},
-  Pages                    = {1003 - 1014},
-  Volume                   = {32},
-
-  Doi                      = {10.1016/j.jas.2005.01.015}
+  author  = {Shannon J.P. McPherron},
+  title   = {{A}rtifact orientations and site formation processes from total station proveniences},
+  journal = {Journal of Archaeological Science},
+  year    = {2005},
+  volume  = {32},
+  number  = {7},
+  pages   = {1003--1014},
+  doi     = {10.1016/j.jas.2005.01.015},
 }
 
 @Article{Morin2005,
@@ -604,19 +590,18 @@
   journal = {Journal of Archaeological Science},
   year    = {2005},
   volume  = {32},
-  pages   = {1083-1098},
+  pages   = {1083--1098},
   doi     = {10.1016/j.jas.2005.02.009},
 }
 
 @Book{Morton2004,
-  Title                    = {Archaeological Site Formation: Understanding Lake Margin Contexts},
-  Author                   = {A. G. T. Morton},
-  Publisher                = {Archaeopress},
-  Year                     = {2004},
-
-  Address                  = {Oxford},
-  Number                   = {1211},
-  Series                   = {BAR International Series}
+  title     = {Archaeological Site Formation: Understanding Lake Margin Contexts},
+  publisher = {British Archaeological Reports},
+  year      = {2004},
+  author    = {A. G. T. Morton},
+  volume    = {1211},
+  series    = {International Series},
+  address   = {Oxford},
 }
 
 @Article{Nickel1996,
@@ -629,13 +614,13 @@
 }
 
 @Article{Nielsen1991,
-  Title                    = {Trampling the archaeological record: an experimental study},
-  Author                   = {Alex E. Nielsen},
-  Journal                  = {Americal Antiquity},
-  Year                     = {1991},
-  Number                   = {3},
-  Pages                    = {483-503},
-  Volume                   = {56}
+  author  = {Alex E. Nielsen},
+  title   = {Trampling the archaeological record: an experimental study},
+  journal = {Americal Antiquity},
+  year    = {1991},
+  volume  = {56},
+  number  = {3},
+  pages   = {483--503},
 }
 
 @Article{Ohser1983,
@@ -654,17 +639,17 @@
   title   = {{Biotic and abiotic processes affecting the formation of BK Level 4c (Bed II, Olduvai Gorge) and their bearing on hominin behavior at the site}},
   journal = {Palaeogeography, Palaeoclimatology, Palaeoecology},
   year    = {2017},
-  pages   = {-},
-  doi     = {http://dx.doi.org/10.1016/j.palaeo.2017.03.001},
+  volume  = {(in press)},
+  doi     = {10.1016/j.palaeo.2017.03.001},
 }
 
 @Article{Orton2004,
-  Title                    = {{P}oint pattern analysis revisited},
-  Author                   = {Orton, C.},
-  Journal                  = {Archeologia e Calcolatori},
-  Year                     = {2004},
-  Pages                    = {299 - 315},
-  Volume                   = {15}
+  author  = {Orton, C.},
+  title   = {{P}oint pattern analysis revisited},
+  journal = {Archeologia e Calcolatori},
+  year    = {2004},
+  volume  = {15},
+  pages   = {299--315},
 }
 
 @Article{Orton1982,
@@ -674,7 +659,7 @@
   year    = {1982},
   volume  = {9},
   number  = {1},
-  pages   = {1 - 23},
+  pages   = {1--23},
   doi     = {10.1016/0305-4403(82)90002-4},
 }
 
@@ -697,7 +682,7 @@
   editor    = {Nash, D. T. and Petraglia, M. D.},
   volume    = {352},
   series    = {International Series},
-  pages     = {108-130},
+  pages     = {108--130},
   address   = {Oxford},
 }
 
@@ -708,26 +693,26 @@
   year    = {1994},
   volume  = {13},
   number  = {3},
-  pages   = {228 - 254},
-  doi     = {http://dx.doi.org/10.1006/jaar.1994.1014},
+  pages   = {228--254},
+  doi     = {10.1006/jaar.1994.1014},
 }
 
 @TechReport{Pierson2005,
   author      = {Thomas C. Pierson},
   title       = {Distinguishing between debris flows and floods from field evidence in small watersheds},
-  institution = {U.S. Geological Survey},
+  institution = {{U.S. Geological Survey}},
   year        = {2005},
-  type        = {USGS Numbered Series},
+  type        = {{USGS Numbered Series}},
 }
 
 @Article{Rick1976,
-  Title                    = {Downslope Movement and Archaeological Intrasite Spatial Analysis},
-  Author                   = {John W. Rick},
-  Journal                  = {American Antiquity},
-  Year                     = {1976},
-  Number                   = {2},
-  Pages                    = {133-144},
-  Volume                   = {41}
+  author  = {John W. Rick},
+  title   = {Downslope Movement and Archaeological Intrasite Spatial Analysis},
+  journal = {American Antiquity},
+  year    = {1976},
+  volume  = {41},
+  number  = {2},
+  pages   = {133--144},
 }
 
 @Book{Ripley1988,
@@ -760,26 +745,24 @@
 }
 
 @Article{Ripley1976,
-  Title                    = {The second-order analysis of stationary point processes},
-  Author                   = {B. D. Ripley},
-  Journal                  = {Journal of Applied Probability},
-  Year                     = {1976},
-  Number                   = {2},
-  Pages                    = {255-266},
-  Volume                   = {13},
-
-  Doi                      = {10.2307/3212829}
+  author  = {B. D. Ripley},
+  title   = {The second-order analysis of stationary point processes},
+  journal = {Journal of Applied Probability},
+  year    = {1976},
+  volume  = {13},
+  number  = {2},
+  pages   = {255--266},
+  doi     = {10.2307/3212829},
 }
 
 @Article{Riris2017,
-  Title                    = {Towards an artefact's-eye view: Non-site analysis of discard patterns and lithic technology in {N}eotropical settings with a case from {M}isiones province, {A}rgentina},
-  Author                   = {Philip Riris},
-  Journal                  = {Journal of Archaeological Science: Reports},
-  Year                     = {2017},
-  Pages                    = {626 - 638},
-  Volume                   = {11},
-
-  Doi                      = {http://dx.doi.org/10.1016/j.jasrep.2017.01.002}
+  author  = {Philip Riris},
+  title   = {Towards an artefact's-eye view: Non-site analysis of discard patterns and lithic technology in {N}eotropical settings with a case from {M}isiones province, {A}rgentina},
+  journal = {Journal of Archaeological Science: Reports},
+  year    = {2017},
+  volume  = {11},
+  pages   = {626--638},
+  doi     = {10.1016/j.jasrep.2017.01.002},
 }
 
 @Article{Sanchez-Romero2016,
@@ -789,7 +772,7 @@
   year      = {2016},
   volume    = {11},
   number    = {12},
-  pages     = {1-27},
+  pages     = {1--27},
   month     = {12},
   doi       = {10.1371/journal.pone.0167595},
   publisher = {Public Library of Science},
@@ -801,7 +784,7 @@
   journal = {Journal of Human Evolution},
   year    = {1987},
   volume  = {16},
-  pages   = {789-807},
+  pages   = {789--807},
 }
 
 @Book{Schick1986,
@@ -834,13 +817,13 @@
 }
 
 @Article{Schiffer1983,
-  Title                    = {Toward the identification of formation processes},
-  Author                   = {Schiffer, Michael B.},
-  Journal                  = {American Antiquity},
-  Year                     = {1983},
-  Number                   = {4},
-  Pages                    = {675-706},
-  Volume                   = {48}
+  author  = {Schiffer, Michael B.},
+  title   = {Toward the identification of formation processes},
+  journal = {American Antiquity},
+  year    = {1983},
+  volume  = {48},
+  number  = {4},
+  pages   = {675--706},
 }
 
 @Article{Schiffer1972,
@@ -850,21 +833,20 @@
   year    = {1972},
   volume  = {37},
   number  = {2},
-  pages   = {156-165},
+  pages   = {156--165},
 }
 
 @Article{Shackley1978,
-  Title                    = {The behaviour of artefacts as sedimentary particles in a fluviatile environment},
-  Author                   = {Shackley, M. L.},
-  Journal                  = {Archaeometry},
-  Year                     = {1978},
-  Number                   = {1},
-  Pages                    = {55-61},
-  Volume                   = {20},
-
-  __markedentry            = {[dncgst:]},
-  Doi                      = {10.1111/j.1475-4754.1978.tb00212.x},
-  Publisher                = {Blackwell Publishing Ltd}
+  author        = {Shackley, M. L.},
+  title         = {The behaviour of artefacts as sedimentary particles in a fluviatile environment},
+  journal       = {Archaeometry},
+  year          = {1978},
+  volume        = {20},
+  number        = {1},
+  pages         = {55--61},
+  __markedentry = {[dncgst:]},
+  doi           = {10.1111/j.1475-4754.1978.tb00212.x},
+  publisher     = {Blackwell Publishing Ltd},
 }
 
 @Article{Sisk2008,
@@ -874,8 +856,8 @@
   year    = {2008},
   volume  = {55},
   number  = {3},
-  pages   = {486 - 500},
-  doi     = {http://dx.doi.org/10.1016/j.jhevol.2008.05.016},
+  pages   = {486--500},
+  doi     = {10.1016/j.jhevol.2008.05.016},
 }
 
 @Article{Stuart2010,
@@ -885,9 +867,8 @@
   year    = {2010},
   volume  = {228},
   number  = {1–2},
-  pages   = {217 - 232},
-  issn    = {1040-6182},
-  doi     = {http://dx.doi.org/10.1016/j.quaint.2010.06.024},
+  pages   = {217--232},
+  doi     = {10.1016/j.quaint.2010.06.024},
 }
 
 @Article{Tobler1970,
@@ -934,9 +915,8 @@
   journal = {Quaternary International},
   year    = {2015},
   volume  = {361},
-  pages   = {212 - 228},
-  issn    = {1040-6182},
-  doi     = {https://doi.org/10.1016/j.quaint.2014.05.055},
+  pages   = {212--228},
+  doi     = {10.1016/j.quaint.2014.05.055},
 }
 
 @Article{Vaquero2012,
@@ -946,8 +926,7 @@
   year    = {2012},
   volume  = {247},
   number  = {0},
-  pages   = {162 - 181},
-  issn    = {1040-6182},
+  pages   = {162--181},
   doi     = {10.1016/j.quaint.2010.12.015},
 }
 
@@ -958,8 +937,8 @@
   year    = {1990},
   volume  = {19},
   number  = {3},
-  pages   = {299 - 309},
-  doi     = {http://dx.doi.org/10.1016/0047-2484(90)90071-I},
+  pages   = {299--309},
+  doi     = {10.1016/0047-2484(90)90071-I},
 }
 
 @Article{Villa1982,
@@ -969,22 +948,21 @@
   year         = {1982},
   volume       = {47},
   number       = {2},
-  pages        = {276-290},
+  pages        = {276--290},
   date         = {Apr., 1982},
   doi          = {10.2307/279901},
   journaltitle = {American Antiquity},
 }
 
 @Article{Villa1983a,
-  Title                    = {The interpretation of stratified sites: A view from underground},
-  Author                   = {Paola Villa and Jean Courtin},
-  Journal                  = {Journal of Archaeological Science },
-  Year                     = {1983},
-  Number                   = {3},
-  Pages                    = {267-281},
-  Volume                   = {10},
-
-  Doi                      = {http://dx.doi.org/10.1016/0305-4403(83)90011-0}
+  author  = {Paola Villa and Jean Courtin},
+  title   = {The interpretation of stratified sites: A view from underground},
+  journal = {Journal of Archaeological Science},
+  year    = {1983},
+  volume  = {10},
+  number  = {3},
+  pages   = {267--281},
+  doi     = {10.1016/0305-4403(83)90011-0},
 }
 
 @Article{Vugt2000,
@@ -998,39 +976,37 @@
 }
 
 @InCollection{Wood1978,
-  Title                    = {A survey of disturbance processes in archaeological site formation},
-  Author                   = {Wood, R. W. and Johnson, D. L.},
-  Booktitle                = {Advances in archaeological method and theory},
-  Publisher                = {Academic Press},
-  Year                     = {1978},
-  Chapter                  = {9},
-  Editor                   = {Schiffer, M. B.},
-  Pages                    = {315-381},
-  Volume                   = {1}
+  author    = {Wood, R. W. and Johnson, D. L.},
+  title     = {A survey of disturbance processes in archaeological site formation},
+  booktitle = {Advances in archaeological method and theory},
+  publisher = {Academic Press},
+  year      = {1978},
+  editor    = {Schiffer, M. B.},
+  volume    = {1},
+  chapter   = {9},
+  pages     = {315--381},
 }
 
 @Article{Woodcock1983,
-  Title                    = {Randomness testing in three-dimensional orientation data },
-  Author                   = {N.H. Woodcock and M.A. Naylor},
-  Journal                  = {Journal of Structural Geology },
-  Year                     = {1983},
-  Number                   = {5},
-  Pages                    = {539 - 548},
-  Volume                   = {5},
-
-  Doi                      = {http://dx.doi.org/10.1016/0191-8141(83)90058-5}
+  author  = {N.H. Woodcock and M.A. Naylor},
+  title   = {Randomness testing in three-dimensional orientation data},
+  journal = {Journal of Structural Geology},
+  year    = {1983},
+  volume  = {5},
+  number  = {5},
+  pages   = {539--548},
+  doi     = {10.1016/0191-8141(83)90058-5},
 }
 
 @Article{Walter2013,
   author  = {Marius J. Walter and Martin H. Trauth},
-  title   = {A \{MATLAB\} based orientation analysis of Acheulean handaxe accumulations in Olorgesailie and Kariandusi, Kenya Rift},
+  title   = {{A {MATLAB} based orientation analysis of Acheulean handaxe accumulations in Olorgesailie and Kariandusi, Kenya Rift}},
   journal = {Journal of Human Evolution},
   year    = {2013},
   volume  = {64},
   number  = {6},
-  pages   = {569 - 581},
-  issn    = {0047-2484},
-  doi     = {http://dx.doi.org/10.1016/j.jhevol.2013.02.011},
+  pages   = {569--581},
+  doi     = {10.1016/j.jhevol.2013.02.011},
 }
 
 @Article{Malinsky-Buller2011,
@@ -1040,8 +1016,7 @@
   year    = {2011},
   volume  = {30},
   number  = {2},
-  pages   = {89 - 101},
-  issn    = {0278-4165},
+  pages   = {89--101},
   doi     = {10.1016/j.jaa.2010.11.002},
 }
 
@@ -1052,22 +1027,18 @@
   year    = {2007},
   volume  = {26},
   number  = {2},
-  pages   = {198 - 223},
-  issn    = {0278-4165},
+  pages   = {198--223},
   doi     = {10.1016/j.jaa.2006.08.002},
 }
 
 @Article{Bargallo2016,
   author  = {Amèlia Bargalló and Maria Joana Gabucio and Florent Rivals},
-  title   = {Puzzling out a palimpsest: Testing an interdisciplinary study in level O of Abric Romaní},
+  title   = {{Puzzling out a palimpsest: Testing an interdisciplinary study in level {O} of {A}bric {R}omaní}},
   journal = {Quaternary International},
   year    = {2016},
   volume  = {417},
-  number  = {Supplement C},
-  pages   = {51 - 65},
-  issn    = {1040-6182},
-  note    = {Advances in Palimpsest Dissection},
-  doi     = {https://doi.org/10.1016/j.quaint.2015.09.066},
+  pages   = {51--65},
+  doi     = {10.1016/j.quaint.2015.09.066},
 }
 
 @Article{Gabucio2017,
@@ -1077,9 +1048,9 @@
   year    = {2017},
   volume  = {0},
   number  = {0},
-  pages   = {1-24},
+  pages   = {1--24},
   doi     = {10.1080/08912963.2017.1340470},
-  eprint  = {http://dx.doi.org/10.1080/08912963.2017.1340470},
+  eprint  = {10.1080/08912963.2017.1340470},
 }
 
 @Article{Texier2000,
@@ -1090,23 +1061,20 @@
   volume    = {12},
   number    = {1},
   pages     = {379--386},
-  issn      = {1145-3370},
   doi       = {10.3406/pal.2000.1610},
   language  = {fre},
   publisher = {Société des amis du Musée national de préhistoire et de la recherche archéologique},
 }
 
 @Article{Villa2004,
-  author   = {Paola Villa},
-  title    = {Taphonomy and stratigraphy in European prehistory},
-  journal  = {Before Farming},
-  year     = {2004},
-  volume   = {2004},
-  number   = {1},
-  pages    = {1-20},
-  abstract = { This paper reports on past and recent studies of archaeological stratigraphy and human occupation features at several Paleolithic cave and open air occurrences seen in the light of refitting, taphonomy and sedimentary context. The Lazaret, Lunel Viel, Fontbrégoua, Caminade, Ambrona and Grotta dei Moscerini occurrences are examined in detail. The adequacy and significance of samples and the value of the refitting method are discussed for some cases. The most successful interpretations of site function, behavioural patterns or models of cultural stratigraphy are those that integrate bone taphonomy or lithic analyses, whether or not based on refitting, with sedimentary and contextual analyses. Some occurrences show that taphonomy without contextual or stratigraphic controls is not likely to produce solid data and that honesty in inference requires that our interpretations do not imply more than we actually know. },
-  doi      = {10.3828/bfarm.2004.1.1},
-  eprint   = {https://doi.org/10.3828/bfarm.2004.1.1},
+  author  = {Paola Villa},
+  title   = {Taphonomy and stratigraphy in European prehistory},
+  journal = {Before Farming},
+  year    = {2004},
+  volume  = {2004},
+  number  = {1},
+  pages   = {1--20},
+  doi     = {10.3828/bfarm.2004.1.1},
 }
 
 @Article{Brantingham2007,
@@ -1116,9 +1084,8 @@
   year    = {2007},
   volume  = {26},
   number  = {4},
-  pages   = {517 - 540},
-  issn    = {0278-4165},
-  doi     = {http://dx.doi.org/10.1016/j.jaa.2007.08.003},
+  pages   = {517--540},
+  doi     = {10.1016/j.jaa.2007.08.003},
 }
 
 @Article{Marwick2017a,
@@ -1133,7 +1100,7 @@
 
 @Article{Fiorillo1991,
   author  = {Anthony R. Fiorillo},
-  title   = {Taphonomy and depositional setting of Careless Creek Quarry (Judith River Formation), Wheatland County, Montana, U.S.A.},
+  title   = {{Taphonomy and depositional setting of Careless Creek Quarry (Judith River Formation), Wheatland County, Montana, U.S.A.}},
   journal = {Palaeogeography, Palaeoclimatology, Palaeoecology},
   year    = {1991},
   volume  = {81},
@@ -1150,7 +1117,6 @@
   volume    = {55},
   number    = {2},
   pages     = {235--239},
-  issn      = {1527-1404},
   abstract  = {Fossil wood has been used extensively as a paleocurrent indicator, and published evidence suggests that it may be aligned either parallel or perpendicular to a unidirectional current. Flume experiments on deposition of waterlogged wood show that most fragments are aligned parallel to the current. For fragments with a high degree of symmetry, however, a perpendicular orientation is possible. The dominant factors in controlling the orientation of wood fragments appear to be current velocity, fragment shape and fragment size.},
   doi       = {10.1306/212F867F-2B24-11D7-8648000102C1865D},
   eprint    = {http://jsedres.geoscienceworld.org/content/55/2/235.full.pdf},
@@ -1159,8 +1125,8 @@
 
 @Article{Krumbein1941,
   author  = {William Christian Krumbein},
-  title   = {Measurement and geological significance of shape and roundness of sedimentary particles},
-  journal = {JOURNAL OF SEDIMENTARY PETROLOGY},
+  title   = {{Measurement and geological significance of shape and roundness of sedimentary particles}},
+  journal = {Journal of Sedimentary Research},
   year    = {1941},
   volume  = {11},
   number  = {2},
@@ -1170,12 +1136,12 @@
 
 @Article{Binford1981,
   author  = {Binford, L. R.},
-  title   = {Behavioral Archaeology and the "Pompeii Premise"},
+  title   = {{Behavioral Archaeology and the "Pompeii Premise"}},
   journal = {Journal of Anthropological Research},
   year    = {1981},
   volume  = {37},
   number  = {3},
-  pages   = {195-208},
+  pages   = {195--208},
 }
 
 @Article{Dibble1997,
@@ -1185,42 +1151,39 @@
   year    = {1997},
   volume  = {62},
   number  = {4},
-  pages   = {629-651},
+  pages   = {629--651},
   month   = {Oct.},
   doi     = {10.2307/281882},
 }
 
 @Article{Enloe2006,
   author  = {James G. Enloe},
-  title   = {Geological processes and site structure: assessing integrity at a Late Paleolithic open-air site in northern France},
+  title   = {{Geological processes and site structure: assessing integrity at a Late Paleolithic open-air site in northern France}},
   journal = {Geoarchaeology},
   year    = {2006},
   volume  = {21},
   number  = {6},
-  pages   = {523–540},
+  pages   = {523--540},
   doi     = {10.1002/gea.20122},
 }
 
 @Article{Aramendi2017,
   author  = {Julia Aramendi and David Uribelarrea and Mari Carmen Arriaza and Héctor Arráiz and Doris Barboni and José Yravedra and María Cruz Ortega and Agness Gidna and Audax Mabulla and Enrique Baquedano and Manuel Domínguez-Rodrigo},
-  title   = {The paleoecology and taphonomy of \{AMK\} (Bed I, Olduvai Gorge) and its contributions to the understanding of the “Zinj” paleolandscape},
+  title   = {{{T}he paleoecology and taphonomy of {AMK} ({B}ed I, {O}lduvai {G}orge) and its contributions to the understanding of the “{Z}inj” paleolandscape}},
   journal = {Palaeogeography, Palaeoclimatology, Palaeoecology},
   year    = {2017},
-  pages   = {-},
-  issn    = {0031-0182},
-  doi     = {https://doi.org/10.1016/j.palaeo.2017.02.036},
+  volume  = {(in press)},
+  doi     = {10.1016/j.palaeo.2017.02.036},
 }
 
 @Article{Lindsay1968,
   author    = {Lindsay, John F.},
-  title     = {The development of clast fabric in mudflows},
+  title     = {{The development of clast fabric in mudflows}},
   journal   = {Journal of Sedimentary Research},
   year      = {1968},
   volume    = {38},
   number    = {4},
   pages     = {1242--1253},
-  issn      = {1527-1404},
-  abstract  = {Mudflow deposits in Permian rocks in Antarctica are used as examples to demonstrate that a computer model will differentiate these from other diamictites. Four A-axis fabrics were measured from the mudflow units and were found to be similar to long-axis fabrics produced by simulations. When compared with till fabrics from the same section the mudflow fabrics can be distinguished because of the presence of dipping girdles in the latter. Had the mudflows been arrested at a stage of maximum fabric development, it would be impossible to distinguish them from most till fabrics. C-axis fabrics developed in mudflows have vertical modes while their counterparts in till fabrics plunge steeply in a downstream direction.},
   doi       = {10.1306/74D71B40-2B21-11D7-8648000102C1865D},
   eprint    = {http://jsedres.geoscienceworld.org/content/38/4/1242.full.pdf},
   publisher = {SEPM Society for Sedimentary Research},
@@ -1234,7 +1197,6 @@
   volume    = {20},
   number    = {3},
   pages     = {243--262},
-  issn      = {1520-6548},
   doi       = {10.1002/gea.20048},
   publisher = {Wiley Subscription Services, Inc., A Wiley Company},
 }
@@ -1246,7 +1208,6 @@
   year    = {2014},
   volume  = {331},
   pages   = {216--233},
-  issn    = {1040-6182},
   doi     = {10.1016/j.quaint.2014.01.028},
 }
 
@@ -1271,7 +1232,7 @@
   publisher = {The University of Chicago Press},
   year      = {2007},
   editor    = {Raymond R. Rogers and David A. Eberth and Anthony R. Fiorillo},
-  pages     = {265-332},
+  pages     = {265--332},
 }
 
 @Article{Fernandez-Lopez1991,
@@ -1280,12 +1241,12 @@
   journal = {Revista Espa\~{n}ola de Paleontología},
   year    = {1991},
   volume  = {6},
-  pages   = {37-49},
+  pages   = {37--49},
 }
 
 @Article{Voorhies1969,
   author  = {Voorhies, MR},
-  title   = {Taphonomy and population dynamics of an early Pliocene vertebrate fauna, Knox County, Nebraska},
+  title   = {{Taphonomy and population dynamics of an early Pliocene vertebrate fauna, Knox County, Nebraska}},
   journal = {Contributions to Geology, University of Wyoming},
   year    = {1969},
   volume  = {Special Paper 1},
@@ -1298,12 +1259,12 @@
   title     = {Orientation and distribution of fossils as environmental indicators},
   booktitle = {Nineteenth Field Conference of the Wyoming Geological Association},
   year      = {1965},
-  pages     = {219-292},
+  pages     = {219--292},
 }
 
 @MastersThesis{Kluskens1990,
   author      = {Kluskens, S. L.},
-  title       = {Orientation and density analysis of stone artefacts at Combe-Capelle Bas, Périgord, France},
+  title       = {{Orientation and density analysis of stone artefacts at Combe-Capelle Bas, Périgord, France}},
   school      = {University of Pennsylvania},
   year        = {1990},
   institution = {University of Pennsylvania},
@@ -1312,21 +1273,21 @@
 
 @Article{Karkanas,
   author  = {Panagiotis Karkanas and Vangelis Tourloukis and Nick Thompson and Domenico Giusti and Eleni Panagopoulou and Katerina Harvati},
-  title   = {Sedimentology and micromorphology of the Lower Palaeolithic lakeshore site Marathousa 1, Megalopolis basin, Greece},
+  title   = {{Sedimentology and micromorphology of the Lower Palaeolithic lakeshore site Marathousa 1, Megalopolis basin, Greece}},
   journal = {Quaternary International},
   year    = {this issue},
 }
 
 @Article{Konidaris,
   author  = {George Konidaris and Athanassios Athanassiou and Vangelis Tourloukis and Nick Thompson and Domenico Giusti and Eleni Panagopoulou and Katerina Harvati},
-  title   = {The skeleton of a straight-tusked elephant (\emph{Palaeoloxodon antiquus}) and other large mammals from the Middle Pleistocene locality Marathousa 1 (Megalopolis Basin, Greece): preliminary results},
+  title   = {{The skeleton of a straight-tusked elephant (\emph{Palaeoloxodon antiquus}) and other large mammals from the {M}iddle {P}leistocene locality {M}arathousa 1 ({M}egalopolis {B}asin, {G}reece): preliminary results}},
   journal = {Quaternary International},
   year    = {this issue},
 }
 
 @Article{Tourloukis,
   author  = {Tourloukis, V. and Thompson, N. and Panagopoulou, E. and Giusti, D. and Konidaris, G. and Karkanas, P. and Harvati, K.},
-  title   = {Lithic and osseous artifacts from the Lower Palaeolithic site of Marathousa 1, Megalopolis, Greece: preliminary results},
+  title   = {{Lithic and osseous artifacts from the Lower Palaeolithic site of Marathousa 1, Megalopolis, Greece: preliminary results}},
   journal = {Quaternary International},
   year    = {this issue},
 }
