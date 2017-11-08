@@ -9,7 +9,7 @@ Recent excavations at the Middle Pleistocene open-air site of Marathousa 1 have 
 
 ## Repository DOI
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1043974.svg)](https://doi.org/10.5281/zenodo.1043974)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.822272.svg)](https://doi.org/10.5281/zenodo.822272)
 
 The files archived at the DOI above are associated with the publication. The files hosted at github.com are the development versions and may have changed since the repository was published.
 
