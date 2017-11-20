@@ -1,10 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.18)  8 NOV 2017 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.18)  8 NOV 2017 21:56
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input marathousa1_rr.tex
+**marathousa1_rr.tex
 (./marathousa1_rr.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
 \@bls=\dimen102
@@ -1258,7 +1259,7 @@ Here is how much of TeX's memory you used:
  12427 multiletter control sequences out of 15000+600000
  61417 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,34p,1859b,611s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,34p,1852b,611s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/t
 ex-gyre/qhvr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxm
