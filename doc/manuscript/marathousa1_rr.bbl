@@ -1,4 +1,4 @@
-\begin{thebibliography}{88}
+\begin{thebibliography}{91}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -298,6 +298,10 @@ Krumbein, W.~C., 1941. {Measurement and geological significance of shape and
   roundness of sedimentary particles}. Journal of Sedimentary Research 11~(2),
   64--72.
 
+\bibitem[{Kuiper(1960)}]{Kuiper1960}
+Kuiper, 1960. Tests concerning random points on a circle. Proceedings of the
+  Koninklijke Nederlandse Akademie van Wetenschappen, Series A 63, 38–--47.
+
 \bibitem[{Lenoble and Bertran(2004)}]{Lenoble2004}
 Lenoble, A., Bertran, P., 2004. {{F}abric of {P}alaeolithic levels: methods and
   implications for site formation processes}. Journal of Archaeological Science
@@ -407,6 +411,11 @@ Petraglia, M.~D., Potts, R., 1994. {Water Flow and the Formation of Early
   Pleistocene Artifact Sites in Olduvai Gorge, Tanzania }. Journal of
   Anthropological Archaeology 13~(3), 228--254.
 
+\bibitem[{Pewsey et~al.(2013)Pewsey, Neuhauser, and Ruxton}]{Pewsey2013}
+Pewsey, A., Neuhauser, M., Ruxton, G.~D., 2013. Circular Statistics in R.
+  Oxford University Press.
+\newline\urlprefix\url{http://www.ebook.de/de/product/21010817/arthur_pewsey_markus_neuhauser_graeme_d_ruxton_circular_statistics_in_r.html}
+
 \bibitem[{Pierson(2005)}]{Pierson2005}
 Pierson, T.~C., 2005. Distinguishing between debris flows and floods from field
   evidence in small watersheds. {USGS Numbered Series}, {U.S. Geological
@@ -482,8 +491,8 @@ Toots, H., 1965. Orientation and distribution of fossils as environmental
 \bibitem[{Tourloukis et~al.(this issue)Tourloukis, Thompson, Panagopoulou,
   Giusti, Konidaris, Karkanas, and Harvati}]{Tourloukis}
 Tourloukis, V., Thompson, N., Panagopoulou, E., Giusti, D., Konidaris, G.,
-  Karkanas, P., Harvati, K., this issue. {Lithic and osseous artifacts from the
-  Lower Palaeolithic site of Marathousa 1, Megalopolis, Greece: preliminary
+  Karkanas, P., Harvati, K., this issue. {Lithic artifacts and bone tools from
+  the Lower Palaeolithic site of Marathousa 1, Megalopolis, Greece: preliminary
   results}. Quaternary International.
 
 \bibitem[{van Vugt et~al.(2000)van Vugt, de~Bruijn, van Kolfschoten, and
@@ -513,6 +522,10 @@ Voorhies, M., 1969. {Taphonomy and population dynamics of an early Pliocene
 Walter, M.~J., Trauth, M.~H., 2013. {A {MATLAB} based orientation analysis of
   Acheulean handaxe accumulations in Olorgesailie and Kariandusi, Kenya Rift}.
   Journal of Human Evolution 64~(6), 569--581.
+
+\bibitem[{Watson(1961)}]{Watson1961}
+Watson, 1961. Goodness-of-fit tests on a circle. Biometrika 48 (1/2),
+  109–114.
 
 \bibitem[{Wood and Johnson(1978)}]{Wood1978}
 Wood, R.~W., Johnson, D.~L., 1978. A survey of disturbance processes in

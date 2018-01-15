@@ -1302,4 +1302,34 @@
   url           = {https://www.R-project.org/},
 }
 
+@Article{Kuiper1960,
+  author  = {Kuiper},
+  title   = {Tests concerning random points on a circle},
+  journal = {Proceedings of the Koninklijke Nederlandse Akademie van Wetenschappen, Series A},
+  year    = {1960},
+  volume  = {63},
+  pages   = {38–-47},
+}
+
+@Article{Watson1961,
+  author  = {Watson},
+  title   = {Goodness-Of-Fit Tests on a Circle},
+  journal = {Biometrika},
+  year    = {1961},
+  volume  = {48 (1/2)},
+  pages   = {109–114},
+}
+
+@Book{Pewsey2013,
+  title     = {Circular Statistics in R},
+  publisher = {Oxford University Press},
+  year      = {2013},
+  author    = {Pewsey, Arthur and Neuhauser, Markus and Ruxton, Graeme D.},
+  isbn      = {0199671133},
+  date      = {2013-09-26},
+  ean       = {9780199671137},
+  pagetotal = {208},
+  url       = {http://www.ebook.de/de/product/21010817/arthur_pewsey_markus_neuhauser_graeme_d_ruxton_circular_statistics_in_r.html},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
