@@ -1280,14 +1280,14 @@
 
 @Article{Konidaris,
   author  = {George Konidaris and Athanassios Athanassiou and Vangelis Tourloukis and Nick Thompson and Domenico Giusti and Eleni Panagopoulou and Katerina Harvati},
-  title   = {{The skeleton of a straight-tusked elephant (\emph{Palaeoloxodon antiquus}) and other large mammals from the {M}iddle {P}leistocene locality {M}arathousa 1 ({M}egalopolis {B}asin, {G}reece): preliminary results}},
+  title   = {{The skeleton of a straight-tusked elephant (\emph{Palaeoloxodon antiquus}) and other large mammals from the {M}iddle {P}leistocene butchering locality {M}arathousa 1 ({M}egalopolis {B}asin, {G}reece): preliminary results}},
   journal = {Quaternary International},
   year    = {this issue},
 }
 
 @Article{Tourloukis,
   author  = {Tourloukis, V. and Thompson, N. and Panagopoulou, E. and Giusti, D. and Konidaris, G. and Karkanas, P. and Harvati, K.},
-  title   = {{Lithic and osseous artifacts from the Lower Palaeolithic site of Marathousa 1, Megalopolis, Greece: preliminary results}},
+  title   = {{Lithic artifacts and bone tools from the Lower Palaeolithic site of Marathousa 1, Megalopolis, Greece: preliminary results}},
   journal = {Quaternary International},
   year    = {this issue},
 }
@@ -1330,6 +1330,15 @@
   ean       = {9780199671137},
   pagetotal = {208},
   url       = {http://www.ebook.de/de/product/21010817/arthur_pewsey_markus_neuhauser_graeme_d_ruxton_circular_statistics_in_r.html},
+}
+
+@Book{Frison1986,
+  title     = {The Colby Mammoth Site: Taphonomy and Archaeology of a Clovis Kill in Northern Wyoming},
+  publisher = {University of New Mexico Press},
+  year      = {1986},
+  author    = {Frison, G C and Todd, L C},
+  keywords  = {Fauna taphonomy, Site formation processes,},
+  location  = {Albuquerque},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

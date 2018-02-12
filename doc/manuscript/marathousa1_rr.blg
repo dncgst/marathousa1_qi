@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: marathousa1_rr.aux
 The style file: elsarticle-harv.bst
 Database file #1: marathousa_rr.bib
-You've used 91 entries,
+You've used 92 entries,
             2821 wiz_defined-function locations,
-            1246 strings with 25227 characters,
-and the built_in function-call counts, 49357 in all, are:
-= -- 4916
-> -- 2920
-< -- 72
-+ -- 1108
-- -- 1003
-* -- 4414
-:= -- 8970
-add.period$ -- 289
-call.type$ -- 91
-change.case$ -- 792
-chr.to.int$ -- 89
-cite$ -- 91
-duplicate$ -- 1665
-empty$ -- 3148
-format.name$ -- 1241
-if$ -- 9821
+            1250 strings with 25369 characters,
+and the built_in function-call counts, 49769 in all, are:
+= -- 4956
+> -- 2939
+< -- 73
++ -- 1117
+- -- 1009
+* -- 4445
+:= -- 9043
+add.period$ -- 292
+call.type$ -- 92
+change.case$ -- 798
+chr.to.int$ -- 90
+cite$ -- 92
+duplicate$ -- 1683
+empty$ -- 3180
+format.name$ -- 1252
+if$ -- 9906
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 96
-newline$ -- 282
-num.names$ -- 376
-pop$ -- 715
+missing$ -- 98
+newline$ -- 285
+num.names$ -- 380
+pop$ -- 726
 preamble$ -- 1
-purify$ -- 694
+purify$ -- 700
 quote$ -- 0
-skip$ -- 1335
+skip$ -- 1349
 stack$ -- 0
-substring$ -- 2731
-swap$ -- 248
+substring$ -- 2744
+swap$ -- 251
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 792
+type$ -- 798
 warning$ -- 0
-while$ -- 425
+while$ -- 428
 width$ -- 0
-write$ -- 1012
+write$ -- 1022

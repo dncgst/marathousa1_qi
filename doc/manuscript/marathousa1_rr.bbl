@@ -1,4 +1,4 @@
-\begin{thebibliography}{91}
+\begin{thebibliography}{92}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -225,6 +225,11 @@ Fiorillo, A.~R., 1991. {Taphonomy and depositional setting of Careless Creek
   Quarry (Judith River Formation), Wheatland County, Montana, U.S.A.}
   Palaeogeography, Palaeoclimatology, Palaeoecology 81~(3), 281--311.
 
+\bibitem[{Frison and Todd(1986)}]{Frison1986}
+Frison, G.~C., Todd, L.~C., 1986. The Colby Mammoth Site: Taphonomy and
+  Archaeology of a Clovis Kill in Northern Wyoming. University of New Mexico
+  Press.
+
 \bibitem[{García-Moreno et~al.(2016)García-Moreno, Smith, Kindler, Pop,
   Roebroeks, Gaudzinski-Windheuser, and Klinkenberg}]{Garcia-Moreno2016}
 García-Moreno, A., Smith, G.~M., Kindler, L., Pop, E., Roebroeks, W.,
@@ -290,8 +295,8 @@ Kluskens, S.~L., 1990. {Orientation and density analysis of stone artefacts at
 Konidaris, G., Athanassiou, A., Tourloukis, V., Thompson, N., Giusti, D.,
   Panagopoulou, E., Harvati, K., this issue. {The skeleton of a straight-tusked
   elephant (\emph{Palaeoloxodon antiquus}) and other large mammals from the
-  {M}iddle {P}leistocene locality {M}arathousa 1 ({M}egalopolis {B}asin,
-  {G}reece): preliminary results}. Quaternary International.
+  {M}iddle {P}leistocene butchering locality {M}arathousa 1 ({M}egalopolis
+  {B}asin, {G}reece): preliminary results}. Quaternary International.
 
 \bibitem[{Krumbein(1941)}]{Krumbein1941}
 Krumbein, W.~C., 1941. {Measurement and geological significance of shape and
