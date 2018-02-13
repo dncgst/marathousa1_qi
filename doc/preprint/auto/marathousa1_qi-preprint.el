@@ -21,10 +21,10 @@
     "babel"
     "natbib"
     "hyperref"
-    "lineno"
     "textcomp"
     "amsmath"
-    "dblfloatfix")
+    "dblfloatfix"
+    "ccicons")
    (LaTeX-add-labels
     "fig:1"
     "fig:2"

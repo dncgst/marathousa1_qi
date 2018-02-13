@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.18)  13 FEB 2018 13:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.18)  13 FEB 2018 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,24 +664,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip47
 )
-(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count109
-\output=\toks20
-\linenoprevgraf=\count110
-\linenumbersep=\dimen123
-\linenumberwidth=\dimen124
-\c@linenumber=\count111
-\c@pagewiselinenumber=\count112
-\c@LN@truepage=\count113
-\c@internallinenumber=\count114
-\c@internallinenumbers=\count115
-\quotelinenumbersep=\dimen125
-\bframerule=\dimen126
-\bframesep=\dimen127
-\bframebox=\box30
-LaTeX Info: Redefining \\ on input line 3056.
-)
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
@@ -848,51 +830,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
-\ex@=\dimen128
+\@emptytoks=\toks20
+\ex@=\dimen123
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen129
+\pmbraise@=\dimen124
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count116
+\inf@bad=\count109
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count117
-\leftroot@=\count118
+\uproot@=\count110
+\leftroot@=\count111
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count119
-\DOTSCASE@=\count120
+\classnum@=\count112
+\DOTSCASE@=\count113
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box31
-\strutbox@=\box32
-\big@size=\dimen130
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen125
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count121
-\c@MaxMatrixCols=\count122
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
 \dotsspace@=\muskip11
-\c@parentequation=\count123
-\dspbrk@lvl=\count124
-\tag@help=\toks22
-\row@=\count125
-\column@=\count126
-\maxfields@=\count127
-\andhelp@=\toks23
-\eqnshift@=\dimen131
-\alignsep@=\dimen132
-\tagshift@=\dimen133
-\tagwidth@=\dimen134
-\totwidth@=\dimen135
-\lineht@=\dimen136
-\@envbody=\toks24
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
+\tag@help=\toks21
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
+\andhelp@=\toks22
+\eqnshift@=\dimen126
+\alignsep@=\dimen127
+\tagshift@=\dimen128
+\tagwidth@=\dimen129
+\totwidth@=\dimen130
+\lineht@=\dimen131
+\@envbody=\toks23
 \multlinegap=\skip49
 \multlinetaggap=\skip50
-\mathdisplay@stack=\toks25
+\mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
@@ -910,73 +892,87 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 )
-\@dblbotnum=\count128
-\c@dblbotnumber=\count129
-) (./marathousa1_qi-preprint.aux)
+\@dblbotnum=\count121
+\c@dblbotnumber=\count122
+) (/usr/share/texlive/texmf-dist/tex/latex/ccicons/ccicons.sty
+Package: ccicons 2013/04/16 v1.5 LaTeX support for Creative Commons icons
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+)
+\XKV@depth=\count123
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)))
+(./marathousa1_qi-preprint.aux)
 \openout1 = `marathousa1_qi-preprint.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 37.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 37.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 36.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 36.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 37.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 37.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 36.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 36.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 37.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 37.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 36.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 36.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 37.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 37.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 36.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 37.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Try loading font information for T1+txr on input line 37.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Try loading font information for T1+txr on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txr.fd
 File: t1txr.fd 2000/12/15 v3.1
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count130
-\scratchdimen=\dimen137
-\scratchbox=\box33
-\nofMPsegments=\count131
-\nofMParguments=\count132
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count133
-\MPscratchDim=\dimen138
-\MPnumerator=\count134
-\makeMPintoPDFobject=\count135
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count124
+\scratchdimen=\dimen132
+\scratchbox=\box32
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen133
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1030,7 +1026,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box34
+\AtBeginShipoutBox=\box33
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
@@ -1039,7 +1035,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1047,342 +1043,337 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count136
+\c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
 
 (./marathousa1_qi-preprint.out) (./marathousa1_qi-preprint.out)
 \@outlinefile=\write4
 \openout4 = `marathousa1_qi-preprint.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 67.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 67.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 67.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 67.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 67.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 67.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (0.30006pt too wide) in paragraph at lines 74--75
+Overfull \hbox (0.30006pt too wide) in paragraph at lines 70--71
 [][]\T1/txr/m/n/10 1987[][]; [][]Shack-ley[][], [][]1978[][]; [][]Wood and John
 -son[][], [][]1978[][]; [][]Bin-ford[][], [][]1981[][];
  []
 
 
-Overfull \hbox (0.19008pt too wide) in paragraph at lines 76--77
+Overfull \hbox (0.19008pt too wide) in paragraph at lines 72--73
 \T1/txr/m/n/10 bi-otic and abi-otic pro-cess, spa-tial statis-tics are still in
 -suf-fi-ciently
  []
 
+LaTeX Font Info:    Font shape `U/ccicons/m/n' will be
+(Font)              scaled to size 8.0pt on input line 77.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 91.
+               Default added (so using `tbp') on input line 87.
 
-<../manuscript/artwork/Fig1.png, id=178, 468.0687pt x 377.7312pt>
+<../manuscript/artwork/Fig1.png, id=179, 468.0687pt x 377.7312pt>
 File: ../manuscript/artwork/Fig1.png Graphic file (type png)
 
 <use ../manuscript/artwork/Fig1.png>
-Package pdftex.def Info: ../manuscript/artwork/Fig1.png used on input line 93.
+Package pdftex.def Info: ../manuscript/artwork/Fig1.png used on input line 89.
 (pdftex.def)             Requested size: 522.0pt x 421.25778pt.
 
-Overfull \hbox (0.38007pt too wide) in paragraph at lines 99--100
+Overfull \hbox (0.38007pt too wide) in paragraph at lines 95--96
 \T1/txr/m/n/10 max-i-mal di-am-e-ter mostly mea-sur-ing less than 80mm ([][]Kon
 idaris
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 101.
+               Default added (so using `tbp') on input line 97.
 
-<../manuscript/artwork/Fig2.pdf, id=189, 631.37456pt x 879.30087pt>
+<../manuscript/artwork/Fig2.pdf, id=190, 631.37456pt x 879.30087pt>
 File: ../manuscript/artwork/Fig2.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig2.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig2.pdf used on input line 103.
-
+Package pdftex.def Info: ../manuscript/artwork/Fig2.pdf used on input line 99.
 (pdftex.def)             Requested size: 469.79681pt x 654.29507pt.
 
 
-LaTeX Warning: Float too large for page by 12.52707pt on input line 106.
+LaTeX Warning: Float too large for page by 12.52707pt on input line 102.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 111.
+               Default added (so using `tbp') on input line 107.
 
-<../manuscript/artwork/Fig3.pdf, id=195, 2899.33873pt x 3076.39696pt>
+<../manuscript/artwork/Fig3.pdf, id=196, 2899.33873pt x 3076.39696pt>
 File: ../manuscript/artwork/Fig3.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig3.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig3.pdf used on input line 113.
+Package pdftex.def Info: ../manuscript/artwork/Fig3.pdf used on input line 109.
 
 (pdftex.def)             Requested size: 522.0pt x 553.8684pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 120.
+               Default added (so using `tbp') on input line 116.
 
-<../manuscript/artwork/Fig4.png, id=205, 543.4704pt x 727.2771pt>
+<../manuscript/artwork/Fig4.png, id=206, 543.4704pt x 727.2771pt>
 File: ../manuscript/artwork/Fig4.png Graphic file (type png)
 
 <use ../manuscript/artwork/Fig4.png>
-Package pdftex.def Info: ../manuscript/artwork/Fig4.png used on input line 122.
+Package pdftex.def Info: ../manuscript/artwork/Fig4.png used on input line 118.
 
 (pdftex.def)             Requested size: 261.0pt x 349.2666pt.
 
-Overfull \hbox (19.91006pt too wide) in paragraph at lines 136--137
-\T1/txr/m/n/10 tochthonous hy-poth-e-sis (\T1/txr/m/it/10 sensu [][]\T1/txr/m/n
-/10 Fernández-López[][], [][]1991[][]; [][]Domínguez-
+Overfull \hbox (19.91006pt too wide) in paragraph at lines 132--133
+\T1/txr/m/n/10 toch-tho-nous hy-poth-e-sis (\T1/txr/m/it/10 sensu [][]\T1/txr/m
+/n/10 Fernández-López[][], [][]1991[][]; [][]Domínguez-
  []
 
 
-Overfull \hbox (5.74008pt too wide) in paragraph at lines 136--137
+Overfull \hbox (5.74008pt too wide) in paragraph at lines 132--133
 \T1/txr/m/n/10 (\T1/txr/m/it/10 sensu [][]\T1/txr/m/n/10 Fernández-López[][], [
 ][]1991[][]; [][]Domínguez-Rodrigo et al.[][], [][]2012[][])
  []
 
 [2] [3 <../manuscript/artwork/Fig1.png>] [4 <../manuscript/artwork/Fig2.pdf>]
 [5 <../manuscript/artwork/Fig3.pdf>] [6 <../manuscript/artwork/Fig4.png>]
-LaTeX Font Info:    Try loading font information for TS1+txr on input line 143.
+LaTeX Font Info:    Try loading font information for TS1+txr on input line 139.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Overfull \hbox (11.58008pt too wide) in paragraph at lines 145--146
+Overfull \hbox (11.58008pt too wide) in paragraph at lines 141--142
 [][]\T1/txr/m/n/10 Domínguez-Rodrigo et al.[][], [][]2012[][]; [][]Domínguez-Ro
 drigo and García-
  []
 
 
-Overfull \hbox (2.2301pt too wide) in paragraph at lines 149--150
+Overfull \hbox (2.2301pt too wide) in paragraph at lines 145--146
 \T1/txr/m/n/10 from sec-ondary source, i.e., from ex-ca-va-tion pho-tographs, d
 raw-
  []
 
-LaTeX Font Info:    Try loading font information for T1+txss on input line 155.
+LaTeX Font Info:    Try loading font information for T1+txss on input line 151.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 155.
+(Font)              scaled to size 9.49997pt on input line 151.
 
-Overfull \hbox (1.09009pt too wide) in paragraph at lines 160--161
+Overfull \hbox (1.09009pt too wide) in paragraph at lines 156--157
 \T1/txr/m/n/10 ad-dressed by [][]Voorhies[][] ([][]1969[][]); [][]Isaac[][] ([]
 []1967[][]); [][]Bar-Yosef and Tch-
  []
 
 
-Overfull \hbox (4.66006pt too wide) in paragraph at lines 160--161
+Overfull \hbox (4.66006pt too wide) in paragraph at lines 156--157
 [][]\T1/txr/m/n/10 2008[][]; [][]McPher-ron[][], [][]2005[][]; [][]Benito-Calvo
  et al.[][], [][]2009[][], [][]2011[][]; [][]Benito-
  []
 
 
-Overfull \hbox (15.76007pt too wide) in paragraph at lines 160--161
+Overfull \hbox (15.76007pt too wide) in paragraph at lines 156--157
 \T1/txr/m/n/10 Saccà[][], [][]2010[][]; [][]Domínguez-Rodrigo et al.[][], [][]2
 012[][]; [][]Domínguez-Rodrigo
  []
 
 
-Overfull \hbox (1.2001pt too wide) in paragraph at lines 160--161
+Overfull \hbox (1.2001pt too wide) in paragraph at lines 156--157
 \T1/txr/m/n/10 and García-Pérez[][], [][]2013[][]; [][]Domínguez-Rodrigo et al.
 [][], [][]2014c[][]; [][]de la
  []
 
 
-Overfull \hbox (0.44008pt too wide) in paragraph at lines 160--161
+Overfull \hbox (0.44008pt too wide) in paragraph at lines 156--157
 \T1/txr/m/n/10 Torre and Benito-Calvo[][], [][]2013[][]; [][]Wal-ter and Trauth
 [][], [][]2013[][]; [][]García-
  []
 
 
-Overfull \hbox (16.0801pt too wide) in paragraph at lines 162--163
+Overfull \hbox (16.0801pt too wide) in paragraph at lines 158--159
 \T1/txr/m/n/10 pos-si-bly as-so-ci-ated with a range of sed-i-men-tary pro-cess
 es. Whereas
  []
 
 
-Overfull \hbox (6.39008pt too wide) in paragraph at lines 162--163
+Overfull \hbox (6.39008pt too wide) in paragraph at lines 158--159
 \T1/txr/m/n/10 water-flow de-posits are gen-er-ally char-ac-terised by rel-a-ti
 vely good
  []
 
 
-Overfull \hbox (2.56006pt too wide) in paragraph at lines 162--163
+Overfull \hbox (2.56006pt too wide) in paragraph at lines 158--159
 \T1/txr/m/n/10 debris-flow de-posits mostly ex-hibit mas-sive, poorly bed-ded m
 ix-
  []
 
 
-Overfull \hbox (0.36009pt too wide) in paragraph at lines 162--163
+Overfull \hbox (0.36009pt too wide) in paragraph at lines 158--159
 \T1/txr/m/n/10 have been ob-served to show some de-gree of pla-nar fab-ric ([][
 ]Leno-
  []
 
 [7]
-Overfull \hbox (0.58011pt too wide) in paragraph at lines 165--166
+Overfull \hbox (0.58011pt too wide) in paragraph at lines 161--162
 \T1/txr/m/n/10 to the sur-round-ing re-lief, a com-bi-na-tion of high- and low-
 energy
  []
 
 
-Overfull \hbox (1.9501pt too wide) in paragraph at lines 168--169
+Overfull \hbox (1.9501pt too wide) in paragraph at lines 164--165
 \T1/txr/m/n/10 gate the dy-nam-ics of the de-po-si-tional pro-cesses at Maratho
 usa 1.
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 172.
+               Default added (so using `tbp') on input line 168.
 
 
-Overfull \hbox (7.59009pt too wide) in paragraph at lines 194--195
+Overfull \hbox (7.59009pt too wide) in paragraph at lines 190--191
 []\T1/txr/m/n/10 Rose di-a-grams and uni-for-mity tests, such as Rayleigh, Kuip
 er,
  []
 
 
-Overfull \hbox (5.93007pt too wide) in paragraph at lines 196--197
+Overfull \hbox (5.93007pt too wide) in paragraph at lines 192--193
 []\T1/txr/m/n/10 Randomness test-ing of three-dimensional data was con-ducted
  []
 
 [8]
-Overfull \hbox (12.9601pt too wide) in paragraph at lines 206--207
+Overfull \hbox (12.9601pt too wide) in paragraph at lines 202--203
 []\T1/txr/m/n/10 In analysing the ver-ti-cal dis-per-sion of ma-te-rial at Mara
 thousa 1,
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 211.
+               Default added (so using `tbp') on input line 207.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 239.
+               Default added (so using `tbp') on input line 235.
 
-<../manuscript/artwork/Fig5.pdf, id=577, 1387.68205pt x 646.07346pt>
+<../manuscript/artwork/Fig5.pdf, id=578, 1387.68205pt x 646.07346pt>
 File: ../manuscript/artwork/Fig5.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig5.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig5.pdf used on input line 241.
+Package pdftex.def Info: ../manuscript/artwork/Fig5.pdf used on input line 237.
 
 (pdftex.def)             Requested size: 522.0pt x 243.03604pt.
 
-Overfull \hbox (15.82947pt too wide) in paragraph at lines 254--255
+Overfull \hbox (15.82947pt too wide) in paragraph at lines 250--251
 \T1/txr/m/n/10 Smirnov test of CSR (Com-plete Spa-tial Ran-dom-ness) and Berman
 's
  []
 
 [9] [10 <../manuscript/artwork/Fig5.pdf>]
-Overfull \hbox (5.50009pt too wide) in paragraph at lines 260--261
+Overfull \hbox (5.50009pt too wide) in paragraph at lines 256--257
 \T1/txr/m/n/10 mu-la-tive dis-tri-bu-tion of the dis-tance from a point of type
  $\OML/txmi/m/it/10 i$ \T1/txr/m/n/10 (UB4c)
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 275.
+               Default added (so using `tbp') on input line 271.
 
-<../manuscript/artwork/Fig6.pdf, id=688, 1282.64963pt x 765.20255pt>
+<../manuscript/artwork/Fig6.pdf, id=689, 1282.64963pt x 765.20255pt>
 File: ../manuscript/artwork/Fig6.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig6.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig6.pdf used on input line 277.
+Package pdftex.def Info: ../manuscript/artwork/Fig6.pdf used on input line 273.
 
 (pdftex.def)             Requested size: 522.0pt x 311.41154pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 282.
+               Default added (so using `tbp') on input line 278.
 
 [11] [12 <../manuscript/artwork/Fig6.pdf>]
-Overfull \hbox (2.0501pt too wide) in paragraph at lines 304--305
+Overfull \hbox (2.0501pt too wide) in paragraph at lines 300--301
 []\T1/txr/m/n/10 The UB4c sub-samples had dis-cor-dant test re-sults when con-
  []
 
 
-Overfull \hbox (13.60005pt too wide) in paragraph at lines 304--305
-\T1/txr/m/n/10 sid-er-ing the om-nibus statis-tics. How-ever, ac-cord-ing to th
-e Rayleigh
- []
-
-
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 309.
+               Default added (so using `tbp') on input line 305.
 
-<../manuscript/artwork/Fig7.pdf, id=784, 1366.22089pt x 695.41777pt>
+<../manuscript/artwork/Fig7.pdf, id=785, 1366.22089pt x 695.41777pt>
 File: ../manuscript/artwork/Fig7.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig7.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig7.pdf used on input line 311.
+Package pdftex.def Info: ../manuscript/artwork/Fig7.pdf used on input line 307.
 
 (pdftex.def)             Requested size: 522.0pt x 265.70462pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 319.
+               Default added (so using `tbp') on input line 315.
 
-<../manuscript/artwork/Fig8.pdf, id=792, 738.58908pt x 546.03136pt>
+<../manuscript/artwork/Fig8.pdf, id=793, 738.58908pt x 546.03136pt>
 File: ../manuscript/artwork/Fig8.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig8.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig8.pdf used on input line 321.
+Package pdftex.def Info: ../manuscript/artwork/Fig8.pdf used on input line 317.
 
 (pdftex.def)             Requested size: 261.0pt x 192.95515pt.
 
-Overfull \hbox (1.5101pt too wide) in paragraph at lines 329--330
+Overfull \hbox (1.5101pt too wide) in paragraph at lines 325--326
 \T1/txr/m/n/10 of the min-i-mum dis-tances (d) from each spec-i-men to the UA3c
 /4
  []
 
 
-Overfull \hbox (1.96008pt too wide) in paragraph at lines 329--330
+Overfull \hbox (1.96008pt too wide) in paragraph at lines 325--326
 \T1/txr/m/n/10 UA3c (Fig. [][]2[][]) and pre-dom-i-nantly in the prox-im-ity of
  the UA3c/4
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 331.
+               Default added (so using `tbp') on input line 327.
 
-<../manuscript/artwork/Fig9.pdf, id=800, 642.81929pt x 642.15077pt>
+<../manuscript/artwork/Fig9.pdf, id=801, 642.81929pt x 642.15077pt>
 File: ../manuscript/artwork/Fig9.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig9.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig9.pdf used on input line 333.
+Package pdftex.def Info: ../manuscript/artwork/Fig9.pdf used on input line 329.
 
 (pdftex.def)             Requested size: 261.0pt x 260.72614pt.
 
-Overfull \hbox (0.78952pt too wide) in paragraph at lines 339--340
+Overfull \hbox (0.78952pt too wide) in paragraph at lines 335--336
 \T1/txr/m/n/10 mum dis-tances from each spec-i-men from Area B to the UB4c/5a
  []
 
@@ -1393,157 +1384,109 @@ multiple pdfs with page group included in a single page
 >]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 344.
+               Default added (so using `tbp') on input line 340.
 
-<../manuscript/artwork/Fig10.pdf, id=932, 1365.51929pt x 698.8868pt>
+<../manuscript/artwork/Fig10.pdf, id=933, 1365.51929pt x 698.8868pt>
 File: ../manuscript/artwork/Fig10.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig10.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig10.pdf used on input line 346
+Package pdftex.def Info: ../manuscript/artwork/Fig10.pdf used on input line 342
 .
 (pdftex.def)             Requested size: 522.0pt x 267.15804pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 360.
+               Default added (so using `tbp') on input line 356.
 
-<../manuscript/artwork/Fig11.pdf, id=937, 1372.45316pt x 1411.5232pt>
+<../manuscript/artwork/Fig11.pdf, id=938, 1372.45316pt x 1411.5232pt>
 File: ../manuscript/artwork/Fig11.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig11.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig11.pdf used on input line 362
+Package pdftex.def Info: ../manuscript/artwork/Fig11.pdf used on input line 358
 .
 (pdftex.def)             Requested size: 522.0pt x 536.85823pt.
  [15 <../manuscript/artwork/Fig9.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 375.
+               Default added (so using `tbp') on input line 371.
 
-<../manuscript/artwork/Fig12.pdf, id=986, 1373.71286pt x 1417.8427pt>
+<../manuscript/artwork/Fig12.pdf, id=987, 1373.71286pt x 1417.8427pt>
 File: ../manuscript/artwork/Fig12.pdf Graphic file (type pdf)
 
 <use ../manuscript/artwork/Fig12.pdf>
-Package pdftex.def Info: ../manuscript/artwork/Fig12.pdf used on input line 377
+Package pdftex.def Info: ../manuscript/artwork/Fig12.pdf used on input line 373
 .
 (pdftex.def)             Requested size: 522.0pt x 538.76419pt.
-
-Overfull \hbox (22.79008pt too wide) in paragraph at lines 385--386
-[]\T1/txr/m/n/10 Recent ex-ca-va-tions at the Mid-dle Pleis-tocene site of Mara
-thousa 1
- []
-
-[16 <../manuscript/artwork/Fig10.pdf>] [17 <../manuscript/artwork/Fig11.pdf>]
-[18 <../manuscript/artwork/Fig12.pdf>]
-Overfull \hbox (30.02008pt too wide) in paragraph at lines 398--399
-\T1/txr/m/n/10 water-laden pro-cesses that oc-curred be-fore the flood event UA
-3c/UB4c.
+ [16 <../manuscript/artwork/Fig10.pdf>]
+[17 <../manuscript/artwork/Fig11.pdf>] [18 <../manuscript/artwork/Fig12.pdf>]
+Overfull \hbox (12.14008pt too wide) in paragraph at lines 394--395
+\T1/txr/m/n/10 toch-tho-nous as-sem-blages ([][]Cobo-Sánchez et al.[][], [][]20
+14[][]; [][]Domínguez-
  []
 
 
-Overfull \hbox (13.95007pt too wide) in paragraph at lines 400--401
-\T1/txr/m/n/10 tively high en-ergy flu-vial flows en-ter-ing the lake mar-gins 
-([][]Karkanas
- []
-
-
-Overfull \hbox (7.91008pt too wide) in paragraph at lines 402--403
+Overfull \hbox (7.91008pt too wide) in paragraph at lines 398--399
 []\T1/txr/m/n/10 Moreover, un-like bones with a tubu-lar shape (i.e., long bone
 s),
  []
 
 
-Overfull \hbox (25.0401pt too wide) in paragraph at lines 402--403
-\T1/txr/m/n/10 en-ergy pro-cesses, less likely un-der low en-ergy pro-cesses ([
-][]Domínguez-
- []
-
-
-Overfull \hbox (7.71008pt too wide) in paragraph at lines 402--403
-\T1/txr/m/n/10 long bones could roll or-thog-o-nally to the flow di-rec-tion ([
-][]Voorhies[][],
- []
-
-
-Overfull \hbox (12.62007pt too wide) in paragraph at lines 404--405
-[][]\T1/txr/m/n/10 2005[][]). How-ever, hy-per-con-cen-trated flows, such as th
-e UA3c/UB4c
- []
-
-
-Overfull \hbox (17.81009pt too wide) in paragraph at lines 406--407
-[]\T1/txr/m/n/10 Thus, we can as-sume that an over-land flow, namely UA3c/UB4c,
-
+Overfull \hbox (16.38007pt too wide) in paragraph at lines 398--399
+\T1/txr/m/n/10 ([][]Domínguez-Rodrigo and García-Pérez[][], [][]2013[][]; [][]D
+omínguez-Rodrigo
  []
 
 [19]
-Overfull \hbox (7.27007pt too wide) in paragraph at lines 411--412
+Overfull \hbox (7.27007pt too wide) in paragraph at lines 407--408
 \T1/txr/m/n/10 dis-tribute poor to very poor sorted clasts ho-mo-ge-neously thr
 ough-
  []
 
 
-Overfull \hbox (5.96007pt too wide) in paragraph at lines 428--429
-[]\T1/txr/m/n/10 The au-tochthonous hy-poth-e-sis was fur-ther ex-plored by mea
-ns
+Overfull \hbox (5.96007pt too wide) in paragraph at lines 424--425
+[]\T1/txr/m/n/10 The au-toch-tho-nous hy-poth-e-sis was fur-ther ex-plored by m
+eans
  []
 
 
-Overfull \hbox (20.80008pt too wide) in paragraph at lines 428--429
-[][]\T1/txr/m/n/10 Fernández-López[][], [][]1991[][]) by the hy-per-con-cen-tra
-ted flow UA3c/UB4c.
- []
-
-
-Overfull \hbox (8.97008pt too wide) in paragraph at lines 428--429
-\T1/txr/m/n/10 lithic arte-facts and fau-nal re-mains would sug-gest an al-loch
-thonous
+Overfull \hbox (7.37009pt too wide) in paragraph at lines 424--425
+\T1/txr/m/n/10 gest an al-loch-tho-nous ori-gin and sub-se-quent re-elaboration
+ (\T1/txr/m/it/10 sensu
  []
 
 [20]
-Overfull \hbox (0.9001pt too wide) in paragraph at lines 439--440
+Overfull \hbox (0.9001pt too wide) in paragraph at lines 435--436
 \T1/txr/m/n/10 sam-ples are ver-ti-cally ad-ja-cent to the ero-sional sur-face 
 (Fig. [][]10[][]),
  []
 
 
-Overfull \hbox (3.25009pt too wide) in paragraph at lines 442--443
+Overfull \hbox (3.25009pt too wide) in paragraph at lines 438--439
 \T1/txr/m/n/10 the ver-ti-cal prox-im-ity of both as-sem-blages from UB4c and U
 B5a
  []
 
 
-Overfull \hbox (16.0901pt too wide) in paragraph at lines 448--449
-[]\T1/txr/m/n/10 In con-clu-sion, mul-ti-ple lines of ev-i-dence re-ject an al-
-lochthonous
- []
-
-
-Overfull \hbox (2.04013pt too wide) in paragraph at lines 451--452
+Overfull \hbox (2.04013pt too wide) in paragraph at lines 447--448
 \T1/txr/m/n/10 the use of space by hu-man groups, in terms of knap-ping episode
 s
  []
 
 
-Overfull \hbox (3.40007pt too wide) in paragraph at lines 453--454
+Overfull \hbox (3.40007pt too wide) in paragraph at lines 449--450
 []\T1/txr/m/n/10 However, whereas hunt-ing or scav-eng-ing in the Lower Palae-
  []
 
 
-Overfull \hbox (0.24011pt too wide) in paragraph at lines 464--465
+Overfull \hbox (0.24011pt too wide) in paragraph at lines 460--461
 \T1/txr/m/n/10 is-sue[][]) and the fau-nal re-mains ([][]Konidaris et al.[][], 
 [][]this is-sue[][]), which
  []
 
-
-Overfull \hbox (6.8001pt too wide) in paragraph at lines 464--465
-\T1/txr/m/n/10 ses show that mul-ti-ple lines of ev-i-dence sup-port an au-toch
-thonous
- []
-
 [21] (./marathousa1_qi-preprint.bbl
 Underfull \hbox (badness 1107) in paragraph at lines 192--199
-\T1/txr/m/n/8 Baque-dano, E., Yrave-dra, J., Diez-Martín, F., 2014c. Au-tochtho
-nous
+\T1/txr/m/n/8 Baque-dano, E., Yrave-dra, J., Diez-Martín, F., 2014c. Au-toch-th
+o-nous
  []
 
 
@@ -1564,41 +1507,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 420--423
  []
 
 [23])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 475.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 471.
  [24
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 475.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 471.
  (./marathousa1_qi-preprint.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 475.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 475.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 471.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 471.
 Package rerunfilecheck Info: File `marathousa1_qi-preprint.out' has not changed
 .
 (rerunfilecheck)             Checksum: 9917B1F70D5CF3471A4D881BB68457EA;917.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 475.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 471.
  ) 
 Here is how much of TeX's memory you used:
- 9725 strings out of 493013
- 136548 string characters out of 6135682
- 244009 words of memory out of 5000000
- 12895 multiletter control sequences out of 15000+600000
- 56322 words of font info for 107 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 34i,12n,34p,1988b,632s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 9781 strings out of 493013
+ 137177 string characters out of 6135682
+ 247322 words of memory out of 5000000
+ 12939 multiletter control sequences out of 15000+600000
+ 56352 words of font info for 108 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 34i,12n,37p,1988b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
-fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/t
-ex-gyre/qhvr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxm
-i.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/
-share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on marathousa1_qi-preprint.pdf (24 pages, 22764887 bytes).
+fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/t
+ype1/public/ccicons/ccicons.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/q
+hvr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on marathousa1_qi-preprint.pdf (24 pages, 22773237 bytes).
 PDF statistics:
- 1432 PDF objects out of 1440 (max. 8388607)
- 1181 compressed objects within 12 object streams
+ 1437 PDF objects out of 1440 (max. 8388607)
+ 1185 compressed objects within 12 object streams
  156 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
