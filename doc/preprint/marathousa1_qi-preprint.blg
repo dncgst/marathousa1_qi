@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: marathousa1_qi-preprint.aux
+The style file: elsarticle-harv.bst
+Database file #1: marathousa_rr.bib
+You've used 92 entries,
+            2821 wiz_defined-function locations,
+            1252 strings with 25392 characters,
+and the built_in function-call counts, 49901 in all, are:
+= -- 4974
+> -- 2939
+< -- 73
++ -- 1117
+- -- 1009
+* -- 4461
+:= -- 9057
+add.period$ -- 292
+call.type$ -- 92
+change.case$ -- 798
+chr.to.int$ -- 90
+cite$ -- 92
+duplicate$ -- 1685
+empty$ -- 3194
+format.name$ -- 1252
+if$ -- 9934
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 98
+newline$ -- 285
+num.names$ -- 380
+pop$ -- 726
+preamble$ -- 1
+purify$ -- 700
+quote$ -- 0
+skip$ -- 1347
+stack$ -- 0
+substring$ -- 2782
+swap$ -- 251
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 798
+warning$ -- 0
+while$ -- 432
+width$ -- 0
+write$ -- 1022
