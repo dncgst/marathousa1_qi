@@ -465,8 +465,8 @@ This research is supported by the European Research Council (ERC StG no. 283503 
  
 \section*{References}
 
-\bibliographystylesec{elsarticle-harv}
-\bibliographysec{marathousa_rr}
+\bibliographystyle{elsarticle-harv}
+\bibliography{marathousa_rr}
 
 \end{document}
 
